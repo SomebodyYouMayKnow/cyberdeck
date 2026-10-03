@@ -44,11 +44,11 @@
 
 - [ ] Create ESP32 firmware and Raspberry Pi setup software.
 - [ ] Add the firmware source, even if initially untested.
-- [ ] Create a public GitHub repository.
-- [ ] Organize it into `CAD/`, `PCB/`, `Firmware/`, and `production/`.
-- [ ] Put a linked `BOM.csv` in the repository root.
+- [x] Create a public GitHub repository.
+- [x] Organize it into `CAD/`, `PCB/`, `Firmware/`, and `production/`.
+- [x] Put a linked `BOM.csv` in the repository root.
 - [ ] Write a README in your own words with description, motivation, instructions, CAD render, PCB/schematic/wiring images, and BOM table.
-- [ ] Add a license and `.gitignore`.
+- [x] Add a license and `.gitignore`.
 - [ ] Verify repository paths and links from GitHub.
 
 ## Stardance submission evidence
@@ -65,4 +65,3 @@
 3. Firmware, public GitHub repo, root `BOM.csv`, human-written README, production Gerbers, feedback, and work log remain outstanding.
 
 The official Stardance hardware guide requires a complete CAD assembly with electronics in STEP format, PCB source, firmware, a linked root-level BOM CSV, a completed human-written README, and feedback. [Official guide](https://stardance.hackclub.com/resources/shipping-hardware)
-
