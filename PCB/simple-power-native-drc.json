@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "errors": 0,
+  "native_nets_connected": 72,
+  "native_nets_total": 72,
+  "functional_nets": 17,
+  "intentional_singleton_NC_nets": 55,
+  "native_count_explanation": "EasyEDA lists 17 connected functional nets plus 55 intentional isolated NC pad nets, for 72/72. The saved schematic explicitly marks the 55 pins NC; native pin verification confirms each is a singleton with no copper.",
+  "source": "C:\\Users\\matth\\Documents\\Codex\\2026-09-29\\cyberdeck-electrical-engineering\\outputs\\pcb-simple-power-native.json",
+  "source_sha256": "14c6ba430bfcb49659fa3ca9d57fee9c3092dd0da13f206e33ee1388b886b47c",
+  "pin_verification": "C:\\Users\\matth\\Documents\\Codex\\2026-09-29\\cyberdeck-electrical-engineering\\outputs\\simple-power-native-verification.json",
+  "pin_verification_sha256": "27e9630cd52b7e239c17d9181f5a2ec0dcec1e60080c0f8e6f7ba3839fc795e9",
+  "screenshot": "C:\\Users\\matth\\Documents\\Codex\\2026-09-29\\cyberdeck-electrical-engineering\\outputs\\pcb-simple-power-drc.jpg",
+  "screenshot_sha256": "6df558b8d66e4d976f7b5fb9c79b29e5195a2717b13438f55762bf1dec2e1283",
+  "accessibility_evidence": "C:\\Users\\matth\\Documents\\Codex\\2026-09-29\\cyberdeck-electrical-engineering\\work\\simple-power-native-drc.txt",
+  "accessibility_sha256": "bab14a121651ba802774231b5deca1f4afcc6966479cb2d15de61282d43a12d0",
+  "method": "EasyEDA Standard 6.5.51 Design > Check DRC completed in the native application; counts parsed from captured accessibility state. Saved native source was exported immediately afterward with no design edits.",
+  "scope": "Native PCB design-rule and connectivity check. Not assembled fit, electrical load, thermal or RF testing."
+}

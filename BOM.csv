@@ -1,0 +1,26 @@
+Part,Quantity,Status,Unit_USD,Source,Role_or_note
+Chameleon Ultra SE3,1,Selected,39.99,https://shop.mtoolstec.com/product/chameleon-ultra-se3,Owned-hardware RFID/NFC development module; BLE protocol still needs verification
+ATNSINC nRF24L01+ PA/LNA radio kit,1,Selected,9.99,https://www.amazon.com/dp/B08R9F11D1,Two 2.4 GHz radios with antennas and regulator adapters
+ELEGOO breadboard and component kit,1,Optional,9.99,https://www.amazon.com/dp/B01ERP6WL4,Through-hole capacitors and resistors subject to fit check
+ALFA AWUS036ACS USB Wi-Fi adapter,1,Selected,26.97,https://store.rokland.com/products/alfa-awus036acs-802-11ac-ac600-dual-band-wifi-usb-adapter-rp-sma,Pi USB dual-band Wi-Fi adapter
+LILYGO T-Display-S3 AMOLED,1,Owned,0,https://github.com/Xinyuan-LilyGO/T-Display-S3-AMOLED,ESP32-S3 controller and local display; exact revision to confirm
+Raspberry Pi Zero 2 W,1,Owned,0,https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/,Linux host; exact owned variant to confirm
+Waveshare USB HUB HAT SKU12694,1,Owned,0,https://www.waveshare.com/usb-hub-hat.htm,Four-port USB hub mounted beside Pi under keyboard
+Waveshare 3.5 inch HDMI LCD SKU12824,1,Selected,31.99,https://www.waveshare.com/3.5inch-hdmi-lcd.htm,Pi main display; exact connector depth and touch use to verify
+M5Stack CardKB v1.1,1,Selected,7.95,https://shop.m5stack.com/products/cardkb-mini-keyboard-programmable-unit-v1-1-mega8a,I2C keyboard through Adafruit level shifter
+Miady 10000 mAh power-bank two-pack,1,Selected,19.97,https://www.amazon.com/dp/B0GQH1QHDH,Separate intact USB cables power main devices; total bank rating must be tested
+Adafruit BSS138 I2C level shifter 757,1,Selected,3.95,https://www.adafruit.com/product/757,CardKB 5 V to ESP32 3.3 V I2C level shifting
+Adafruit I2C rotary encoder 5880,1,Selected,4.95,https://www.adafruit.com/product/5880,Case-mounted I2C encoder at planned address 0x36
+Adafruit IR Remote Transceiver 5990,1,Selected,5.95,https://www.adafruit.com/product/5990,Wired IR receive/transmit module at side opening
+Pololu D24V10F3 step-down regulator 2830,1,Selected,9.95,https://www.pololu.com/product/2830,External preassembled 3.3 V peripheral regulator; measure load and temperature
+100 nF through-hole capacitors,4,Required,0,https://www.digikey.com/en/products/detail/kemet/C315C104K5R5TA/12701330,C1 C2 C5 C7; use kit parts only if physical pitch fits
+10 uF through-hole electrolytic capacitors,4,Required,0,https://www.digikey.com/en/products/detail/panasonic-industry/EEA-GA1V100/2504583,C3 C4 C6 C8; pad 1 positive
+10 kOhm axial resistors,4,Required,0,https://www.digikey.com/,R1 R2 R3 R4; select lead pitch to fit PCB
+M2.5 nylon standoff kit,1,Selected,9.99,https://www.amazon.com/dp/B0FPMC9917,Pi and HAT support with electrical insulation
+M3 standoff and screw kit,1,Selected,9.99,https://www.amazon.com/dp/B0FBMFBQHQ,Carrier and frame hardware; use insulating washers where metal can contact copper
+Mini-HDMI to HDMI cable,1,Required,5.95,https://www.adafruit.com/product/2775,Pi to HDMI LCD; select final length after enclosure test
+USB-A to micro-USB data cable,1,Required,2.95,https://www.adafruit.com/product/898,Pi USB host to Waveshare HUB HAT data connection
+USB-C data and power cables,2,If_needed,4.95,https://www.adafruit.com/product/4474,ESP32 programming and main-device power as required
+Pi Zero adapter kit,1,If_needed,6.95,https://www.pishop.us/product/raspberry-pi-zero-adapter-kit/,OTG cable GPIO header and mini-HDMI adapter
+Custom 190x110 mm carrier PCB,1,To_quote,TBD,https://jlcpcb.com/,Order only after physical fit check and final Gerber export
+3D printed enclosure,1,To_quote,TBD,local CAD source,Print only after Fusion assembly and physical fit checks

@@ -1,0 +1,183 @@
+#include <Arduino.h>
+#include <Wire.h>
+#include <SPI.h>
+#include <RF24.h>
+#include <Adafruit_seesaw.h>
+#include <IRremote.hpp>
+
+#include "cyberdeck_pins.h"
+
+// This firmware is deliberately a bring-up scaffold. It provides one serial
+// protocol for the Pi and starts every peripheral in a safe idle state.
+// Do not connect or power a signal harness while its source rail is off.
+
+using namespace CyberdeckPins;
+
+RF24 radio1(RADIO1_CE, RADIO1_CSN);
+RF24 radio2(RADIO2_CE, RADIO2_CSN);
+Adafruit_seesaw encoder;
+
+const uint8_t RADIO1_ADDRESS[6] = "CDR1";
+const uint8_t RADIO2_ADDRESS[6] = "CDR2";
+bool radio1Ready = false;
+bool radio2Ready = false;
+bool encoderReady = false;
+int32_t encoderPosition = 0;
+
+char commandBuffer[128];
+size_t commandLength = 0;
+unsigned long lastScanMs = 0;
+
+void event(const char *type, const char *detail) {
+  Serial.printf("{\"type\":\"%s\",\"detail\":\"%s\"}\n", type, detail);
+}
+
+void eventNumber(const char *type, int32_t value) {
+  Serial.printf("{\"type\":\"%s\",\"value\":%ld}\n", type, static_cast<long>(value));
+}
+
+bool configureRadio(RF24 &radio, const uint8_t *address, const char *name) {
+  if (!radio.begin(&SPI)) {
+    event("radio_error", name);
+    return false;
+  }
+  radio.setPALevel(RF24_PA_MIN);       // Begin at the lowest transmit power.
+  radio.setDataRate(RF24_1MBPS);
+  radio.setChannel(76);
+  radio.setRetries(5, 15);
+  radio.openWritingPipe(address);
+  radio.openReadingPipe(1, address);
+  radio.startListening();
+  event("radio_ready", name);
+  return true;
+}
+
+void sendRadio(RF24 &radio, bool ready, const char *name, const char *payload) {
+  if (!ready) {
+    event("radio_error", "not_ready");
+    return;
+  }
+  char packet[32] = {};
+  strncpy(packet, payload, sizeof(packet) - 1);
+  radio.stopListening();
+  const bool sent = radio.write(packet, sizeof(packet));
+  radio.startListening();
+  event(sent ? "radio_sent" : "radio_failed", name);
+}
+
+void pollRadio(RF24 &radio, bool ready, const char *name) {
+  if (!ready || !radio.available()) return;
+  char packet[32] = {};
+  radio.read(packet, sizeof(packet));
+  Serial.printf("{\"type\":\"radio_rx\",\"radio\":\"%s\",\"payload\":\"%s\"}\n", name, packet);
+}
+
+void pollCardKB() {
+  Wire.requestFrom(CARDKB_ADDRESS, static_cast<uint8_t>(1));
+  if (!Wire.available()) return;
+  const uint8_t key = Wire.read();
+  if (key != 0) eventNumber("key", key);
+}
+
+void pollEncoder() {
+  if (!encoderReady) return;
+  const int32_t position = encoder.getEncoderPosition();
+  if (position == encoderPosition) return;
+  eventNumber("encoder_delta", position - encoderPosition);
+  encoderPosition = position;
+}
+
+void pollIrReceiver() {
+  if (!IrReceiver.decode()) return;
+  Serial.printf("{\"type\":\"ir_rx\",\"protocol\":%u,\"address\":%u,\"command\":%u}\n",
+                static_cast<unsigned>(IrReceiver.decodedIRData.protocol),
+                static_cast<unsigned>(IrReceiver.decodedIRData.address),
+                static_cast<unsigned>(IrReceiver.decodedIRData.command));
+  IrReceiver.resume();
+}
+
+void reportStatus() {
+  Serial.printf("{\"type\":\"status\",\"radio1\":%s,\"radio2\":%s,\"encoder\":%s}\n",
+                radio1Ready ? "true" : "false", radio2Ready ? "true" : "false",
+                encoderReady ? "true" : "false");
+}
+
+void handleCommand(const char *command) {
+  if (strcmp(command, "PING") == 0) {
+    event("pong", "cyberdeck");
+  } else if (strcmp(command, "STATUS") == 0) {
+    reportStatus();
+  } else if (strncmp(command, "RADIO1:", 7) == 0) {
+    sendRadio(radio1, radio1Ready, "radio1", command + 7);
+  } else if (strncmp(command, "RADIO2:", 7) == 0) {
+    sendRadio(radio2, radio2Ready, "radio2", command + 7);
+  } else if (strncmp(command, "IR_NEC:", 7) == 0) {
+    // Format: IR_NEC:ADDRESS:COMMAND, both hexadecimal, for example IR_NEC:00FF:12ED.
+    unsigned int address = 0;
+    unsigned int irCommand = 0;
+    if (sscanf(command + 7, "%x:%x", &address, &irCommand) == 2) {
+      IrSender.sendNEC(address, irCommand, 0);
+      event("ir_sent", "nec");
+    } else {
+      event("command_error", "bad_ir_nec");
+    }
+  } else {
+    event("command_error", "unknown");
+  }
+}
+
+void pollUsbSerial() {
+  while (Serial.available()) {
+    const char c = static_cast<char>(Serial.read());
+    if (c == '\r') continue;
+    if (c == '\n') {
+      commandBuffer[commandLength] = '\0';
+      if (commandLength > 0) handleCommand(commandBuffer);
+      commandLength = 0;
+    } else if (commandLength < sizeof(commandBuffer) - 1) {
+      commandBuffer[commandLength++] = c;
+    } else {
+      commandLength = 0;
+      event("command_error", "too_long");
+    }
+  }
+}
+
+void setup() {
+  Serial.begin(115200);
+  delay(250);
+  event("boot", "cyberdeck_esp32");
+
+  Wire.begin(I2C_SDA, I2C_SCL, I2C_CLOCK_HZ);
+  SPI.begin(RADIO_SCK, RADIO_MISO, RADIO_MOSI, RADIO1_CSN);
+  radio1Ready = configureRadio(radio1, RADIO1_ADDRESS, "radio1");
+  radio2Ready = configureRadio(radio2, RADIO2_ADDRESS, "radio2");
+
+  encoderReady = encoder.begin(ENCODER_ADDRESS);
+  if (encoderReady) {
+    encoderPosition = encoder.getEncoderPosition();
+    event("encoder_ready", "0x36");
+  } else {
+    event("encoder_error", "0x36");
+  }
+
+  IrReceiver.begin(IR_RX, DISABLE_LED_FEEDBACK);
+  IrSender.begin(IR_TX, DISABLE_LED_FEEDBACK);
+  event("ir_ready", "rx39_tx40");
+  reportStatus();
+}
+
+void loop() {
+  pollUsbSerial();
+  pollCardKB();
+  pollEncoder();
+  pollIrReceiver();
+  pollRadio(radio1, radio1Ready, "radio1");
+  pollRadio(radio2, radio2Ready, "radio2");
+
+  if (millis() - lastScanMs >= 5000) {
+    lastScanMs = millis();
+    reportStatus();
+  }
+}
+

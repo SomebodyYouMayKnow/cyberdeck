@@ -1,0 +1,15 @@
+*.pdf binary
+*.xlsx binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.svg text
+*.dxf text
+*.scad text
+*.json text
+*.csv text
+*.md text
+*.py text
+*.cpp text
+*.h text
+*.ini text

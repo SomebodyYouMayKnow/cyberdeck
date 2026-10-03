@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1224" height="744" viewBox="0 0 204 124">
+  <style>
+    text{font-family:Arial,sans-serif;fill:#e8eef7;font-size:3px}.small{font-size:2.2px}.note{fill:#aab8cc;font-size:2px}.label{font-weight:bold}.dim{stroke:#8fa5c5;stroke-width:.35;fill:none}.pcb{fill:#133a64;stroke:#79a8d8;stroke-width:.55}.case{fill:#111821;stroke:#e8eef7;stroke-width:.7}.keyboard{fill:#202832;stroke:#cdd8e5;stroke-width:.45}.hat{fill:#3d6fb5;stroke:#b7d5ff;stroke-width:.45}.pi{fill:#2b7a53;stroke:#b9f2cf;stroke-width:.45}.esp{fill:#764b89;stroke:#edc6ff;stroke-width:.45}.cham{fill:#9a5b1b;stroke:#ffd090;stroke-width:.45}.lcd{fill:#111;stroke:#85f1ff;stroke-width:.55}.window{fill:#151b27;stroke:#ecb4ff;stroke-width:.5}.mount{fill:#f4d35e;stroke:#111821;stroke-width:.35}.channel{stroke:#f3a7a7;stroke-width:1.4;fill:none}.hatch{fill:#202a38;stroke:#a6bad7;stroke-width:.45}
+  </style>
+  <rect class="case" x="0.5" y="0.5" width="203" height="123" rx="8"/>
+  <rect class="pcb" x="7" y="7" width="190" height="110" rx="5"/>
+  <text x="8" y="12" class="label">190 × 110 carrier PCB</text>
+  <!-- top arrangement -->
+  <rect class="keyboard" x="15" y="50" width="88" height="54" rx="2"/>
+  <text x="42" y="77" class="label">CardKB</text><text x="40" y="81" class="small">88 × 54 reserve</text>
+  <rect class="pi" x="117" y="39" width="30" height="65" rx="2"/>
+  <text x="120" y="70" class="label">Pi Zero 2</text>
+  <rect class="esp" x="160" y="39" width="25.5" height="60" rx="2"/>
+  <text x="163" y="64" class="label">LILYGO</text><text x="164" y="68" class="small">AMOLED</text>
+  <rect class="hat" x="27" y="69.5" width="65" height="30" rx="2"/>
+  <text x="46" y="83" class="label">USB HAT</text><text x="42" y="87" class="small">under keyboard</text>
+  <rect class="hatch" x="33.6" y="92" width="51.8" height="8" rx="1"/>
+  <text x="43" y="97" class="small">header slot</text>
+  <!-- fixture and control positions -->
+  <circle cx="188" cy="108" r="3.6" fill="#1c2735" stroke="#e8eef7" stroke-width=".4"/>
+  <text x="174" y="116" class="small">encoder</text>
+  <rect x="145" y="103" width="14" height="6" rx="1" fill="#1c2735" stroke="#e8eef7" stroke-width=".4"/>
+  <text x="142" y="116" class="small">peripheral switch</text>
+  <rect x="1" y="84" width="5" height="10" fill="#1c2735" stroke="#e8eef7" stroke-width=".4"/>
+  <text x="8" y="91" class="small">wired IR opening</text>
+  <!-- mount holes -->
+  <g class="mount"><circle cx="12" cy="12" r="1.6"/><circle cx="62" cy="12" r="1.6"/><circle cx="192" cy="12" r="1.6"/><circle cx="12" cy="112" r="1.6"/><circle cx="106" cy="112" r="1.6"/><circle cx="192" cy="112" r="1.6"/><circle cx="12" cy="45" r="1.6"/><circle cx="106" cy="45" r="1.6"/><circle cx="160" cy="39" r="1.6"/><circle cx="193" cy="39" r="1.6"/><circle cx="160" cy="105" r="1.6"/><circle cx="193" cy="105" r="1.6"/></g>
+  <!-- cable channel -->
+  <path class="channel" d="M20 14 H125 M20 14 V43 M140 14 V36"/>
+  <text x="48" y="18" class="note">rear hinge cable channel / strain-relief tie points</text>
+  <!-- outer antenna points -->
+  <path class="dim" d="M8 4 l-6 -5 M196 4 l6 -5 M102 3 V-3"/>
+  <text x="2" y="3" class="small">nRF24</text><text x="184" y="3" class="small">nRF24</text><text x="94" y="3" class="small">Wi-Fi</text>
+  <text x="8" y="121" class="note">Top view: hinge at top. The HAT and Pi are inside; the keyboard frame covers the left section.</text>
+</svg>

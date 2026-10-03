@@ -1,0 +1,1842 @@
+{
+  "schema_version": 1,
+  "title": "CYBERDECK SIMPLE POWER WIRING MAP",
+  "status": "NATIVE_EXPORT_ASSIGNMENTS_VERIFIED",
+  "generated_utc": "2026-10-03T04:33:28.627593+00:00",
+  "sources": {
+    "outputs/schematic-simple-power-native.json": "1861b7872267eff313ba5267874894d55dfa8f3b06d74e385273eb774742225c",
+    "outputs/pcb-simple-power-native.json": "14c6ba430bfcb49659fa3ca9d57fee9c3092dd0da13f206e33ee1388b886b47c",
+    "work/simple-peripherals-component-map.json": "58d2b779711a2a97318d4067444a9b429520f63a5a96270ed082f26117d4516f"
+  },
+  "verification_report": "outputs/simple-power-native-verification.json",
+  "counts": {
+    "component_count": 21,
+    "electrical_pin_count": 132,
+    "connected_pin_count": 77,
+    "no_connect_pin_count": 55,
+    "net_count": 17,
+    "schematic_component_count": 21,
+    "schematic_pin_count": 132,
+    "explicit_NC_mark_count": 55,
+    "PCB_component_count": 21,
+    "PCB_electrical_pad_count": 132,
+    "PCB_mechanical_Pi_pad_count": 4,
+    "PCB_total_pad_count": 136
+  },
+  "components": [
+    {
+      "ref": "A1",
+      "value": "ESP32-S3-AMOLED-1.91",
+      "component_id": "gged35c19f03e901e1f",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "3V3",
+          "net": "ESP3V3",
+          "no_connect": false,
+          "symbol_pin_id": "gge4114"
+        },
+        {
+          "number": "2",
+          "name": "01",
+          "net": "SDA_LV",
+          "no_connect": false,
+          "symbol_pin_id": "gge4135"
+        },
+        {
+          "number": "3",
+          "name": "02",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge4156"
+        },
+        {
+          "number": "4",
+          "name": "03",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge4177"
+        },
+        {
+          "number": "5",
+          "name": "10",
+          "net": "RADIO1_CSN",
+          "no_connect": false,
+          "symbol_pin_id": "gge4198"
+        },
+        {
+          "number": "6",
+          "name": "11",
+          "net": "RADIO_MOSI",
+          "no_connect": false,
+          "symbol_pin_id": "gge4219"
+        },
+        {
+          "number": "7",
+          "name": "12",
+          "net": "RADIO_SCK",
+          "no_connect": false,
+          "symbol_pin_id": "gge4240"
+        },
+        {
+          "number": "8",
+          "name": "13",
+          "net": "RADIO_MISO",
+          "no_connect": false,
+          "symbol_pin_id": "gge4261"
+        },
+        {
+          "number": "9",
+          "name": "14",
+          "net": "RADIO1_CE",
+          "no_connect": false,
+          "symbol_pin_id": "gge4282"
+        },
+        {
+          "number": "10",
+          "name": "15",
+          "net": "RADIO2_CSN",
+          "no_connect": false,
+          "symbol_pin_id": "gge4303"
+        },
+        {
+          "number": "11",
+          "name": "GND",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge4324"
+        },
+        {
+          "number": "12",
+          "name": "VSYS",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge4345"
+        },
+        {
+          "number": "13",
+          "name": "VSYS",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge4366"
+        },
+        {
+          "number": "14",
+          "name": "16",
+          "net": "RADIO2_CE",
+          "no_connect": false,
+          "symbol_pin_id": "gge4387"
+        },
+        {
+          "number": "15",
+          "name": "39",
+          "net": "IR_RX",
+          "no_connect": false,
+          "symbol_pin_id": "gge4408"
+        },
+        {
+          "number": "16",
+          "name": "3V3",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge4429"
+        },
+        {
+          "number": "17",
+          "name": "3V3",
+          "net": "ESP3V3",
+          "no_connect": false,
+          "symbol_pin_id": "gge4450"
+        },
+        {
+          "number": "18",
+          "name": "GND",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge4471"
+        },
+        {
+          "number": "19",
+          "name": "GND",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge4492"
+        },
+        {
+          "number": "20",
+          "name": "40",
+          "net": "IR_TX",
+          "no_connect": false,
+          "symbol_pin_id": "gge4513"
+        },
+        {
+          "number": "21",
+          "name": "41",
+          "net": "SCL_LV",
+          "no_connect": false,
+          "symbol_pin_id": "gge4534"
+        },
+        {
+          "number": "22",
+          "name": "42",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge4555"
+        },
+        {
+          "number": "23",
+          "name": "43",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge4576"
+        },
+        {
+          "number": "24",
+          "name": "44",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge4597"
+        },
+        {
+          "number": "25",
+          "name": "45",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge4618"
+        },
+        {
+          "number": "26",
+          "name": "46",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge4639"
+        },
+        {
+          "number": "27",
+          "name": "GND",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge4660"
+        },
+        {
+          "number": "28",
+          "name": "GND",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge4681"
+        }
+      ]
+    },
+    {
+      "ref": "C1",
+      "value": "100nF",
+      "component_id": "ggeca4de4700ee065dc",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "3V3_AUX",
+          "no_connect": false,
+          "symbol_pin_id": "gge13879"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge13900"
+        }
+      ]
+    },
+    {
+      "ref": "C2",
+      "value": "100nF",
+      "component_id": "ggee83d505374825c8b",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "3V3_AUX",
+          "no_connect": false,
+          "symbol_pin_id": "gge13951"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge13972"
+        }
+      ]
+    },
+    {
+      "ref": "C3",
+      "value": "10uF",
+      "component_id": "ggecba382aa17f93048",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "3V3_AUX",
+          "no_connect": false,
+          "symbol_pin_id": "gge14224"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge14245"
+        }
+      ]
+    },
+    {
+      "ref": "C4",
+      "value": "10uF",
+      "component_id": "gge207d32f59b0b0d8e",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "3V3_AUX",
+          "no_connect": false,
+          "symbol_pin_id": "gge14302"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge14323"
+        }
+      ]
+    },
+    {
+      "ref": "C5",
+      "value": "100nF",
+      "component_id": "gge89af724020325cc6acc0",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+5V_EXT",
+          "no_connect": false,
+          "symbol_pin_id": "ggeff1ac1534dde56fd921f"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "ggeeb956dc72e6650438a58"
+        }
+      ]
+    },
+    {
+      "ref": "C6",
+      "value": "10uF",
+      "component_id": "ggeb1c28745395c54d7b0cd",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "+5V_EXT",
+          "no_connect": false,
+          "symbol_pin_id": "ggea4f1663b55485b16a490"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge983ea134883955668f45"
+        }
+      ]
+    },
+    {
+      "ref": "C7",
+      "value": "100nF",
+      "component_id": "gge2c58aebafc1753b3b7ef",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "3V3_AUX",
+          "no_connect": false,
+          "symbol_pin_id": "ggeeda64686770d5f2fba50"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge1ccb5f938c8a5f339f3d"
+        }
+      ]
+    },
+    {
+      "ref": "C8",
+      "value": "10uF",
+      "component_id": "gge1a303ce317635af09187",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "3V3_AUX",
+          "no_connect": false,
+          "symbol_pin_id": "ggea29fcef785a4579b8358"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "ggec43bac49cc5c5770bc0e"
+        }
+      ]
+    },
+    {
+      "ref": "IC1",
+      "value": "NRF24L01",
+      "component_id": "ggeb1f7200842a9e1c9",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "GND",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge12874"
+        },
+        {
+          "number": "2",
+          "name": "VCC",
+          "net": "3V3_AUX",
+          "no_connect": false,
+          "symbol_pin_id": "gge12895"
+        },
+        {
+          "number": "3",
+          "name": "CE",
+          "net": "RADIO1_CE",
+          "no_connect": false,
+          "symbol_pin_id": "gge12916"
+        },
+        {
+          "number": "4",
+          "name": "CSN",
+          "net": "RADIO1_CSN",
+          "no_connect": false,
+          "symbol_pin_id": "gge12937"
+        },
+        {
+          "number": "5",
+          "name": "SCK",
+          "net": "RADIO_SCK",
+          "no_connect": false,
+          "symbol_pin_id": "gge12958"
+        },
+        {
+          "number": "6",
+          "name": "MOSI",
+          "net": "RADIO_MOSI",
+          "no_connect": false,
+          "symbol_pin_id": "gge12979"
+        },
+        {
+          "number": "7",
+          "name": "MISO",
+          "net": "RADIO_MISO",
+          "no_connect": false,
+          "symbol_pin_id": "gge13000"
+        },
+        {
+          "number": "8",
+          "name": "IRQ",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge13021"
+        }
+      ]
+    },
+    {
+      "ref": "IC2",
+      "value": "NRF24L01",
+      "component_id": "gge4fef22435443c364",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "GND",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge13099"
+        },
+        {
+          "number": "2",
+          "name": "VCC",
+          "net": "3V3_AUX",
+          "no_connect": false,
+          "symbol_pin_id": "gge13120"
+        },
+        {
+          "number": "3",
+          "name": "CE",
+          "net": "RADIO2_CE",
+          "no_connect": false,
+          "symbol_pin_id": "gge13141"
+        },
+        {
+          "number": "4",
+          "name": "CSN",
+          "net": "RADIO2_CSN",
+          "no_connect": false,
+          "symbol_pin_id": "gge13162"
+        },
+        {
+          "number": "5",
+          "name": "SCK",
+          "net": "RADIO_SCK",
+          "no_connect": false,
+          "symbol_pin_id": "gge13183"
+        },
+        {
+          "number": "6",
+          "name": "MOSI",
+          "net": "RADIO_MOSI",
+          "no_connect": false,
+          "symbol_pin_id": "gge13204"
+        },
+        {
+          "number": "7",
+          "name": "MISO",
+          "net": "RADIO_MISO",
+          "no_connect": false,
+          "symbol_pin_id": "gge13225"
+        },
+        {
+          "number": "8",
+          "name": "IRQ",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge13246"
+        }
+      ]
+    },
+    {
+      "ref": "JP1",
+      "value": "Adafruit 5990 IR RX/TX module",
+      "component_id": "gge77ad37ec3d1c399b",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "IRout",
+          "net": "IR_TX",
+          "no_connect": false,
+          "symbol_pin_id": "gge24757"
+        },
+        {
+          "number": "2",
+          "name": "IRin",
+          "net": "IR_RX",
+          "no_connect": false,
+          "symbol_pin_id": "gge24778"
+        },
+        {
+          "number": "3",
+          "name": "GND",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge24799"
+        },
+        {
+          "number": "4",
+          "name": "VIN",
+          "net": "3V3_AUX",
+          "no_connect": false,
+          "symbol_pin_id": "gge24820"
+        }
+      ]
+    },
+    {
+      "ref": "JP2",
+      "value": "REGULATED POWER INPUT",
+      "component_id": "ggeb6e5d994fcd05bd78aeb",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "+5V_EXT",
+          "net": "+5V_EXT",
+          "no_connect": false,
+          "symbol_pin_id": "gge09c4041b9dc45444a961"
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "ggecd772307860453de80e1"
+        },
+        {
+          "number": "3",
+          "name": "3V3_AUX",
+          "net": "3V3_AUX",
+          "no_connect": false,
+          "symbol_pin_id": "ggeaec1223f7dbb51cdb820"
+        },
+        {
+          "number": "4",
+          "name": "GND",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge7db3253622415f2e8e5d"
+        }
+      ]
+    },
+    {
+      "ref": "JP3",
+      "value": "WIRED ADAFRUIT 757 I2C SHIFTER",
+      "component_id": "gge61fb284b4615527dbd28d442",
+      "mpn": "THROUGH-HOLE WIRE HARNESS",
+      "footprint_definition": "HDR_1X8_THT_2P54",
+      "notes": [
+        "External assembled Adafruit757; no loose SMD on carrier.",
+        "757 includes 10k pullups; no carrier Q1/Q2/R5/R6/R7/R8. Channels3/4 unused."
+      ],
+      "pins": [
+        {
+          "number": "1",
+          "name": "GND",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge522a103c4c6b5147900598ed"
+        },
+        {
+          "number": "2",
+          "name": "LV",
+          "net": "ESP3V3",
+          "no_connect": false,
+          "symbol_pin_id": "ggeb16503f8c9b55bf286c29bf4"
+        },
+        {
+          "number": "3",
+          "name": "HV",
+          "net": "+5V_EXT",
+          "no_connect": false,
+          "symbol_pin_id": "gge85ed98e00985587686496a92"
+        },
+        {
+          "number": "4",
+          "name": "A1 SDA",
+          "net": "SDA_LV",
+          "no_connect": false,
+          "symbol_pin_id": "gged409fc16a7f05923abd4c72d"
+        },
+        {
+          "number": "5",
+          "name": "B1 SDA",
+          "net": "KB_SDA",
+          "no_connect": false,
+          "symbol_pin_id": "gge10e6538ee69d53a2b76363c6"
+        },
+        {
+          "number": "6",
+          "name": "A2 SCL",
+          "net": "SCL_LV",
+          "no_connect": false,
+          "symbol_pin_id": "gge2b7bb0263c1356eca41c7250"
+        },
+        {
+          "number": "7",
+          "name": "B2 SCL",
+          "net": "KB_SCL",
+          "no_connect": false,
+          "symbol_pin_id": "ggefc6c4d9ad36f5ed2945a7cb9"
+        },
+        {
+          "number": "8",
+          "name": "GND",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge42a31d65bf035446af5cf67d"
+        }
+      ]
+    },
+    {
+      "ref": "JP8",
+      "value": "WIRED ADAFRUIT 5880 ENCODER",
+      "component_id": "ggeaa561e8158e35e52a11fe8b1",
+      "mpn": "THROUGH-HOLE WIRE HARNESS",
+      "footprint_definition": "HDR_1X4_THT_2P54",
+      "notes": [
+        "Case-mounted preassembled I2C encoder; carrier is harness only."
+      ],
+      "pins": [
+        {
+          "number": "1",
+          "name": "GND",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "ggee613208a4c775b13bd85df4b"
+        },
+        {
+          "number": "2",
+          "name": "3V3",
+          "net": "ESP3V3",
+          "no_connect": false,
+          "symbol_pin_id": "ggeaa575ea791855cb48692286a"
+        },
+        {
+          "number": "3",
+          "name": "SDA",
+          "net": "SDA_LV",
+          "no_connect": false,
+          "symbol_pin_id": "ggee4e467f5d6235ddbb335d2f3"
+        },
+        {
+          "number": "4",
+          "name": "SCL",
+          "net": "SCL_LV",
+          "no_connect": false,
+          "symbol_pin_id": "gge2e02b4a90df0584f81185792"
+        }
+      ]
+    },
+    {
+      "ref": "PI1",
+      "value": "Raspberry Pi Zero 2 W",
+      "component_id": "gge97d7393dda2920b4",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "3V3",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10555"
+        },
+        {
+          "number": "2",
+          "name": "5V",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11374"
+        },
+        {
+          "number": "3",
+          "name": "GPIO2 sda",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10576"
+        },
+        {
+          "number": "4",
+          "name": "5V",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11353"
+        },
+        {
+          "number": "5",
+          "name": "GPIO3 scl",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10597"
+        },
+        {
+          "number": "6",
+          "name": "GND",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11332"
+        },
+        {
+          "number": "7",
+          "name": "GPIO4",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10618"
+        },
+        {
+          "number": "8",
+          "name": "tx GPIO14",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11311"
+        },
+        {
+          "number": "9",
+          "name": "GND",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10639"
+        },
+        {
+          "number": "10",
+          "name": "rx GPIO15",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11290"
+        },
+        {
+          "number": "11",
+          "name": "GPIO17",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10660"
+        },
+        {
+          "number": "12",
+          "name": "pwm0 GPIO18",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11269"
+        },
+        {
+          "number": "13",
+          "name": "GPIO27",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10681"
+        },
+        {
+          "number": "14",
+          "name": "GND",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11248"
+        },
+        {
+          "number": "15",
+          "name": "GPIO22",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10702"
+        },
+        {
+          "number": "16",
+          "name": "GPIO23",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11227"
+        },
+        {
+          "number": "17",
+          "name": "3V3",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10723"
+        },
+        {
+          "number": "18",
+          "name": "GPIO24",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11206"
+        },
+        {
+          "number": "19",
+          "name": "GPIO10 mosi",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10744"
+        },
+        {
+          "number": "20",
+          "name": "GND",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11185"
+        },
+        {
+          "number": "21",
+          "name": "GPIO9 miso",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10765"
+        },
+        {
+          "number": "22",
+          "name": "GPIO25",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11164"
+        },
+        {
+          "number": "23",
+          "name": "GPIO11 sck",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10786"
+        },
+        {
+          "number": "24",
+          "name": "cs0 GPIO8",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11143"
+        },
+        {
+          "number": "25",
+          "name": "GND",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10807"
+        },
+        {
+          "number": "26",
+          "name": "cs1 GPIO7",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11122"
+        },
+        {
+          "number": "27",
+          "name": "eeprom sda",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10828"
+        },
+        {
+          "number": "28",
+          "name": "eeprom scl",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11101"
+        },
+        {
+          "number": "29",
+          "name": "GPIO5",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10849"
+        },
+        {
+          "number": "30",
+          "name": "GND",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11080"
+        },
+        {
+          "number": "31",
+          "name": "GPIO6",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10870"
+        },
+        {
+          "number": "32",
+          "name": "pwm0 GPIO12",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11059"
+        },
+        {
+          "number": "33",
+          "name": "GPIO13 pwm1",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10891"
+        },
+        {
+          "number": "34",
+          "name": "GND",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11038"
+        },
+        {
+          "number": "35",
+          "name": "GPIO19 pwm1",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10912"
+        },
+        {
+          "number": "36",
+          "name": "GPIO16",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge11017"
+        },
+        {
+          "number": "37",
+          "name": "GPIO26",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10933"
+        },
+        {
+          "number": "38",
+          "name": "GPIO20",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10996"
+        },
+        {
+          "number": "39",
+          "name": "GND",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10954"
+        },
+        {
+          "number": "40",
+          "name": "GPIO21",
+          "net": null,
+          "no_connect": true,
+          "symbol_pin_id": "gge10975"
+        }
+      ]
+    },
+    {
+      "ref": "R1",
+      "value": "10k",
+      "component_id": "gge30020",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "RADIO1_CSN",
+          "no_connect": false,
+          "symbol_pin_id": "gge30024"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "3V3_AUX",
+          "no_connect": false,
+          "symbol_pin_id": "gge30025"
+        }
+      ]
+    },
+    {
+      "ref": "R2",
+      "value": "10k",
+      "component_id": "gge30030",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "RADIO1_CE",
+          "no_connect": false,
+          "symbol_pin_id": "gge30034"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge30035"
+        }
+      ]
+    },
+    {
+      "ref": "R3",
+      "value": "10k",
+      "component_id": "gge30040",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "RADIO2_CSN",
+          "no_connect": false,
+          "symbol_pin_id": "gge30044"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "3V3_AUX",
+          "no_connect": false,
+          "symbol_pin_id": "gge30045"
+        }
+      ]
+    },
+    {
+      "ref": "R4",
+      "value": "10k",
+      "component_id": "gge30050",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "RADIO2_CE",
+          "no_connect": false,
+          "symbol_pin_id": "gge30054"
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge30055"
+        }
+      ]
+    },
+    {
+      "ref": "U1",
+      "value": "CardKB Module",
+      "component_id": "gge51eda74d3f7c17e6",
+      "footprint_definition": null,
+      "pins": [
+        {
+          "number": "1",
+          "name": "GND",
+          "net": "GND",
+          "no_connect": false,
+          "symbol_pin_id": "gge24586"
+        },
+        {
+          "number": "2",
+          "name": "VCC",
+          "net": "+5V_EXT",
+          "no_connect": false,
+          "symbol_pin_id": "gge24565"
+        },
+        {
+          "number": "3",
+          "name": "SDA",
+          "net": "KB_SDA",
+          "no_connect": false,
+          "symbol_pin_id": "gge24544"
+        },
+        {
+          "number": "4",
+          "name": "SCL",
+          "net": "KB_SCL",
+          "no_connect": false,
+          "symbol_pin_id": "gge24523"
+        }
+      ]
+    }
+  ],
+  "nets": {
+    "+5V_EXT": [
+      {
+        "ref": "C5",
+        "pin": "1",
+        "name": "1"
+      },
+      {
+        "ref": "C6",
+        "pin": "1",
+        "name": "1"
+      },
+      {
+        "ref": "JP2",
+        "pin": "1",
+        "name": "+5V_EXT"
+      },
+      {
+        "ref": "JP3",
+        "pin": "3",
+        "name": "HV"
+      },
+      {
+        "ref": "U1",
+        "pin": "2",
+        "name": "VCC"
+      }
+    ],
+    "3V3_AUX": [
+      {
+        "ref": "C1",
+        "pin": "1",
+        "name": "1"
+      },
+      {
+        "ref": "C2",
+        "pin": "1",
+        "name": "1"
+      },
+      {
+        "ref": "C3",
+        "pin": "1",
+        "name": "1"
+      },
+      {
+        "ref": "C4",
+        "pin": "1",
+        "name": "1"
+      },
+      {
+        "ref": "C7",
+        "pin": "1",
+        "name": "1"
+      },
+      {
+        "ref": "C8",
+        "pin": "1",
+        "name": "1"
+      },
+      {
+        "ref": "IC1",
+        "pin": "2",
+        "name": "VCC"
+      },
+      {
+        "ref": "IC2",
+        "pin": "2",
+        "name": "VCC"
+      },
+      {
+        "ref": "JP1",
+        "pin": "4",
+        "name": "VIN"
+      },
+      {
+        "ref": "JP2",
+        "pin": "3",
+        "name": "3V3_AUX"
+      },
+      {
+        "ref": "R1",
+        "pin": "2",
+        "name": "2"
+      },
+      {
+        "ref": "R3",
+        "pin": "2",
+        "name": "2"
+      }
+    ],
+    "ESP3V3": [
+      {
+        "ref": "A1",
+        "pin": "1",
+        "name": "3V3"
+      },
+      {
+        "ref": "A1",
+        "pin": "17",
+        "name": "3V3"
+      },
+      {
+        "ref": "JP3",
+        "pin": "2",
+        "name": "LV"
+      },
+      {
+        "ref": "JP8",
+        "pin": "2",
+        "name": "3V3"
+      }
+    ],
+    "GND": [
+      {
+        "ref": "A1",
+        "pin": "11",
+        "name": "GND"
+      },
+      {
+        "ref": "A1",
+        "pin": "18",
+        "name": "GND"
+      },
+      {
+        "ref": "C1",
+        "pin": "2",
+        "name": "2"
+      },
+      {
+        "ref": "C2",
+        "pin": "2",
+        "name": "2"
+      },
+      {
+        "ref": "C3",
+        "pin": "2",
+        "name": "2"
+      },
+      {
+        "ref": "C4",
+        "pin": "2",
+        "name": "2"
+      },
+      {
+        "ref": "C5",
+        "pin": "2",
+        "name": "2"
+      },
+      {
+        "ref": "C6",
+        "pin": "2",
+        "name": "2"
+      },
+      {
+        "ref": "C7",
+        "pin": "2",
+        "name": "2"
+      },
+      {
+        "ref": "C8",
+        "pin": "2",
+        "name": "2"
+      },
+      {
+        "ref": "IC1",
+        "pin": "1",
+        "name": "GND"
+      },
+      {
+        "ref": "IC2",
+        "pin": "1",
+        "name": "GND"
+      },
+      {
+        "ref": "JP1",
+        "pin": "3",
+        "name": "GND"
+      },
+      {
+        "ref": "JP2",
+        "pin": "2",
+        "name": "GND"
+      },
+      {
+        "ref": "JP2",
+        "pin": "4",
+        "name": "GND"
+      },
+      {
+        "ref": "JP3",
+        "pin": "1",
+        "name": "GND"
+      },
+      {
+        "ref": "JP3",
+        "pin": "8",
+        "name": "GND"
+      },
+      {
+        "ref": "JP8",
+        "pin": "1",
+        "name": "GND"
+      },
+      {
+        "ref": "R2",
+        "pin": "2",
+        "name": "2"
+      },
+      {
+        "ref": "R4",
+        "pin": "2",
+        "name": "2"
+      },
+      {
+        "ref": "U1",
+        "pin": "1",
+        "name": "GND"
+      }
+    ],
+    "IR_RX": [
+      {
+        "ref": "A1",
+        "pin": "15",
+        "name": "39"
+      },
+      {
+        "ref": "JP1",
+        "pin": "2",
+        "name": "IRin"
+      }
+    ],
+    "IR_TX": [
+      {
+        "ref": "A1",
+        "pin": "20",
+        "name": "40"
+      },
+      {
+        "ref": "JP1",
+        "pin": "1",
+        "name": "IRout"
+      }
+    ],
+    "KB_SCL": [
+      {
+        "ref": "JP3",
+        "pin": "7",
+        "name": "B2 SCL"
+      },
+      {
+        "ref": "U1",
+        "pin": "4",
+        "name": "SCL"
+      }
+    ],
+    "KB_SDA": [
+      {
+        "ref": "JP3",
+        "pin": "5",
+        "name": "B1 SDA"
+      },
+      {
+        "ref": "U1",
+        "pin": "3",
+        "name": "SDA"
+      }
+    ],
+    "RADIO1_CE": [
+      {
+        "ref": "A1",
+        "pin": "9",
+        "name": "14"
+      },
+      {
+        "ref": "IC1",
+        "pin": "3",
+        "name": "CE"
+      },
+      {
+        "ref": "R2",
+        "pin": "1",
+        "name": "1"
+      }
+    ],
+    "RADIO1_CSN": [
+      {
+        "ref": "A1",
+        "pin": "5",
+        "name": "10"
+      },
+      {
+        "ref": "IC1",
+        "pin": "4",
+        "name": "CSN"
+      },
+      {
+        "ref": "R1",
+        "pin": "1",
+        "name": "1"
+      }
+    ],
+    "RADIO2_CE": [
+      {
+        "ref": "A1",
+        "pin": "14",
+        "name": "16"
+      },
+      {
+        "ref": "IC2",
+        "pin": "3",
+        "name": "CE"
+      },
+      {
+        "ref": "R4",
+        "pin": "1",
+        "name": "1"
+      }
+    ],
+    "RADIO2_CSN": [
+      {
+        "ref": "A1",
+        "pin": "10",
+        "name": "15"
+      },
+      {
+        "ref": "IC2",
+        "pin": "4",
+        "name": "CSN"
+      },
+      {
+        "ref": "R3",
+        "pin": "1",
+        "name": "1"
+      }
+    ],
+    "RADIO_MISO": [
+      {
+        "ref": "A1",
+        "pin": "8",
+        "name": "13"
+      },
+      {
+        "ref": "IC1",
+        "pin": "7",
+        "name": "MISO"
+      },
+      {
+        "ref": "IC2",
+        "pin": "7",
+        "name": "MISO"
+      }
+    ],
+    "RADIO_MOSI": [
+      {
+        "ref": "A1",
+        "pin": "6",
+        "name": "11"
+      },
+      {
+        "ref": "IC1",
+        "pin": "6",
+        "name": "MOSI"
+      },
+      {
+        "ref": "IC2",
+        "pin": "6",
+        "name": "MOSI"
+      }
+    ],
+    "RADIO_SCK": [
+      {
+        "ref": "A1",
+        "pin": "7",
+        "name": "12"
+      },
+      {
+        "ref": "IC1",
+        "pin": "5",
+        "name": "SCK"
+      },
+      {
+        "ref": "IC2",
+        "pin": "5",
+        "name": "SCK"
+      }
+    ],
+    "SCL_LV": [
+      {
+        "ref": "A1",
+        "pin": "21",
+        "name": "41"
+      },
+      {
+        "ref": "JP3",
+        "pin": "6",
+        "name": "A2 SCL"
+      },
+      {
+        "ref": "JP8",
+        "pin": "4",
+        "name": "SCL"
+      }
+    ],
+    "SDA_LV": [
+      {
+        "ref": "A1",
+        "pin": "2",
+        "name": "01"
+      },
+      {
+        "ref": "JP3",
+        "pin": "4",
+        "name": "A1 SDA"
+      },
+      {
+        "ref": "JP8",
+        "pin": "3",
+        "name": "SDA"
+      }
+    ]
+  },
+  "no_connect_pins": [
+    {
+      "ref": "A1",
+      "pin": "3",
+      "name": "02"
+    },
+    {
+      "ref": "A1",
+      "pin": "4",
+      "name": "03"
+    },
+    {
+      "ref": "A1",
+      "pin": "12",
+      "name": "VSYS"
+    },
+    {
+      "ref": "A1",
+      "pin": "13",
+      "name": "VSYS"
+    },
+    {
+      "ref": "A1",
+      "pin": "16",
+      "name": "3V3"
+    },
+    {
+      "ref": "A1",
+      "pin": "19",
+      "name": "GND"
+    },
+    {
+      "ref": "A1",
+      "pin": "22",
+      "name": "42"
+    },
+    {
+      "ref": "A1",
+      "pin": "23",
+      "name": "43"
+    },
+    {
+      "ref": "A1",
+      "pin": "24",
+      "name": "44"
+    },
+    {
+      "ref": "A1",
+      "pin": "25",
+      "name": "45"
+    },
+    {
+      "ref": "A1",
+      "pin": "26",
+      "name": "46"
+    },
+    {
+      "ref": "A1",
+      "pin": "27",
+      "name": "GND"
+    },
+    {
+      "ref": "A1",
+      "pin": "28",
+      "name": "GND"
+    },
+    {
+      "ref": "IC1",
+      "pin": "8",
+      "name": "IRQ"
+    },
+    {
+      "ref": "IC2",
+      "pin": "8",
+      "name": "IRQ"
+    },
+    {
+      "ref": "PI1",
+      "pin": "1",
+      "name": "3V3"
+    },
+    {
+      "ref": "PI1",
+      "pin": "2",
+      "name": "5V"
+    },
+    {
+      "ref": "PI1",
+      "pin": "3",
+      "name": "GPIO2 sda"
+    },
+    {
+      "ref": "PI1",
+      "pin": "4",
+      "name": "5V"
+    },
+    {
+      "ref": "PI1",
+      "pin": "5",
+      "name": "GPIO3 scl"
+    },
+    {
+      "ref": "PI1",
+      "pin": "6",
+      "name": "GND"
+    },
+    {
+      "ref": "PI1",
+      "pin": "7",
+      "name": "GPIO4"
+    },
+    {
+      "ref": "PI1",
+      "pin": "8",
+      "name": "tx GPIO14"
+    },
+    {
+      "ref": "PI1",
+      "pin": "9",
+      "name": "GND"
+    },
+    {
+      "ref": "PI1",
+      "pin": "10",
+      "name": "rx GPIO15"
+    },
+    {
+      "ref": "PI1",
+      "pin": "11",
+      "name": "GPIO17"
+    },
+    {
+      "ref": "PI1",
+      "pin": "12",
+      "name": "pwm0 GPIO18"
+    },
+    {
+      "ref": "PI1",
+      "pin": "13",
+      "name": "GPIO27"
+    },
+    {
+      "ref": "PI1",
+      "pin": "14",
+      "name": "GND"
+    },
+    {
+      "ref": "PI1",
+      "pin": "15",
+      "name": "GPIO22"
+    },
+    {
+      "ref": "PI1",
+      "pin": "16",
+      "name": "GPIO23"
+    },
+    {
+      "ref": "PI1",
+      "pin": "17",
+      "name": "3V3"
+    },
+    {
+      "ref": "PI1",
+      "pin": "18",
+      "name": "GPIO24"
+    },
+    {
+      "ref": "PI1",
+      "pin": "19",
+      "name": "GPIO10 mosi"
+    },
+    {
+      "ref": "PI1",
+      "pin": "20",
+      "name": "GND"
+    },
+    {
+      "ref": "PI1",
+      "pin": "21",
+      "name": "GPIO9 miso"
+    },
+    {
+      "ref": "PI1",
+      "pin": "22",
+      "name": "GPIO25"
+    },
+    {
+      "ref": "PI1",
+      "pin": "23",
+      "name": "GPIO11 sck"
+    },
+    {
+      "ref": "PI1",
+      "pin": "24",
+      "name": "cs0 GPIO8"
+    },
+    {
+      "ref": "PI1",
+      "pin": "25",
+      "name": "GND"
+    },
+    {
+      "ref": "PI1",
+      "pin": "26",
+      "name": "cs1 GPIO7"
+    },
+    {
+      "ref": "PI1",
+      "pin": "27",
+      "name": "eeprom sda"
+    },
+    {
+      "ref": "PI1",
+      "pin": "28",
+      "name": "eeprom scl"
+    },
+    {
+      "ref": "PI1",
+      "pin": "29",
+      "name": "GPIO5"
+    },
+    {
+      "ref": "PI1",
+      "pin": "30",
+      "name": "GND"
+    },
+    {
+      "ref": "PI1",
+      "pin": "31",
+      "name": "GPIO6"
+    },
+    {
+      "ref": "PI1",
+      "pin": "32",
+      "name": "pwm0 GPIO12"
+    },
+    {
+      "ref": "PI1",
+      "pin": "33",
+      "name": "GPIO13 pwm1"
+    },
+    {
+      "ref": "PI1",
+      "pin": "34",
+      "name": "GND"
+    },
+    {
+      "ref": "PI1",
+      "pin": "35",
+      "name": "GPIO19 pwm1"
+    },
+    {
+      "ref": "PI1",
+      "pin": "36",
+      "name": "GPIO16"
+    },
+    {
+      "ref": "PI1",
+      "pin": "37",
+      "name": "GPIO26"
+    },
+    {
+      "ref": "PI1",
+      "pin": "38",
+      "name": "GPIO20"
+    },
+    {
+      "ref": "PI1",
+      "pin": "39",
+      "name": "GND"
+    },
+    {
+      "ref": "PI1",
+      "pin": "40",
+      "name": "GPIO21"
+    }
+  ],
+  "assembly_and_firmware_notes": [
+    "Approved simplified architecture: main devices receive individual external power connections. No Pi, LILYGO, LCD or Chameleon main power travels through this carrier. Use one power source per device; never parallel USB 5 V outputs.",
+    "JP2 peripheral supply: 1 +5V_EXT, 2 GND, 3 3V3_AUX, 4 GND. A regulated USB 5 V source feeds CardKB and the VIN of an external preassembled Pololu D24V10F3 #2830. Its regulated 3.3 V output feeds JP2.3. Do not swap either voltage or connect a bare battery cell.",
+    "ESP3V3 remains separate from 3V3_AUX. Grounds are common. Both LILYGO VSYS contacts and all 40 Pi header contacts remain NC. The Pi powers its retained HAT through its USB host connection; do not independently backfeed HAT power.",
+    "JP3 is an eight-pin harness to the preassembled Adafruit #757 I2C level shifter: 1 GND, 2 ESP3V3/LV, 3 +5V_EXT/HV, 4 SDA_LV/A1, 5 KB_SDA/B1, 6 SCL_LV/A2, 7 KB_SCL/B2, 8 GND. A/B are matched channels, not carrier component reference A1. Unused module channels remain unconnected. This is not the module physical footprint.",
+    "JP8 encoder: 1 GND, 2 ESP3V3, 3 SDA_LV, 4 SCL_LV. The assembled Adafruit5880 encoder uses I2C0x36; CardKB uses0x5F. Start with100kHz and check the assembled cable and parallel pullups.",
+    "R1-R4 are axial through-hole10k resistors. C1/C2/C5/C7 are through-hole100nF ceramic; C3/C4/C6/C8 are through-hole10uF electrolytic. Electrolytic pad1 is positive, pad2 GND. Q1/Q2 and R5-R8 are replaced by the assembled757; there are no loose SMD parts to hand-solder on the carrier.",
+    "Radio SPI: GPIO12SCK,11MOSI,13MISO; radio1GPIO10CSN/14CE; radio2GPIO15CSN/16CE. CardKB/encoderGPIO1SDA/41SCL. IR GPIO39RX/40TX. GPIO2,43,44 remain NC. No AUX_OE_N or translator-enable firmware remains.",
+    "Direct SPI/IR wires and the BSS138 keyboard converter are not power-off isolation. Use only with ESP and peripheral supplies present; disconnect signal harnesses before independently powering off/programming one domain. Configure radioCSN HIGH, CE LOW and IR_TX LOW before transmitting. Avoid unpowered devices being driven through GPIO protection paths.",
+    "The inline USB on/off switch controls only the external peripheral supply. It is not a deck-wide switch or Linux shutdown control. Coordinate ESP/peripheral power as above; shut down the Pi before removing its own power.",
+    "The external regulator nominal1A rating is not a verified load allowance. Measure the actual two PA/LNA radios, pulsed IR, rail droop and regulator temperature. The Miady bank total rating is shared by its ports; individual cables do not increase one bank total capacity.",
+    "All carrier electrical contacts are plated through holes. Assembled modules contain factory-soldered SMD components, with only through-hole headers/wires required for user assembly. Insulate and strain-relieve external supply wiring; verify polarity with a meter.",
+    "This audit verifies assignments and schematic connectivity, not physical fit, operating current, temperature or fabrication readiness. Native copper/DRC and actual hardware measurements are separate."
+  ],
+  "verification_scope": "All component identities and schematic pin names/IDs, wire-and-label graph nets, explicit NC marks, PCB electrical pad assignments and four Pi mechanical pads. Copper geometry, continuity, native DRC, UI save state, thermal performance and mechanical fit are separate checks."
+}

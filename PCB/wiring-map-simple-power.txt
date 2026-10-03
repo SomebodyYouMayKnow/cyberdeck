@@ -1,0 +1,246 @@
+CYBERDECK SIMPLE POWER WIRING MAP
+==========================================
+NATIVE_EXPORT_ASSIGNMENTS_VERIFIED
+Generated: 2026-10-03T04:33:28.627593+00:00
+21 components | 132 electrical pins | 17 nets | 77 connected | 55 NC
+
+SOURCE FILES AND SHA-256
+outputs/schematic-simple-power-native.json: 1861b7872267eff313ba5267874894d55dfa8f3b06d74e385273eb774742225c
+outputs/pcb-simple-power-native.json: 14c6ba430bfcb49659fa3ca9d57fee9c3092dd0da13f206e33ee1388b886b47c
+work/simple-peripherals-component-map.json: 58d2b779711a2a97318d4067444a9b429520f63a5a96270ed082f26117d4516f
+
+CURRENT ASSEMBLY AND FIRMWARE NOTES
+1. Approved simplified architecture: main devices receive individual external power connections. No Pi, LILYGO, LCD or Chameleon main power travels through this carrier. Use one power source per device; never parallel USB 5 V outputs.
+2. JP2 peripheral supply: 1 +5V_EXT, 2 GND, 3 3V3_AUX, 4 GND. A regulated USB 5 V source feeds CardKB and the VIN of an external preassembled Pololu D24V10F3 #2830. Its regulated 3.3 V output feeds JP2.3. Do not swap either voltage or connect a bare battery cell.
+3. ESP3V3 remains separate from 3V3_AUX. Grounds are common. Both LILYGO VSYS contacts and all 40 Pi header contacts remain NC. The Pi powers its retained HAT through its USB host connection; do not independently backfeed HAT power.
+4. JP3 is an eight-pin harness to the preassembled Adafruit #757 I2C level shifter: 1 GND, 2 ESP3V3/LV, 3 +5V_EXT/HV, 4 SDA_LV/A1, 5 KB_SDA/B1, 6 SCL_LV/A2, 7 KB_SCL/B2, 8 GND. A/B are matched channels, not carrier component reference A1. Unused module channels remain unconnected. This is not the module physical footprint.
+5. JP8 encoder: 1 GND, 2 ESP3V3, 3 SDA_LV, 4 SCL_LV. The assembled Adafruit5880 encoder uses I2C0x36; CardKB uses0x5F. Start with100kHz and check the assembled cable and parallel pullups.
+6. R1-R4 are axial through-hole10k resistors. C1/C2/C5/C7 are through-hole100nF ceramic; C3/C4/C6/C8 are through-hole10uF electrolytic. Electrolytic pad1 is positive, pad2 GND. Q1/Q2 and R5-R8 are replaced by the assembled757; there are no loose SMD parts to hand-solder on the carrier.
+7. Radio SPI: GPIO12SCK,11MOSI,13MISO; radio1GPIO10CSN/14CE; radio2GPIO15CSN/16CE. CardKB/encoderGPIO1SDA/41SCL. IR GPIO39RX/40TX. GPIO2,43,44 remain NC. No AUX_OE_N or translator-enable firmware remains.
+8. Direct SPI/IR wires and the BSS138 keyboard converter are not power-off isolation. Use only with ESP and peripheral supplies present; disconnect signal harnesses before independently powering off/programming one domain. Configure radioCSN HIGH, CE LOW and IR_TX LOW before transmitting. Avoid unpowered devices being driven through GPIO protection paths.
+9. The inline USB on/off switch controls only the external peripheral supply. It is not a deck-wide switch or Linux shutdown control. Coordinate ESP/peripheral power as above; shut down the Pi before removing its own power.
+10. The external regulator nominal1A rating is not a verified load allowance. Measure the actual two PA/LNA radios, pulsed IR, rail droop and regulator temperature. The Miady bank total rating is shared by its ports; individual cables do not increase one bank total capacity.
+11. All carrier electrical contacts are plated through holes. Assembled modules contain factory-soldered SMD components, with only through-hole headers/wires required for user assembly. Insulate and strain-relieve external supply wiring; verify polarity with a meter.
+12. This audit verifies assignments and schematic connectivity, not physical fit, operating current, temperature or fabrication readiness. Native copper/DRC and actual hardware measurements are separate.
+
+COMPONENT / PIN / NET TABLE — ALL ELECTRICAL PINS
+
+A1 — ESP32-S3-AMOLED-1.91 [gged35c19f03e901e1f]
+PIN	NAME	NET
+1	3V3	ESP3V3
+2	01	SDA_LV
+3	02	NC (intentional)
+4	03	NC (intentional)
+5	10	RADIO1_CSN
+6	11	RADIO_MOSI
+7	12	RADIO_SCK
+8	13	RADIO_MISO
+9	14	RADIO1_CE
+10	15	RADIO2_CSN
+11	GND	GND
+12	VSYS	NC (intentional)
+13	VSYS	NC (intentional)
+14	16	RADIO2_CE
+15	39	IR_RX
+16	3V3	NC (intentional)
+17	3V3	ESP3V3
+18	GND	GND
+19	GND	NC (intentional)
+20	40	IR_TX
+21	41	SCL_LV
+22	42	NC (intentional)
+23	43	NC (intentional)
+24	44	NC (intentional)
+25	45	NC (intentional)
+26	46	NC (intentional)
+27	GND	NC (intentional)
+28	GND	NC (intentional)
+
+C1 — 100nF [ggeca4de4700ee065dc]
+PIN	NAME	NET
+1	1	3V3_AUX
+2	2	GND
+
+C2 — 100nF [ggee83d505374825c8b]
+PIN	NAME	NET
+1	1	3V3_AUX
+2	2	GND
+
+C3 — 10uF [ggecba382aa17f93048]
+PIN	NAME	NET
+1	1	3V3_AUX
+2	2	GND
+
+C4 — 10uF [gge207d32f59b0b0d8e]
+PIN	NAME	NET
+1	1	3V3_AUX
+2	2	GND
+
+C5 — 100nF [gge89af724020325cc6acc0]
+PIN	NAME	NET
+1	1	+5V_EXT
+2	2	GND
+
+C6 — 10uF [ggeb1c28745395c54d7b0cd]
+PIN	NAME	NET
+1	1	+5V_EXT
+2	2	GND
+
+C7 — 100nF [gge2c58aebafc1753b3b7ef]
+PIN	NAME	NET
+1	1	3V3_AUX
+2	2	GND
+
+C8 — 10uF [gge1a303ce317635af09187]
+PIN	NAME	NET
+1	1	3V3_AUX
+2	2	GND
+
+IC1 — NRF24L01 [ggeb1f7200842a9e1c9]
+PIN	NAME	NET
+1	GND	GND
+2	VCC	3V3_AUX
+3	CE	RADIO1_CE
+4	CSN	RADIO1_CSN
+5	SCK	RADIO_SCK
+6	MOSI	RADIO_MOSI
+7	MISO	RADIO_MISO
+8	IRQ	NC (intentional)
+
+IC2 — NRF24L01 [gge4fef22435443c364]
+PIN	NAME	NET
+1	GND	GND
+2	VCC	3V3_AUX
+3	CE	RADIO2_CE
+4	CSN	RADIO2_CSN
+5	SCK	RADIO_SCK
+6	MOSI	RADIO_MOSI
+7	MISO	RADIO_MISO
+8	IRQ	NC (intentional)
+
+JP1 — Adafruit 5990 IR RX/TX module [gge77ad37ec3d1c399b]
+PIN	NAME	NET
+1	IRout	IR_TX
+2	IRin	IR_RX
+3	GND	GND
+4	VIN	3V3_AUX
+
+JP2 — REGULATED POWER INPUT [ggeb6e5d994fcd05bd78aeb]
+PIN	NAME	NET
+1	+5V_EXT	+5V_EXT
+2	GND	GND
+3	3V3_AUX	3V3_AUX
+4	GND	GND
+
+JP3 — WIRED ADAFRUIT 757 I2C SHIFTER [gge61fb284b4615527dbd28d442]
+PIN	NAME	NET
+1	GND	GND
+2	LV	ESP3V3
+3	HV	+5V_EXT
+4	A1 SDA	SDA_LV
+5	B1 SDA	KB_SDA
+6	A2 SCL	SCL_LV
+7	B2 SCL	KB_SCL
+8	GND	GND
+
+JP8 — WIRED ADAFRUIT 5880 ENCODER [ggeaa561e8158e35e52a11fe8b1]
+PIN	NAME	NET
+1	GND	GND
+2	3V3	ESP3V3
+3	SDA	SDA_LV
+4	SCL	SCL_LV
+
+PI1 — Raspberry Pi Zero 2 W [gge97d7393dda2920b4]
+PIN	NAME	NET
+1	3V3	NC (intentional)
+2	5V	NC (intentional)
+3	GPIO2 sda	NC (intentional)
+4	5V	NC (intentional)
+5	GPIO3 scl	NC (intentional)
+6	GND	NC (intentional)
+7	GPIO4	NC (intentional)
+8	tx GPIO14	NC (intentional)
+9	GND	NC (intentional)
+10	rx GPIO15	NC (intentional)
+11	GPIO17	NC (intentional)
+12	pwm0 GPIO18	NC (intentional)
+13	GPIO27	NC (intentional)
+14	GND	NC (intentional)
+15	GPIO22	NC (intentional)
+16	GPIO23	NC (intentional)
+17	3V3	NC (intentional)
+18	GPIO24	NC (intentional)
+19	GPIO10 mosi	NC (intentional)
+20	GND	NC (intentional)
+21	GPIO9 miso	NC (intentional)
+22	GPIO25	NC (intentional)
+23	GPIO11 sck	NC (intentional)
+24	cs0 GPIO8	NC (intentional)
+25	GND	NC (intentional)
+26	cs1 GPIO7	NC (intentional)
+27	eeprom sda	NC (intentional)
+28	eeprom scl	NC (intentional)
+29	GPIO5	NC (intentional)
+30	GND	NC (intentional)
+31	GPIO6	NC (intentional)
+32	pwm0 GPIO12	NC (intentional)
+33	GPIO13 pwm1	NC (intentional)
+34	GND	NC (intentional)
+35	GPIO19 pwm1	NC (intentional)
+36	GPIO16	NC (intentional)
+37	GPIO26	NC (intentional)
+38	GPIO20	NC (intentional)
+39	GND	NC (intentional)
+40	GPIO21	NC (intentional)
+
+R1 — 10k [gge30020]
+PIN	NAME	NET
+1	1	RADIO1_CSN
+2	2	3V3_AUX
+
+R2 — 10k [gge30030]
+PIN	NAME	NET
+1	1	RADIO1_CE
+2	2	GND
+
+R3 — 10k [gge30040]
+PIN	NAME	NET
+1	1	RADIO2_CSN
+2	2	3V3_AUX
+
+R4 — 10k [gge30050]
+PIN	NAME	NET
+1	1	RADIO2_CE
+2	2	GND
+
+U1 — CardKB Module [gge51eda74d3f7c17e6]
+PIN	NAME	NET
+1	GND	GND
+2	VCC	+5V_EXT
+3	SDA	KB_SDA
+4	SCL	KB_SCL
+
+NET MEMBERSHIP
++5V_EXT: C5.1 (1), C6.1 (1), JP2.1 (+5V_EXT), JP3.3 (HV), U1.2 (VCC)
+3V3_AUX: C1.1 (1), C2.1 (1), C3.1 (1), C4.1 (1), C7.1 (1), C8.1 (1), IC1.2 (VCC), IC2.2 (VCC), JP1.4 (VIN), JP2.3 (3V3_AUX), R1.2 (2), R3.2 (2)
+ESP3V3: A1.1 (3V3), A1.17 (3V3), JP3.2 (LV), JP8.2 (3V3)
+GND: A1.11 (GND), A1.18 (GND), C1.2 (2), C2.2 (2), C3.2 (2), C4.2 (2), C5.2 (2), C6.2 (2), C7.2 (2), C8.2 (2), IC1.1 (GND), IC2.1 (GND), JP1.3 (GND), JP2.2 (GND), JP2.4 (GND), JP3.1 (GND), JP3.8 (GND), JP8.1 (GND), R2.2 (2), R4.2 (2), U1.1 (GND)
+IR_RX: A1.15 (39), JP1.2 (IRin)
+IR_TX: A1.20 (40), JP1.1 (IRout)
+KB_SCL: JP3.7 (B2 SCL), U1.4 (SCL)
+KB_SDA: JP3.5 (B1 SDA), U1.3 (SDA)
+RADIO1_CE: A1.9 (14), IC1.3 (CE), R2.1 (1)
+RADIO1_CSN: A1.5 (10), IC1.4 (CSN), R1.1 (1)
+RADIO2_CE: A1.14 (16), IC2.3 (CE), R4.1 (1)
+RADIO2_CSN: A1.10 (15), IC2.4 (CSN), R3.1 (1)
+RADIO_MISO: A1.8 (13), IC1.7 (MISO), IC2.7 (MISO)
+RADIO_MOSI: A1.6 (11), IC1.6 (MOSI), IC2.6 (MOSI)
+RADIO_SCK: A1.7 (12), IC1.5 (SCK), IC2.5 (SCK)
+SCL_LV: A1.21 (41), JP3.6 (A2 SCL), JP8.4 (SCL)
+SDA_LV: A1.2 (01), JP3.4 (A1 SDA), JP8.3 (SDA)
+
+INTENTIONALLY UNCONNECTED PINS
+A1.3 (02), A1.4 (03), A1.12 (VSYS), A1.13 (VSYS), A1.16 (3V3), A1.19 (GND), A1.22 (42), A1.23 (43), A1.24 (44), A1.25 (45), A1.26 (46), A1.27 (GND), A1.28 (GND), IC1.8 (IRQ), IC2.8 (IRQ), PI1.1 (3V3), PI1.2 (5V), PI1.3 (GPIO2 sda), PI1.4 (5V), PI1.5 (GPIO3 scl), PI1.6 (GND), PI1.7 (GPIO4), PI1.8 (tx GPIO14), PI1.9 (GND), PI1.10 (rx GPIO15), PI1.11 (GPIO17), PI1.12 (pwm0 GPIO18), PI1.13 (GPIO27), PI1.14 (GND), PI1.15 (GPIO22), PI1.16 (GPIO23), PI1.17 (3V3), PI1.18 (GPIO24), PI1.19 (GPIO10 mosi), PI1.20 (GND), PI1.21 (GPIO9 miso), PI1.22 (GPIO25), PI1.23 (GPIO11 sck), PI1.24 (cs0 GPIO8), PI1.25 (GND), PI1.26 (cs1 GPIO7), PI1.27 (eeprom sda), PI1.28 (eeprom scl), PI1.29 (GPIO5), PI1.30 (GND), PI1.31 (GPIO6), PI1.32 (pwm0 GPIO12), PI1.33 (GPIO13 pwm1), PI1.34 (GND), PI1.35 (GPIO19 pwm1), PI1.36 (GPIO16), PI1.37 (GPIO26), PI1.38 (GPIO20), PI1.39 (GND), PI1.40 (GPIO21)
+
+VERIFICATION SCOPE
+All component identities and schematic pin names/IDs, wire-and-label graph nets, explicit NC marks, PCB electrical pad assignments and four Pi mechanical pads. Copper geometry, continuity, native DRC, UI save state, thermal performance and mechanical fit are separate checks.
