@@ -1,5 +1,5 @@
 Part,Quantity,Status,Unit_USD,Source,Role_or_note
-Chameleon Ultra SE3,1,Selected,39.99,https://shop.mtoolstec.com/product/chameleon-ultra-se3,Owned-hardware RFID/NFC development module; BLE protocol still needs verification
+Chameleon Ultra SE3,1,Selected,39.99,https://shop.mtoolstec.com/product/chameleon-ultra-se3,Required purchase: RFID/NFC development module; BLE protocol still needs verification
 ATNSINC nRF24L01+ PA/LNA radio kit,1,Selected,9.99,https://www.amazon.com/dp/B08R9F11D1,Two 2.4 GHz radios with antennas and regulator adapters
 ELEGOO breadboard and component kit,1,Optional,9.99,https://www.amazon.com/dp/B01ERP6WL4,Through-hole capacitors and resistors subject to fit check
 ALFA AWUS036ACS USB Wi-Fi adapter,1,Selected,26.97,https://store.rokland.com/products/alfa-awus036acs-802-11ac-ac600-dual-band-wifi-usb-adapter-rp-sma,Pi USB dual-band Wi-Fi adapter
