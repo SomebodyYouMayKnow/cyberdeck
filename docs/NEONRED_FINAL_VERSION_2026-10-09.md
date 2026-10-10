@@ -1,6 +1,6 @@
 # NEONRED — current goal and hardware expansion
 
-Updated: 2026-10-09. This note is the current high-level target and supersedes the older HDMI-based project descriptions. The requested EasyEDA edits have **not** yet been made; the currently saved local EasyEDA exports predate this expansion.
+Updated: 2026-10-09. This note is the current high-level target and supersedes the older HDMI-based project descriptions. On 2026-10-09, I opened the live EasyEDA Standard `neonred` project and exported its current schematic and PCB to `PCB/neonred-live-schematic_2026-10-09.json` and `PCB/neonred-live-PCB_2026-10-09.json`, with PNG views in `PCB/screenshots/`. The requested Proxmark3/RTL-SDR/antenna expansion has **not** been laid out; these are baseline exports, not an updated fabrication design.
 
 ## Final version description
 
@@ -39,7 +39,7 @@ The linked radar detector project describes an SDR plus external downconverters 
 
 ## Required before changing/fabricating the PCB
 
-1. Sign into EasyEDA and open the actual current `neonred` project. The current computer session only exposed the EasyEDA public landing page, not the project editor, and the repository exports are older than this request. Capture new schematic and PCB screenshots before editing, then save/export the updated project and screenshots to `PCB/`.
+1. Use the live EasyEDA exports as the starting baseline. After the mechanical and electrical choices below are verified, update the project and export a new schematic, PCB source, and screenshots to `PCB/`.
 2. Confirm the exact LILYGO model/revision and inspect its manufacturer schematic for an external antenna selector/feed. Do not add a connector footprint based only on the standard T-Display-S3 instructions.
 3. Choose the exact Proxmark3 hardware and RTL-SDR V4 (or an available equivalent); obtain their dimensions, mounting points, connector positions and antenna clearances.
 4. Decide whether the Pi Zero 2 W has enough CPU and USB power headroom for one SDR, the ALFA adapter and the other peripherals. Test incrementally; the software's advertised support is not a performance guarantee for this deck.
