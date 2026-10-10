@@ -6,21 +6,37 @@ ALFA AWUS036ACS USB Wi-Fi adapter,1,Selected,26.97,https://store.rokland.com/pro
 LILYGO T-Display-S3 AMOLED,1,Owned,0,https://github.com/Xinyuan-LilyGO/T-Display-S3-AMOLED,ESP32-S3 controller and local display; exact revision to confirm
 Raspberry Pi Zero 2 W,1,Owned,0,https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/,Linux host; exact owned variant to confirm
 Waveshare USB HUB HAT SKU12694,1,Owned,0,https://www.waveshare.com/usb-hub-hat.htm,Four-port USB hub mounted beside Pi under keyboard
-Waveshare 3.5 inch HDMI LCD SKU12824,1,Selected,31.99,https://www.waveshare.com/3.5inch-hdmi-lcd.htm,Pi main display; exact connector depth and touch use to verify
+Waveshare 3.5 inch HDMI LCD SKU12824,1,Removed_current_design,0,https://www.waveshare.com/3.5inch-hdmi-lcd.htm,Not part of current NEONRED version; the LILYGO AMOLED is the only planned display
 M5Stack CardKB v1.1,1,Selected,7.95,https://shop.m5stack.com/products/cardkb-mini-keyboard-programmable-unit-v1-1-mega8a,I2C keyboard through Adafruit level shifter
-Miady 10000 mAh power-bank two-pack,1,Selected,19.97,https://www.amazon.com/dp/B0GQH1QHDH,Separate intact USB cables power main devices; total bank rating must be tested
+Miady 10000 mAh power-bank two-pack,1,Owned_but_not_suitable_for_single_input,19.97,https://www.amazon.com/dp/B0GQH1QHDH,Listed output up to 5V 2.4A; below Pi Zero recommended supply before the other deck loads
 Adafruit BSS138 I2C level shifter 757,1,Selected,3.95,https://www.adafruit.com/product/757,CardKB 5 V to ESP32 3.3 V I2C level shifting
 Adafruit I2C rotary encoder 5880,1,Selected,4.95,https://www.adafruit.com/product/5880,Case-mounted I2C encoder at planned address 0x36
-Adafruit IR Remote Transceiver 5990,1,Selected,5.95,https://www.adafruit.com/product/5990,Wired IR receive/transmit module at side opening
+Adafruit IR Remote Transceiver 5990,1,Superseded_by_integrated_IR,TBD,https://www.adafruit.com/product/5990,Do not purchase for the revised design; recreate receiver and LED driver functions on carrier PCB
 Pololu D24V10F3 step-down regulator 2830,1,Selected,9.95,https://www.pololu.com/product/2830,External preassembled 3.3 V peripheral regulator; measure load and temperature
 100 nF through-hole capacitors,4,Required,0,https://www.digikey.com/en/products/detail/kemet/C315C104K5R5TA/12701330,C1 C2 C5 C7; use kit parts only if physical pitch fits
 10 uF through-hole electrolytic capacitors,4,Required,0,https://www.digikey.com/en/products/detail/panasonic-industry/EEA-GA1V100/2504583,C3 C4 C6 C8; pad 1 positive
 10 kOhm axial resistors,4,Required,0,https://www.digikey.com/,R1 R2 R3 R4; select lead pitch to fit PCB
 M2.5 nylon standoff kit,1,Selected,9.99,https://www.amazon.com/dp/B0FPMC9917,Pi and HAT support with electrical insulation
 M3 standoff and screw kit,1,Selected,9.99,https://www.amazon.com/dp/B0FBMFBQHQ,Carrier and frame hardware; use insulating washers where metal can contact copper
-Mini-HDMI to HDMI cable,1,Required,5.95,https://www.adafruit.com/product/2775,Pi to HDMI LCD; select final length after enclosure test
+Mini-HDMI to HDMI cable,1,Removed_current_design,0,https://www.adafruit.com/product/2775,Not needed in the current no-HDMI design
 USB-A to micro-USB data cable,1,Required,2.95,https://www.adafruit.com/product/898,Pi USB host to Waveshare HUB HAT data connection
-USB-C data and power cables,2,If_needed,4.95,https://www.adafruit.com/product/4474,ESP32 programming and main-device power as required
-Pi Zero adapter kit,1,If_needed,6.95,https://www.pishop.us/product/raspberry-pi-zero-adapter-kit/,OTG cable GPIO header and mini-HDMI adapter
+USB-C data and power cables,2,Superseded_by_panel_ports,4.95,https://www.adafruit.com/product/4474,Previous separate-cable proposal; use the 2026-10-06 port revision instead
+Pi Zero adapter kit,1,If_needed,6.95,https://www.pishop.us/product/raspberry-pi-zero-adapter-kit/,Only if needed for USB service/cabling after fit check; no mini-HDMI display is planned
 Custom 190x110 mm carrier PCB,1,To_quote,TBD,https://jlcpcb.com/,Order only after physical fit check and final Gerber export
 3D printed enclosure,1,To_quote,TBD,local CAD source,Print only after Fusion assembly and physical fit checks
+Proxmark3 RDV4 complete instrument,1,Candidate_unverified,TBD,https://proxmark.com/proxmark-3-hardware/proxmark-3-rdv4/,Mount the complete removable USB instrument; choose exact model and measure its LF/HF antenna keepouts before PCB changes
+RTL-SDR Blog V4 USB receiver,1,Candidate_unverified,TBD,https://www.rtl-sdr.com/wp-content/uploads/2024/12/RTLSDR_V4_Datasheet_V_1_0.pdf,External USB-A receiver with SMA input; 250-270 mA typical; receive-only; vendor announced end of life, verify availability
+X/K/Ka radar-band block downconverters,1 set,Design_required,TBD,https://github.com/rayhe/sdr-radar-detector,Required to translate radar-band signals into the RTL-SDR V4 tuning range; choose and validate bands/IF before purchase
+ESP32 external 2.4 GHz antenna plus RF pigtail/connector,1,Pending_board_revision,TBD,https://github.com/Xinyuan-LILYGO/LilyGo-AMOLED-Series,Only add if the exact owned LILYGO board has a documented switchable antenna feed; connector and antenna model TBD
+USB-C PD sink / 5 V input module,1,Design_required,TBD,,"External system power input; must negotiate 5 V, include CC handling, and be rated for the measured full-deck load"
+Higher-capacity 5 V system source or USB-PD source plus 5 V converter,1,Design_required,TBD,,"Replacement for the listed Miady bank in single-input mode; select only after peak-load measurement and confirmed 5 V power-path design"
+Main latching master switch,1,Design_required,TBD,,"Panel switch after input protection; must interrupt every switched power branch; rating TBD from measured current"
+Main input fuse or electronic current limiter,1,Design_required,TBD,,"Immediately after USB-C sink; select rating from measured load and lowest cable/connector/trace rating"
+Protected 5 V branch protection,4,Design_required,TBD,,"Select branches only after locking the power architecture and measuring peak current; values TBD"
+USB-C panel-mount data extension for LILYGO,1,Design_required,TBD,,"Native USB D+/D- to exterior; isolate computer VBUS from system 5 V; validate VBUS detect on exact LILYGO revision"
+Micro-USB panel-mount OTG extension for Pi,1,Design_required,TBD,,"External Pi Zero OTG service port; Pi remains powered from switched PWR IN branch"
+USB 2.0 break-before-make HAT/PC selector,1,Design_required,TBD,,"Select Waveshare HAT or external Pi OTG service host; never parallel USB hosts or VBUS sources"
+Tactile momentary through-hole buttons,2,Design_required,TBD,,"Back and Menu; normally-open to ground with ESP32 internal pull-ups; encoder remains Select/scroll"
+38 kHz IR receiver,1,Design_required,TBD,,"Through-hole demodulating sensor at left case opening; exact package and optical clearance TBD"
+940 nm IR emitter LEDs,2,Design_required,TBD,,"Through-hole pair at left case opening; driven by transistor/FET stage, not ESP32 GPIO"
+IR emitter driver and current-limit parts,1,Design_required,TBD,,"Through-hole driver, gate/base resistors and LED current limiting; values set from chosen LEDs and supply after review"

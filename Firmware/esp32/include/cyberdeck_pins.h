@@ -1,10 +1,17 @@
 #pragma once
 
-// Pin assignments are copied from outputs/wiring-map-simple-power.txt.
-// Change these only after changing and re-verifying the carrier PCB.
+// Pin assignments match the NEONRED EasyEDA schematic (2026-10-06).
+// Change these only after changing and re-verifying the schematic.
 namespace CyberdeckPins {
-constexpr int I2C_SDA = 1;
-constexpr int I2C_SCL = 41;
+constexpr int ENCODER_A = 1;
+constexpr int ENCODER_B = 2;
+constexpr int ENCODER_BUTTON = 42;
+
+// Navigation buttons: normally open to GND, using internal pull-ups.
+constexpr int BUTTON_BACK = 43;
+constexpr int BUTTON_MENU = 44;
+constexpr int BUTTON_UP = 41;
+constexpr int BUTTON_DOWN = 46;
 
 constexpr int RADIO_SCK = 12;
 constexpr int RADIO_MOSI = 11;
@@ -17,8 +24,4 @@ constexpr int RADIO2_CE = 16;
 constexpr int IR_RX = 39;
 constexpr int IR_TX = 40;
 
-constexpr uint8_t CARDKB_ADDRESS = 0x5F;
-constexpr uint8_t ENCODER_ADDRESS = 0x36;
-constexpr uint32_t I2C_CLOCK_HZ = 100000;
 }
-

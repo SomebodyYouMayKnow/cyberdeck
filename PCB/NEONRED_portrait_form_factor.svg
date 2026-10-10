@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="310mm" height="230mm" viewBox="0 0 310 230">
+  <defs>
+    <style>
+      .board { fill:#f7f9fc; stroke:#172554; stroke-width:1.1; }
+      .guide { fill:none; stroke:#2563eb; stroke-width:.65; stroke-dasharray:2 1.2; }
+      .provisional { fill:#fff7ed; stroke:#c2410c; stroke-width:.65; stroke-dasharray:2 1.2; }
+      .dim { stroke:#334155; stroke-width:.35; fill:none; marker-start:url(#arrow); marker-end:url(#arrow); }
+      .txt { font:3.2px Arial,sans-serif; fill:#0f172a; }
+      .small { font:2.5px Arial,sans-serif; fill:#334155; }
+      .title { font:bold 5px Arial,sans-serif; fill:#0f172a; }
+      .casekeep { fill:none; stroke:#94a3b8; stroke-width:.35; stroke-dasharray:1 1; }
+      .casehole { fill:#111827; stroke:#111827; stroke-width:.3; }
+      .clipkeep { fill:none; stroke:#c2410c; stroke-width:.35; stroke-dasharray:1 1; }
+      .cliphole { fill:#fff; stroke:#c2410c; stroke-width:.55; }
+    </style>
+    <marker id="arrow" markerWidth="5" markerHeight="5" refX="2.5" refY="2.5" orient="auto-start-reverse"><path d="M0,0 L5,2.5 L0,5 Z" fill="#334155"/></marker>
+  </defs>
+  <rect width="310" height="230" fill="white"/>
+  <text x="8" y="10" class="title">NEONRED • PORTRAIT PCB FORM-FACTOR + MOUNTING STUDY</text>
+  <text x="8" y="15" class="small">Planning template only — not a fabrication-ready EasyEDA board or validated hole pattern.</text>
+
+  <!-- Concept board silhouette: stepped portrait perimeter, exactly 120 x 180 mm bounding envelope -->
+  <path class="board" d="M28,28 L133,28 L140,35 L140,183 L133,190 L125,190 L125,201 L118,208 L34,208 L27,201 L27,192 L20,185 L20,44 L28,36 Z"/>
+  <text x="39" y="50" class="title">NEONRED</text>
+  <text x="39" y="56" class="small">120 × 180 mm max envelope</text>
+  <text x="39" y="62" class="small">portrait • custom stepped perimeter</text>
+  <text x="39" y="68" class="small">move / place the actual components yourself</text>
+
+  <!-- Suggested case attachment holes, all inside the PCB perimeter -->
+  <circle cx="32" cy="42" r="3.5" class="casekeep"/><circle cx="32" cy="42" r="1.6" class="casehole"/>
+  <circle cx="128" cy="42" r="3.5" class="casekeep"/><circle cx="128" cy="42" r="1.6" class="casehole"/>
+  <circle cx="32" cy="176" r="3.5" class="casekeep"/><circle cx="32" cy="176" r="1.6" class="casehole"/>
+  <circle cx="116" cy="198" r="3.5" class="casekeep"/><circle cx="116" cy="198" r="1.6" class="casehole"/>
+  <text x="44" y="176" class="small">4 × Ø3.2 mm NPTH, M3 case screws</text>
+  <text x="44" y="181" class="small">draft coordinates; check screw head / standoff access</text>
+
+  <line x1="20" y1="21" x2="140" y2="21" class="dim"/><text x="71" y="19" class="small">120 mm max width</text>
+  <line x1="151" y1="28" x2="151" y2="208" class="dim"/><text x="155" y="122" class="small" transform="rotate(90 155 122)">180 mm max height</text>
+  <circle cx="11" cy="221" r="1.6" class="casehole"/><circle cx="11" cy="221" r="3.5" class="casekeep"/>
+  <text x="17" y="222" class="small">Solid hole = Ø3.2 mm case screw; dashed ring = Ø7 mm copper/mechanical keepout.</text>
+
+  <!-- Detached, not placed device outlines; no antenna body/rod is drawn for ALFA -->
+  <text x="164" y="27" class="title">DETACHED DEVICE OUTLINES + RETAINER HOLES</text>
+  <text x="164" y="33" class="small">Templates are separate from the board drawing; do not drill the devices.</text>
+
+  <!-- ALFA AWUS036ACS plastic/USB body only; antenna omitted -->
+  <rect x="174" y="46" width="55" height="25" class="guide"/>
+  <text x="176" y="52" class="txt">ALFA AWUS036ACS body</text>
+  <text x="176" y="57" class="small">55 × 25 mm • antenna not shown</text>
+  <text x="176" y="62" class="small">outline only; add USB plug / cable exit clearance</text>
+  <circle cx="169.5" cy="58.5" r="2.8" class="clipkeep"/><circle cx="169.5" cy="58.5" r="1.35" class="cliphole"/>
+  <circle cx="233.5" cy="58.5" r="2.8" class="clipkeep"/><circle cx="233.5" cy="58.5" r="1.35" class="cliphole"/>
+
+  <!-- Chameleon SE3 enclosure placeholder, because manufacturer does not publish dimensions -->
+  <rect x="174" y="103" width="40" height="24" class="provisional"/>
+  <text x="176" y="109" class="txt">Chameleon Ultra SE3</text>
+  <text x="176" y="114" class="small">40 × 24 mm provisional outline</text>
+  <text x="176" y="119" class="small">measure owned unit; leave USB / button access</text>
+  <circle cx="169.5" cy="115" r="2.8" class="clipkeep"/><circle cx="169.5" cy="115" r="1.35" class="cliphole"/>
+  <circle cx="218.5" cy="115" r="2.8" class="clipkeep"/><circle cx="218.5" cy="115" r="1.35" class="cliphole"/>
+
+  <text x="164" y="140" class="small">Orange circles: 2 × Ø2.7 mm NPTH per retainer pair (M2.5).</text>
+  <text x="164" y="145" class="small">These fasten a printed clip/cradle to the carrier, not through the ALFA or Chameleon.</text>
+  <text x="164" y="153" class="small">Allow body/clip clearance; finalize hole coordinates after measuring both units.</text>
+
+  <rect x="164" y="169" width="136" height="32" fill="#f8fafc" stroke="#cbd5e1" stroke-width=".4"/>
+  <text x="168" y="176" class="txt">Hole / keepout notes</text>
+  <text x="168" y="182" class="small">Case mounts sit inside the PCB edge with edge clearance; “outside” means outside device areas.</text>
+  <text x="168" y="187" class="small">Reserve a Ø7 mm no-copper/assembly zone around each case screw hole.</text>
+  <text x="168" y="192" class="small">Retainer holes are placeholders until clip design and actual module dimensions are known.</text>
+  <text x="164" y="216" class="small">ALFA body size source: manufacturer distributor spec. SE3 size is unverified and must be measured.</text>
+</svg>

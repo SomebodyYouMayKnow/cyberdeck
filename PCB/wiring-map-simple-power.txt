@@ -1,5 +1,6 @@
-CYBERDECK SIMPLE POWER WIRING MAP
+CYBERDECK SIMPLE POWER WIRING MAP — HISTORICAL (2026-10-03)
 ==========================================
+SUPERSEDED by docs/POWER_AND_IO_REVISION_2026-10-06.md. This file describes the earlier peripheral-only switch and separate device power; it does not include the requested master switch, USB-C system input, external USB service ports, navigation buttons, or integrated IR. Do not build from it as the current revision.
 NATIVE_EXPORT_ASSIGNMENTS_VERIFIED
 Generated: 2026-10-03T04:33:28.627593+00:00
 21 components | 132 electrical pins | 17 nets | 77 connected | 55 NC

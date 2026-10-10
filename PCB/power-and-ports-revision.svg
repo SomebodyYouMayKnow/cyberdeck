@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860">
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#27364b"/></marker><style>
+    text{font-family:Arial,sans-serif;fill:#182334}.title{font-size:30px;font-weight:700}.head{font-size:20px;font-weight:700}.body{font-size:16px}.small{font-size:13px}.block{fill:#f5f8fc;stroke:#334e68;stroke-width:2;rx:12}.power{fill:#fff2db;stroke:#b56b00;stroke-width:2;rx:12}.data{fill:#eaf4ff;stroke:#2864a5;stroke-width:2;rx:12}.warn{fill:#fff0f0;stroke:#b13d3d;stroke-width:2;rx:12}.line{stroke:#27364b;stroke-width:3;fill:none;marker-end:url(#arrow)}.pwrline{stroke:#bb7100;stroke-width:4;fill:none;marker-end:url(#arrow)}
+  </style></defs>
+  <rect width="1400" height="860" fill="#fff"/>
+  <text x="45" y="55" class="title">NEONRED — Power and external ports (design draft)</text>
+  <text x="45" y="83" class="small">Functional architecture only; not a pin-level schematic, PCB layout, or fabrication approval.</text>
+  <rect x="60" y="130" width="230" height="105" class="power"/><text x="80" y="165" class="head">USB-C power in</text><text x="80" y="193" class="body">5 V sink / PD interface</text><text x="80" y="216" class="small">CC handling + input protection</text>
+  <rect x="370" y="130" width="210" height="105" class="power"/><text x="396" y="168" class="head">Fuse / limit</text><text x="396" y="198" class="body">Rating TBD by load test</text>
+  <rect x="660" y="130" width="210" height="105" class="power"/><text x="693" y="168" class="head">MASTER ON/OFF</text><text x="693" y="198" class="body">Switch all load branches</text>
+  <path d="M290 183 H365" class="pwrline"/><path d="M580 183 H655" class="pwrline"/>
+  <rect x="980" y="102" width="345" height="168" class="power"/><text x="1005" y="139" class="head">Switched 5 V distribution</text><text x="1005" y="170" class="body">Separate protected branches to:</text><text x="1005" y="199" class="body">Pi PWR IN • LILYGO • display*</text><text x="1005" y="228" class="body">CardKB • peripheral 3.3 V regulator</text><path d="M870 183 H975" class="pwrline"/>
+  <text x="1005" y="252" class="small">*only if confirmed for exact display revision</text>
+  <rect x="65" y="360" width="285" height="116" class="data"/><text x="88" y="397" class="head">USB-C computer port</text><text x="88" y="427" class="body">ESP32 native USB data</text><text x="88" y="452" class="small">VBUS isolated from switched system rail</text>
+  <rect x="420" y="360" width="250" height="116" class="data"/><text x="448" y="397" class="head">LILYGO ESP32-S3</text><text x="448" y="427" class="body">CDC serial / programming</text><text x="448" y="452" class="small">Button UI + radios + IR receive/transmit</text>
+  <path d="M350 419 H415" class="line"/>
+  <rect x="65" y="550" width="285" height="126" class="data"/><text x="88" y="587" class="head">micro-USB PC port</text><text x="88" y="617" class="body">Pi Zero OTG / gadget service</text><text x="88" y="642" class="small">External service connector</text>
+  <rect x="420" y="550" width="250" height="126" class="warn"/><text x="444" y="587" class="head">HAT / PC selector</text><text x="444" y="617" class="body">Break-before-make USB 2.0</text><text x="444" y="642" class="small">No parallel upstream hosts; no VBUS backfeed</text>
+  <rect x="760" y="550" width="230" height="126" class="data"/><text x="787" y="587" class="head">Pi Zero 2 W</text><text x="787" y="617" class="body">OTG goes to selector</text><text x="787" y="642" class="small">PWR IN comes from switched 5 V</text>
+  <rect x="1080" y="550" width="245" height="126" class="block"/><text x="1105" y="587" class="head">Waveshare 4-port HAT</text><text x="1105" y="617" class="body">Selected alternate OTG host</text><text x="1105" y="642" class="small">Preserve existing USB hub function</text>
+  <path d="M350 612 H415" class="line"/><path d="M670 612 H755" class="line"/><path d="M990 612 H1075" class="line"/><text x="708" y="597" class="small">Pi OTG</text>
+  <rect x="60" y="735" width="1265" height="85" class="warn"/><text x="82" y="770" class="head">Fabrication gate</text><text x="82" y="798" class="body">Confirm exact revisions, power budget, USB VBUS/ID behavior, selector, fuse/switch/copper ratings, and IR driver current before routing. No trace width or current rating is assumed.</text>
+</svg>

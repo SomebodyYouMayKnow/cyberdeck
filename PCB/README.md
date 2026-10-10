@@ -1,6 +1,6 @@
 # PCB sources
 
-This folder contains the current **simple-power** revision of the NEONRED carrier PCB.
+The current project goal is documented in [NEONRED_FINAL_VERSION_2026-10-09.md](../docs/NEONRED_FINAL_VERSION_2026-10-09.md): **no separate HDMI display**, and the proposed Proxmark3, RTL-SDR, ESP32 firmware modes and conditional ESP32 external antenna. The EasyEDA files and screenshots currently saved here predate that expansion and are not a current fabrication layout. The EasyEDA live project was not available to the computer session for a new screenshot or edit. Older simple-power and port-revision sources are design history, not approval to fabricate.
 
 - `pcb-simple-power-native.json` — saved EasyEDA PCB source
 - `schematic-simple-power-native.json` — saved EasyEDA schematic source

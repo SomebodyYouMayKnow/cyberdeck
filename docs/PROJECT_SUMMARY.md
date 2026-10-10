@@ -1,6 +1,26 @@
 # Cyberdeck project summary
 
-Updated: **2026-10-03** (America/Los_Angeles). **Current approved design: separate peripheral supply and individual main-device power cables.** The user rejected the centralized USB power distributor and loose SMD assembly. The carrier now uses through-hole parts and headers; any SMD circuitry is already assembled on purchased modules.
+Updated: **2026-10-09** (America/Los_Angeles). The current goal is recorded in [NEONRED_FINAL_VERSION_2026-10-09.md](NEONRED_FINAL_VERSION_2026-10-09.md). It supersedes the older HDMI-based description below: the current version has **no separate HDMI display**, and proposes a removable Proxmark3 instrument, one RTL-SDR Blog V4 with external radar-band downconverters, passive Flock You experimentation, a separately flashed ESP32 Marauder mode, and an external ESP32 antenna only if the exact LILYGO revision supports it. These additions are not yet reflected in the saved EasyEDA project or verified on hardware. Sections below preserve prior design history; where they conflict with the new goal, treat them as historical rather than fabrication instructions. The live EasyEDA editor was not available in the computer session, so no new EasyEDA screenshot, schematic, PCB, or DRC claim is made.
+
+The earlier revision's specific power arrangement below is historical and is **not the current requested design**. Retain its electrical notes only as record of the previous revision.
+
+## Final project vision and inspiration
+
+**NEONRED** is intended to become a compact, repairable clamshell cyberdeck: a portable Linux computer and electronics workbench that the user designs, builds, programs, and documents from the carrier PCB through the finished 3D-printed case. The Raspberry Pi Zero 2 W is the main Linux computer and drives the HDMI display. The LILYGO ESP32-S3 AMOLED is the always-available control interface for the CardKB keyboard, rotary encoder, IR hardware, and low-power radio modules. A separately mounted Waveshare USB HUB HAT expands the Pi, while the Chameleon Ultra SE3, ALFA dual-band Wi-Fi adapter, display, battery bank, and folding-antenna arrangement make the finished unit self-contained.
+
+The intended final form is a laptop-like case: keyboard in the base; Pi, HAT, Chameleon, and protected wiring below it; an HDMI display in the lid; and a lid window that exposes the base-mounted LILYGO display when the deck is closed. It should be maintainable, with screws, standoffs, service access, cable routing, and replaceable modules rather than permanently buried parts.
+
+### Intended, authorized uses
+
+- Linux development, portable programming, diagnostics, and display/keyboard experimentation.
+- ESP32 firmware development; I2C keyboard and encoder control; IR learning and replay for the user's own remotes.
+- NFC/RFID work with the user's own tags, cards, and lab equipment through the Chameleon.
+- Wi-Fi, Bluetooth, and nRF24 experimentation limited to the user's own equipment, networks, or an authorized test environment; the project must not interfere with other people's radio communications or networks.
+- Learning the complete hardware-development cycle: circuit and PCB design, enclosure CAD, 3D printing, embedded firmware, Linux integration, wiring, physical assembly, debugging, and documentation.
+
+### Recovered inspiration record
+
+The earlier wiring chat records that the user shared **two Instagram cyberdeck projects** as visual inspiration, along with a Reddit cyberdeck/radio-project reference. The recovered Instagram references are [post DSUnpaNAXFA](https://www.instagram.com/p/DSUnpaNAXFA/) and [post Dcdjywps34d](https://www.instagram.com/p/Dcdjywps34d/). The design direction recovered from that discussion is a compact, feature-dense, hands-on cyberdeck with a keyboard, multiple displays, portable power, radio hardware, IR capability, visible electronics, and a repairable custom enclosure. The external sources are inspiration and historical research only; they are not approved wiring, firmware, or test procedures.
 
 ## Mechanical enclosure revision 1 (2026-10-03)
 
@@ -22,7 +42,7 @@ The carrier remains **190 × 110 mm with R5 corners**. Keyboard/frame guides, th
 
 Older power-controls files describe the rejected distributor and are historical. Do not manufacture them or use their pinout for this revision.
 
-## Simple power arrangement
+## Historical: previous simple power arrangement (superseded 2026-10-06)
 
 - Power the LILYGO through its own intact USB-C cable and the Pi through its own PWR IN connection. The Pi supplies its separately mounted Waveshare HAT through a proper USB host/data cable. Do not independently feed HAT 5 V as well.
 - Power the HDMI display externally; confirm its exact 5 V connection against the actual display. The selected older HDMI/SPI-touch module must not be assumed to have a USB power socket. Chameleon can receive power through its normal USB connection; do not connect a second power feed simultaneously.
@@ -70,7 +90,7 @@ Removed: LM73100 carrier distributor, carrier fuse, power-output pigtail pads, b
 | IR receive / transmit | 39 / 40 |
 | Externally unused GPIO | 2, 3, 42, 43, 44, 45, 46 |
 
-Set radio CSN HIGH, CE LOW and IR transmit LOW before using the peripherals. Serialize SPI transactions, selecting one radio at a time. No translator-enable GPIO is required. Firmware, CardKB-to-Pi forwarding, encoder actions, HDMI/touch and Linux setup still require integration.
+Set both radio CSN pins HIGH, both CE pins LOW and IR transmit LOW before using the peripherals. The wiring supports two independently configured nRF24L01+ radios: shared SPI SCK/MOSI/MISO (GPIO 12/11/13), with separate CSN/CE pairs (Radio 1 GPIO 10/14; Radio 2 GPIO 15/16). Firmware must serialize SPI transactions and select one radio at a time to configure it and load its TX FIFO. To transmit concurrently, configure each radio to a different RF channel, preload both TX FIFOs, then assert both CE pins nearly together; the radios transmit autonomously after that, so SPI can be reused. A single GPIO write cannot drive both CE pins because they are separate ESP32 outputs, though their start times can be kept very close. This is a firmware operation; no extra connection between the radios is needed. Start with well-separated channels within the locally permitted 2.4 GHz band (for example RF_CH 5 and 75), use compatible air data rates/packet settings at each receiver, and test for mutual desensitization/interference with the actual antennas and transmit power. Simultaneous operation is not yet hardware-tested. No translator-enable GPIO is required. Firmware, CardKB-to-Pi forwarding, encoder actions, HDMI/touch and Linux setup still require integration.
 
 ## Enclosure concept approved for documentation
 

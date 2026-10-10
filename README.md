@@ -1,66 +1,33 @@
 # NEONRED
 
-## What I am building
-
-
-NEONRED is planned as a clamshell style foldable cyberdeck with different modules that combines a Raspberry Pi Zero 2 W with a LILYGO ESP32-S3 AMOLED controller. The Pi is the main Linux computer and controls the HDMI display. The ESP32 controls the small AMOLED screen, CardKB keyboard, rotary encoder, IR hardware, and radio modules.
-
-## Why I am making it
-
-I am making it after my start of the year in a class called AP Cybersecurity, it's the first year they have offered a class like this, and I am very intersted, my teacher suggested we make cybersecurity related projects.
+NEONRED is a compact, modular cyberdeck built around a Raspberry Pi Zero 2 W and a LILYGO T-Display-S3 AMOLED. The Pi runs Linux and hosts USB peripherals through the Waveshare USB HUB HAT. The LILYGO board provides the ESP32-S3 control interface and its own AMOLED display. **The current design has no separate HDMI display.**
 
 ## Planned capabilities
-- Linux computer based on a Raspberry Pi Zero 2 W
-- HDMI display in the lid
-- Secondary LILYGO ESP32-S3 AMOLED interface
-- CardKB I2C keyboard and rotary-encoder input
-- IR transmit/receive module on the side of the case
-- Two nRF24L01+ radio modules
-- NFC/RFID development with Chameleon Ultra SE3
-- USB hub mounted beside the Pi beneath the keyboard
-- Battery space, service access, and folding antenna mounts
 
-  It will be used to analyze wifi and bluetooth signals, NFC and RFID, IR, and be used as a linux machine. I will use it in class to try and practice hack the box challenges that our teacher is organizing.
+- Portable Linux development and an on-device ESP32 control interface.
+- CardKB keyboard, rotary encoder and navigation buttons.
+- IR receive/transmit hardware and two nRF24L01+ modules for controlled lab experiments.
+- Chameleon Ultra SE3 for testing owned RFID/NFC tags and lab cards.
+- ALFA dual-band Wi-Fi adapter for authorized testing on owned or explicitly authorized networks.
+- Proxmark3 RDV4 as a separately mounted USB instrument, with its own LF/HF antenna system; it is not a bare IC to solder onto the carrier PCB.
+- RTL-SDR Blog V4 as a USB receive-only SDR. The radar-detector experiment needs external X/K/Ka downconverters because the V4 cannot tune directly to those radar frequencies.
+- ESP32 firmware experiments: the project’s control UI, passive Flock You detection, and ESP32 Marauder are separate firmware modes. They cannot all run simultaneously on one ESP32, and support for this exact LILYGO board must be validated.
+- A switchable 2.4 GHz external antenna for the ESP32, conditional on confirming the exact LILYGO revision has an antenna-feed option.
 
+Radio work is for the user's own equipment and explicitly authorized environments. Keep Wi-Fi testing non-disruptive and do not interfere with or access other people's networks or devices.
 
+## Design status
 
+The EasyEDA files in `PCB/` are saved design-stage exports, not a fabrication release. The new radio additions need mechanical outlines, serviceable USB connections, antenna clearances, and a power/thermal check. The exact Proxmark3 model, RTL-SDR supply, LILYGO revision, and antenna-feed option are not yet verified. See [the current feature and integration plan](docs/NEONRED_FINAL_VERSION_2026-10-09.md).
 
-## PCB and wiring
+Existing project files include source exports, wiring notes, screenshots, firmware scaffolding, and CAD/layout artifacts. Treat older HDMI-specific and superseded power documents as historical until reconciled with the live EasyEDA project.
 
-The current carrier board is 190 × 110 mm. It has module footprints, locations fo parts and their outline.
+## Useful files
 
-![Current EasyEDA 3D view](PCB/screenshots/easyeda-current-3d-view.jpg)
-
-![Current routed board and DRC view](PCB/screenshots/easyeda-current-routed-board-drc.jpg)
-
-![Current mounting-template preview](PCB/screenshots/mounting-template-preview.png)
-- [Saved schematic source](PCB/schematic-simple-power-native.json)
-- [Saved PCB source](PCB/pcb-simple-power-native.json)
-- [Wiring map](PCB/wiring-map-simple-power.txt)
-- [1:1 mounting template](PCB/simple-power-mounting-template.pdf)
-
-### Power plan
-
-The Pi, ESP32/LILYGO board, HDMI display, and Chameleon use their own intact USB power connections. The carrier board is not a high-current USB power distributor. CardKB uses 5 V, while the radios and IR hardware use the separate 3.3 V peripheral regulator. All grounds are common.
-
-## Firmware
-
-The repository includes starter firmware and a documented serial protocol. It has not been run against the final hardware yet.
-
-- [`Firmware/esp32/`](Firmware/esp32/) — ESP32 firmware scaffold
-- [`Firmware/pi/`](Firmware/pi/) — Pi bridge and BLE discovery scaffold
-- [`Firmware/PROTOCOL.md`](Firmware/PROTOCOL.md) — serial-message format
-
-## Bill of materials
-
-https://docs.google.com/spreadsheets/d/15TbgYwyxuw6ulc80f8xgyEBDQYSM2Vez6B2vkB-bnEY/edit?gid=0#gid=0
-
-## Build plan
-
-1. Get all the parts first and mount them on the PCB
-2. Test that every part works
-3. Refine the CAD case
-4. Assemble everything together
-5. Code it
-6. Test it
-7. Send a final summary and demonstrations to forge.
+- [Current goal and integration plan](docs/NEONRED_FINAL_VERSION_2026-10-09.md)
+- [PCB source and screenshots](PCB/)
+- [Firmware scaffold](Firmware/)
+- [CAD files](cad/)
+- [Current master BOM/status list](BOM.csv)
+- [Earlier dated purchase list](BOM_NEONRED_purchase-list_2026-10-06.csv; historical until reconciled)
+- [Detailed project notes](docs/PROJECT_SUMMARY.md)

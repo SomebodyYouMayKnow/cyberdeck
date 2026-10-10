@@ -1,8 +1,6 @@
 #include <Arduino.h>
-#include <Wire.h>
 #include <SPI.h>
 #include <RF24.h>
-#include <Adafruit_seesaw.h>
 #include <IRremote.hpp>
 
 #include "cyberdeck_pins.h"
@@ -15,14 +13,28 @@ using namespace CyberdeckPins;
 
 RF24 radio1(RADIO1_CE, RADIO1_CSN);
 RF24 radio2(RADIO2_CE, RADIO2_CSN);
-Adafruit_seesaw encoder;
-
 const uint8_t RADIO1_ADDRESS[6] = "CDR1";
 const uint8_t RADIO2_ADDRESS[6] = "CDR2";
 bool radio1Ready = false;
 bool radio2Ready = false;
-bool encoderReady = false;
+bool encoderReady = true;
 int32_t encoderPosition = 0;
+uint8_t encoderAB = 0;
+bool lastButtonPressed = false;
+unsigned long lastButtonEventMs = 0;
+
+struct ButtonState {
+  int pin;
+  const char *name;
+  bool lastPressed;
+  unsigned long lastChangeMs;
+};
+ButtonState buttons[] = {
+    {BUTTON_BACK, "back", false, 0},
+    {BUTTON_MENU, "menu", false, 0},
+    {BUTTON_UP, "up", false, 0},
+    {BUTTON_DOWN, "down", false, 0},
+};
 
 char commandBuffer[128];
 size_t commandLength = 0;
@@ -72,19 +84,43 @@ void pollRadio(RF24 &radio, bool ready, const char *name) {
   Serial.printf("{\"type\":\"radio_rx\",\"radio\":\"%s\",\"payload\":\"%s\"}\n", name, packet);
 }
 
-void pollCardKB() {
-  Wire.requestFrom(CARDKB_ADDRESS, static_cast<uint8_t>(1));
-  if (!Wire.available()) return;
-  const uint8_t key = Wire.read();
-  if (key != 0) eventNumber("key", key);
+void pollEncoder() {
+  // Mechanical quadrature encoder with common pin grounded. INPUT_PULLUP
+  // supplies the idle-high level; no external pull-up resistors are needed.
+  static const int8_t transitions[16] = {
+     0, -1,  1,  0,
+     1,  0,  0, -1,
+    -1,  0,  0,  1,
+     0,  1, -1,  0
+  };
+  const uint8_t currentAB = (digitalRead(ENCODER_A) << 1) | digitalRead(ENCODER_B);
+  const uint8_t index = (encoderAB << 2) | currentAB;
+  const int8_t step = transitions[index];
+  encoderAB = currentAB;
+  if (step != 0) {
+    encoderPosition += step;
+    eventNumber("encoder_delta", step);
+  }
+
+  const bool pressed = digitalRead(ENCODER_BUTTON) == LOW;
+  const unsigned long now = millis();
+  if (pressed && !lastButtonPressed && now - lastButtonEventMs >= 35) {
+    event("button", "select");
+    lastButtonEventMs = now;
+  }
+  lastButtonPressed = pressed;
 }
 
-void pollEncoder() {
-  if (!encoderReady) return;
-  const int32_t position = encoder.getEncoderPosition();
-  if (position == encoderPosition) return;
-  eventNumber("encoder_delta", position - encoderPosition);
-  encoderPosition = position;
+void pollNavigationButtons() {
+  const unsigned long now = millis();
+  for (auto &button : buttons) {
+    const bool pressed = digitalRead(button.pin) == LOW;
+    if (pressed != button.lastPressed && now - button.lastChangeMs >= 25) {
+      button.lastPressed = pressed;
+      button.lastChangeMs = now;
+      if (pressed) event("button", button.name);
+    }
+  }
 }
 
 void pollIrReceiver() {
@@ -148,18 +184,17 @@ void setup() {
   delay(250);
   event("boot", "cyberdeck_esp32");
 
-  Wire.begin(I2C_SDA, I2C_SCL, I2C_CLOCK_HZ);
+  pinMode(ENCODER_A, INPUT_PULLUP);
+  pinMode(ENCODER_B, INPUT_PULLUP);
+  pinMode(ENCODER_BUTTON, INPUT_PULLUP);
+  for (auto &button : buttons) pinMode(button.pin, INPUT_PULLUP);
+  encoderAB = (digitalRead(ENCODER_A) << 1) | digitalRead(ENCODER_B);
   SPI.begin(RADIO_SCK, RADIO_MISO, RADIO_MOSI, RADIO1_CSN);
   radio1Ready = configureRadio(radio1, RADIO1_ADDRESS, "radio1");
   radio2Ready = configureRadio(radio2, RADIO2_ADDRESS, "radio2");
 
-  encoderReady = encoder.begin(ENCODER_ADDRESS);
-  if (encoderReady) {
-    encoderPosition = encoder.getEncoderPosition();
-    event("encoder_ready", "0x36");
-  } else {
-    event("encoder_error", "0x36");
-  }
+  event("encoder_ready", "gpio1_gpio2_button42_pullups");
+  event("buttons_ready", "up41_down46_back43_menu44_select42_pullups");
 
   IrReceiver.begin(IR_RX, DISABLE_LED_FEEDBACK);
   IrSender.begin(IR_TX, DISABLE_LED_FEEDBACK);
@@ -169,8 +204,8 @@ void setup() {
 
 void loop() {
   pollUsbSerial();
-  pollCardKB();
   pollEncoder();
+  pollNavigationButtons();
   pollIrReceiver();
   pollRadio(radio1, radio1Ready, "radio1");
   pollRadio(radio2, radio2Ready, "radio2");
@@ -180,4 +215,3 @@ void loop() {
     reportStatus();
   }
 }
-

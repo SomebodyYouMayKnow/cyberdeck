@@ -1,0 +1,22 @@
+Item,Qty,Status,Unit_USD,Line_USD,Product_URL,Notes
+Chameleon Ultra SE3,1,Required,39.99,39.99,https://shop.mtoolstec.com/product/chameleon-ultra-se3,RFID/NFC module; physical outline not published by vendor so measure before designing its cradle
+nRF24L01+ PA/LNA two-module kit with antennas,1 kit,Required,9.99,9.99,https://www.amazon.com/dp/B08R9F11D1,Kit price; confirm it contains two modules and antennas before order
+ALFA AWUS036ACS Wi-Fi adapter,1,Required,26.97,26.97,https://store.rokland.com/products/alfa-awus036acs-802-11ac-ac600-dual-band-wifi-usb-adapter-rp-sma,55 x 25 x 10 mm body; reserve extra area for antenna connector and cable/antenna bend
+Waveshare 3.5-inch HDMI LCD SKU12824,1,Required,35.99,35.99,https://www.waveshare.com/3.5inch-hdmi-lcd.htm,Confirm exact revision and connector envelope before making lid/window
+M5Stack CardKB v1.1,1,Required,7.95,7.95,https://shop.m5stack.com/products/cardkb-mini-keyboard-programmable-unit-v1-1-mega8a,Nominal board 88 x 54 x 5 mm; verify connector and screw details
+Adafruit BSS138 I2C level shifter 757,1,Required,3.95,3.95,https://www.adafruit.com/product/757,For the 5 V CardKB to 3.3 V ESP32 I2C interface
+Adafruit I2C rotary encoder 5880,1,Required,7.95,7.95,https://www.digikey.com/en/products/detail/adafruit-industries-llc/5880/22596384,Current list price; panel mount and connect by I2C
+Pololu D24V10F3 3.3 V regulator 2830,1,Required,9.95,9.95,https://www.pololu.com/product/2830,Separate peripheral supply only; validate total peripheral current and thermal load
+100 nF through-hole ceramic capacitor,4,Required,TBD,TBD,https://www.digikey.com/en/products/detail/kemet/C315C104K5R5TA/12701330,One per nRF radio plus remaining schematic bypass positions; select lead pitch to match footprints
+10 uF through-hole electrolytic capacitor,4,Required,TBD,TBD,https://www.digikey.com/en/products/detail/panasonic-industry/EEA-GA1V100/2504583,Observe polarity; verify voltage rating and lead pitch
+10 kOhm axial resistor,4,Required,TBD,TBD,https://www.digikey.com/,Only if retained by final reviewed schematic; confirm each function/value before order
+Through-hole 38 kHz IR receiver,1,Required,TBD,TBD,https://www.adafruit.com/product/157,Integrate on carrier; package/pinout to be matched to the chosen receiver datasheet
+940 nm IR emitter LED,2,Required,TBD,TBD,https://www.digikey.com/,Choose pulse-current-rated parts; drive through transistor/MOSFET and current-limit resistor, not directly from ESP32 GPIO
+IR LED driver transistor plus base/gate resistor and LED current-limit resistors,1 set,Required,TBD,TBD,https://www.digikey.com/,Through-hole where practical; finalize values after choosing LED and 3.3 V supply
+M2.5 nylon standoff/screw kit,1,Required,9.99,9.99,https://www.amazon.com/dp/B0FPMC9917,For Pi and USB hub supports; verify screw lengths and board thickness
+M3 standoff/screw kit,1,Required,9.99,9.99,https://www.amazon.com/dp/B0FBMFBQHQ,For carrier/frame mounting; use clearance from copper and module-specific hole pattern
+Mini-HDMI to HDMI cable,1,Required,5.95,5.95,https://www.adafruit.com/product/2775,Pi to Waveshare display; choose length after hinge path is known
+USB-A to micro-USB data cable,1,Required,2.95,2.95,https://www.adafruit.com/product/898,Pi USB host to owned Waveshare USB hub; confirm connector orientation and length
+USB-C data/power cable,2,Required,4.95,9.90,https://www.adafruit.com/product/4474,For owned LILYGO and service/power as needed; confirm cable data capability
+Custom carrier PCB,1,Required,TBD,TBD,https://jlcpcb.com/,New custom portrait outline; quote only after component placement, mechanical fit, and final DRC
+Commercial 5 V USB power bank 20,000 mAh / 30 W (Anker A1384),1,Conditional replacement,49.99,EXCLUDED,https://www.bestbuy.com/product/anker-power-bank-20000mah-30w-black/6587880?cmp=RMX,Use only if replacing owned Miady packs with one bank; external regulated USB source, no separate Li-ion charger module needed
