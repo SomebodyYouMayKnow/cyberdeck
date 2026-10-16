@@ -1,5 +1,5 @@
 Part,Quantity,Status,Unit_USD,Source,Role_or_note
-Chameleon Ultra SE3,1,Selected,39.99,https://shop.mtoolstec.com/product/chameleon-ultra-se3,Required purchase: RFID/NFC development module; BLE protocol still needs verification
+Chameleon Ultra SE3,1,Selected,39.99,https://shop.mtoolstec.com/product/chameleon-ultra-se3,External removable RFID/NFC module for the current version; not integrated on the carrier PCB
 ATNSINC nRF24L01+ PA/LNA radio kit,1,Selected,9.99,https://www.amazon.com/dp/B08R9F11D1,Two 2.4 GHz radios with antennas and regulator adapters
 ELEGOO breadboard and component kit,1,Optional,9.99,https://www.amazon.com/dp/B01ERP6WL4,Through-hole capacitors and resistors subject to fit check
 ALFA AWUS036ACS USB Wi-Fi adapter,1,Selected,26.97,https://store.rokland.com/products/alfa-awus036acs-802-11ac-ac600-dual-band-wifi-usb-adapter-rp-sma,Pi USB dual-band Wi-Fi adapter
@@ -24,10 +24,10 @@ USB-C data and power cables,2,Superseded_by_panel_ports,4.95,https://www.adafrui
 Pi Zero adapter kit,1,If_needed,6.95,https://www.pishop.us/product/raspberry-pi-zero-adapter-kit/,Only if needed for USB service/cabling after fit check; no mini-HDMI display is planned
 Custom 190x110 mm carrier PCB,1,To_quote,TBD,https://jlcpcb.com/,Order only after physical fit check and final Gerber export
 3D printed enclosure,1,To_quote,TBD,local CAD source,Print only after Fusion assembly and physical fit checks
-Proxmark3 RDV4 complete instrument,1,Candidate_unverified,TBD,https://proxmark.com/proxmark-3-hardware/proxmark-3-rdv4/,Mount the complete removable USB instrument; choose exact model and measure its LF/HF antenna keepouts before PCB changes
-RTL-SDR Blog V4 USB receiver,1,Candidate_unverified,TBD,https://www.rtl-sdr.com/wp-content/uploads/2024/12/RTLSDR_V4_Datasheet_V_1_0.pdf,External USB-A receiver with SMA input; 250-270 mA typical; receive-only; vendor announced end of life, verify availability
-X/K/Ka radar-band block downconverters,1 set,Design_required,TBD,https://github.com/rayhe/sdr-radar-detector,Required to translate radar-band signals into the RTL-SDR V4 tuning range; choose and validate bands/IF before purchase
-ESP32 external 2.4 GHz antenna plus RF pigtail/connector,1,Pending_board_revision,TBD,https://github.com/Xinyuan-LILYGO/LilyGo-AMOLED-Series,Only add if the exact owned LILYGO board has a documented switchable antenna feed; connector and antenna model TBD
+Proxmark3 RDV4 complete instrument,1,Out_of_current_scope,0,https://proxmark.com/proxmark-3-hardware/proxmark-3-rdv4/,Removed from current version on 2026-10-16; Chameleon Ultra SE3 remains the external RFID/NFC device
+RTL-SDR Blog V4 USB receiver,1,Out_of_current_scope,0,https://www.rtl-sdr.com/wp-content/uploads/2024/12/RTLSDR_V4_Datasheet_V_1_0.pdf,Removed from current version on 2026-10-16; no SDR/radar detector in current scope
+X/K/Ka radar-band block downconverters,1 set,Out_of_current_scope,0,https://github.com/rayhe/sdr-radar-detector,Removed with the SDR/radar-detector experiment on 2026-10-16
+ESP32 external 2.4 GHz antenna plus RF pigtail/connector,1,Out_of_current_scope,0,https://github.com/Xinyuan-LILYGO/LilyGo-AMOLED-Series,Not part of the restored savecopy-based version
 USB-C PD sink / 5 V input module,1,Design_required,TBD,,"External system power input; must negotiate 5 V, include CC handling, and be rated for the measured full-deck load"
 Higher-capacity 5 V system source or USB-PD source plus 5 V converter,1,Design_required,TBD,,"Replacement for the listed Miady bank in single-input mode; select only after peak-load measurement and confirmed 5 V power-path design"
 Main latching master switch,1,Design_required,TBD,,"Panel switch after input protection; must interrupt every switched power branch; rating TBD from measured current"
