@@ -23,7 +23,7 @@ The current design has no HDMI display, integrated Proxmark, RTL-SDR/radar-detec
 - Keep the Raspberry Pi and USB Hub HAT as separate serviceable modules. Do not assume the HAT and Pi share a mounting footprint or may be powered through an unverified path.
 - Keep the LILYGO board on the carrier as represented by the restored saved copy. The saved PCB is a design snapshot, not proof that power, pin mapping, or physical fit is correct.
 - The current source export is [PCB_savecopy_2026-10-16.json](../PCB/PCB_savecopy_2026-10-16.json), exported from the untouched EasyEDA `savecopy`. The active EasyEDA PCB was cloned from that source and named `PCB_neonred`.
-- The PM3 schematic pages remain in EasyEDA pending the user's choice to delete them or keep them as inactive references. They are not part of the current design scope.
+- The five `PM3_*` pages were removed from the live EasyEDA project on 2026-10-16 at the user's direction. The separate dated schematic backup and archived Proxmark PCB remain preserved; PM3 is outside the active design scope.
 
 ## Power and release status
 
