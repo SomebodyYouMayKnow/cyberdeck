@@ -10,6 +10,12 @@ EasyEDA Design Manager on the new canonical `PCB_neonred` showed **Components (2
 
 The exact native source exported from the preserved savecopy is [PCB_savecopy_2026-10-16.json](../PCB/PCB_savecopy_2026-10-16.json). The active PCB should be exported again after any further edits. The `savecopy` document itself was not edited.
 
+## Live board update — 2026-10-16
+
+The active non-savecopy EasyEDA board retains the LILYGO T-Display-S3 AMOLED, Pi Zero 2 W header/mechanical reference, controls, dual nRF24 modules, and integrated IR receiver/emitter circuit. The Chameleon Ultra SE3 and ALFA AWUS036ACS are external modules, not solderable footprints. Their new reference boxes are on the non-copper `Document` layer outside the board outline: Chameleon 40 x 24 mm is explicitly provisional and unverified; ALFA 55 x 25 mm represents the adapter body only, without antenna or USB-cable clearance. These boxes are case-layout guides, not verified mechanical fit or fabrication features. The Chameleon itself must be measured before designing its retainer.
+
+The current carrier BOM is [BOM.csv](../BOM.csv). It excludes the obsolete HDMI/Proxmark/SDR scope and lists the Chameleon and ALFA as external modules. A new native PCB export should be generated after the final cleanup of the live editor document.
+
 ## Current scope
 
 - Keep the Chameleon Ultra SE3 as the removable RFID/NFC device.

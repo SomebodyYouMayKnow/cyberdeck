@@ -1,12 +1,12 @@
 # NEONRED — current project goal
 
-**Updated:** 2026-10-16. This is the current scope after restoring the EasyEDA PCB from the preserved `savecopy`. It supersedes older descriptions of an integrated Proxmark, radar detector, and other radio expansions.
+**Updated:** 2026-10-17. This is the current scope after restoring the EasyEDA PCB from the preserved `savecopy`. It supersedes older descriptions of an integrated Proxmark, radar detector, and other radio expansions.
 
 ## Final version description
 
-NEONRED is a compact portable cyberdeck centered on a Raspberry Pi Zero 2 W and a LILYGO T-Display-S3 AMOLED. The Pi runs Linux; the LILYGO ESP32-S3 provides a small onboard interface. A CardKB keyboard, rotary encoder, navigation buttons, IR receiver/transmitter, and two nRF24L01+ modules support the planned user controls and electronics experiments. The Waveshare four-port USB Hub HAT mounts next to the Pi and connects over USB. The Chameleon Ultra SE3 is the external RFID/NFC device for this version; it is not integrated as a bare IC or custom reader circuit.
+NEONRED is a compact cyberdeck centered on a Raspberry Pi Zero 2 W and a LILYGO T-Display-S3 AMOLED. The Pi runs Linux and drives the Waveshare 3.5-inch HDMI LCD (SKU12824, 480x320) through a Mini-HDMI-to-HDMI cable; the LILYGO ESP32-S3 provides a small onboard interface. The BOM excludes batteries, so the deck requires external 5 V power. A CardKB keyboard, rotary encoder, navigation buttons, IR receiver/transmitter, and two nRF24L01+ modules support the planned user controls and electronics experiments. The Waveshare four-port USB Hub HAT mounts next to the Pi and connects over USB. The Chameleon Ultra SE3 is the external RFID/NFC device for this version; it is not integrated as a bare IC or custom reader circuit.
 
-The current design has no HDMI display, integrated Proxmark, RTL-SDR/radar-detector subsystem, or ESP32 external antenna. Proxmark3, RTL-SDR/downconverters, Marauder/Flock You firmware, and antenna-feed expansion are out of current scope. Earlier notes about these are historical only.
+The current design has no battery, integrated Proxmark, RTL-SDR/radar-detector subsystem, or ESP32 external antenna. The HDMI display draws about 0.5 A at 5 V per Waveshare documentation; its resistive touch interface is SPI and is separate from HDMI, so touch integration remains unverified. Proxmark3, RTL-SDR/downconverters, Marauder/Flock You firmware, and antenna-feed expansion are out of current scope. Earlier notes about these are historical only.
 
 ## Intended uses
 
@@ -33,4 +33,4 @@ The restored PCB has not been certified for fabrication or power-on. Run a fresh
 
 ## Historical material
 
-Older dated Proxmark and SDR BOM/audit files are retained as project history. They do not describe the current NEONRED build. Use [the scope reset note](NEONRED_SCOPE_RESET_2026-10-16.md) and [BOM.csv](../BOM.csv) for current scope.
+Older dated Proxmark and SDR BOM/audit files are retained as project history. They do not describe the current NEONRED build. Use [the scope reset note](NEONRED_SCOPE_RESET_2026-10-16.md) and [current BOM](../BOM_NEONRED_current_2026-10-17.csv) for current scope.

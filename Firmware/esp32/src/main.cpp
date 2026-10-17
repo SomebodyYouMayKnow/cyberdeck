@@ -193,8 +193,8 @@ void setup() {
   radio1Ready = configureRadio(radio1, RADIO1_ADDRESS, "radio1");
   radio2Ready = configureRadio(radio2, RADIO2_ADDRESS, "radio2");
 
-  event("encoder_ready", "gpio1_gpio2_button42_pullups");
-  event("buttons_ready", "up41_down46_back43_menu44_select42_pullups");
+  event("encoder_ready", "gpio2_gpio3_button42_pullups");
+  event("buttons_ready", "up45_down46_back43_menu44_select42_pullups");
 
   IrReceiver.begin(IR_RX, DISABLE_LED_FEEDBACK);
   IrSender.begin(IR_TX, DISABLE_LED_FEEDBACK);

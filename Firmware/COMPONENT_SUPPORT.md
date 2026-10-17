@@ -3,10 +3,10 @@
 | Component | Connection | Current firmware support | Hardware-dependent work remaining |
 | --- | --- | --- | --- |
 | LILYGO T-Display-S3 AMOLED | Runs ESP32 firmware | PlatformIO scaffold and USB serial bridge | Confirm board revision and display library/pin configuration before adding UI. |
-| CardKB | I²C address `0x5F`; planned on GPIO3/GPIO41 | Polls one-byte key events and sends JSON to Pi | CardKB is not present on the current schematic; verify its voltage and wiring before connecting. |
-| PEC11R mechanical encoder | A/B on GPIO1/GPIO2, common C to GND; switch on GPIO42/GND | Polls quadrature and button state; internal pull-ups enabled on all three inputs | Verify rotation direction and contact numbering on the physical encoder. |
+| CardKB | I²C address `0x5F`; level-shifted SDA/SCL on GPIO1/GPIO41 | Polls one-byte key events and sends JSON to Pi | Verify the CardKB module pullups, voltage, and wiring before connecting. |
+| PEC11R mechanical encoder | A/B on GPIO2/GPIO3, common C to GND; push contact on GPIO42/GND | Polls quadrature and push state; internal pull-ups enabled on all inputs | Verify rotation direction and contact numbering on the physical encoder. The tactile SELECT button shares GPIO42 with encoder push. |
 | Two nRF24L01+ radios | Shared SPI, separate CE/CSN | Initialises safely at minimum power and can send/receive 32-byte packets | Choose unique RF addresses/channels and measure regulated-rail current. |
-| Adafruit 5990 IR transceiver | GPIO39 RX / GPIO40 TX | Receives decoded data and sends commanded NEC codes | Test with the real remote; add other protocols only after verifying them. |
+| Discrete onboard IR | TSOP38238 output on GPIO39; GPIO40 drives a 2N2222A LED switch through 1 kΩ | Receives decoded data and sends commanded NEC codes | Use a 100 Ω series resistor for the IR LED from 3V3_AUX; verify transistor pinout/footprint and LED orientation before fabrication. |
 | Raspberry Pi | ESP32 USB serial cable | Python bridge prints events and sends commands | Add a systemd service and user-interface integration after device testing. |
 | Chameleon Ultra SE3 | BLE | Safe BLE discovery utility only | Verify exact firmware GATT UUIDs and documented command protocol before any connection or control. |
 | HDMI display | Pi HDMI | Handled by Raspberry Pi OS | Confirm exact panel power/touch wiring and configure display rotation. |

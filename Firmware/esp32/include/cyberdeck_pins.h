@@ -1,16 +1,20 @@
 #pragma once
 
-// Pin assignments match the NEONRED EasyEDA schematic (2026-10-06).
+// Pin assignments match the cyberdeck-completed carrier schematic.
 // Change these only after changing and re-verifying the schematic.
 namespace CyberdeckPins {
-constexpr int ENCODER_A = 1;
-constexpr int ENCODER_B = 2;
+// CardKB uses GPIO1/GPIO41 for shifted I2C. Keep the quadrature encoder off
+// those bus pins: its A/B phases use GPIO2/GPIO3.
+constexpr int ENCODER_A = 2;
+constexpr int ENCODER_B = 3;
 constexpr int ENCODER_BUTTON = 42;
+// The SELECT tact switch is wired in parallel with the encoder's push contact.
+constexpr int BUTTON_SELECT = ENCODER_BUTTON;
 
 // Navigation buttons: normally open to GND, using internal pull-ups.
 constexpr int BUTTON_BACK = 43;
 constexpr int BUTTON_MENU = 44;
-constexpr int BUTTON_UP = 41;
+constexpr int BUTTON_UP = 45;
 constexpr int BUTTON_DOWN = 46;
 
 constexpr int RADIO_SCK = 12;
