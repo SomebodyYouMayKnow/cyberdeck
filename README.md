@@ -21,7 +21,6 @@ The current saved EasyEDA working design is `cyberdeck-completed`; its live two-
 - [Rollback record](docs/NEONRED_SCOPE_RESET_2026-10-16.md)
 - [Current purchase BOM](BOM.csv)
 - [Current BOM with ownership and LCSC columns](BOM_NEONRED_LCSC_Owned_current_2026-10-17.csv)
-- [Current BOM with ownership and LCSC columns](BOM_NEONRED_LCSC_Owned_current_2026-10-17.csv)
 - [Restored EasyEDA PCB source export](PCB/PCB_savecopy_2026-10-16.json)
 - [PCB and schematic exports](PCB/)
 - [Firmware](Firmware/)
