@@ -1,0 +1,50 @@
+{
+  "input": "PCB/PCB_cyberdeck-completed-label-fix-2026-10-17.json",
+  "output": "PCB/PCB_cyberdeck-completed-repaired-2026-10-17.json",
+  "beforeShapeCount": 252,
+  "afterShapeCount": 260,
+  "selectSwitch": {
+    "pad1": "ENC_SW",
+    "pad2": "ENC_SW",
+    "pad3": "GND",
+    "pad4": "GND",
+    "interpretation": "The local SELECT tactile switch is electrically parallel with the rotary encoder push switch; both are active-low on ENC_SW. Encoder A is isolated from the button."
+  },
+  "removedTrack": "gge30005903",
+  "addedTrack": "gge_neonred_select_gnd_fix_20261017",
+  "caseHoles": [
+    {
+      "ref": "CASE_TL",
+      "x": 4067.244,
+      "y": 3067.532,
+      "diameterMm": 3.2,
+      "nativeRadiusField": 6.2992,
+      "type": "NPTH"
+    },
+    {
+      "ref": "CASE_TR",
+      "x": 4845,
+      "y": 3073,
+      "diameterMm": 3.2,
+      "nativeRadiusField": 6.2992,
+      "type": "NPTH"
+    },
+    {
+      "ref": "CASE_BL",
+      "x": 4067.244,
+      "y": 3461.233,
+      "diameterMm": 3.2,
+      "nativeRadiusField": 6.2992,
+      "type": "NPTH"
+    },
+    {
+      "ref": "CASE_BR",
+      "x": 4845,
+      "y": 3461.233,
+      "diameterMm": 3.2,
+      "nativeRadiusField": 6.2992,
+      "type": "NPTH"
+    }
+  ],
+  "screenObjectsChanged": false
+}

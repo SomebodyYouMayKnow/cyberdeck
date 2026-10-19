@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <SPI.h>
+#include <Wire.h>
 #include <RF24.h>
 #include <IRremote.hpp>
 
@@ -17,6 +18,7 @@ const uint8_t RADIO1_ADDRESS[6] = "CDR1";
 const uint8_t RADIO2_ADDRESS[6] = "CDR2";
 bool radio1Ready = false;
 bool radio2Ready = false;
+bool cardKbReady = false;
 bool encoderReady = true;
 int32_t encoderPosition = 0;
 uint8_t encoderAB = 0;
@@ -39,6 +41,7 @@ ButtonState buttons[] = {
 char commandBuffer[128];
 size_t commandLength = 0;
 unsigned long lastScanMs = 0;
+unsigned long lastCardKbPollMs = 0;
 
 void event(const char *type, const char *detail) {
   Serial.printf("{\"type\":\"%s\",\"detail\":\"%s\"}\n", type, detail);
@@ -123,6 +126,28 @@ void pollNavigationButtons() {
   }
 }
 
+void pollCardKb() {
+  const unsigned long now = millis();
+  if (now - lastCardKbPollMs < 10) return;
+  lastCardKbPollMs = now;
+
+  const uint8_t requested = Wire.requestFrom(CARDKB_I2C_ADDRESS, static_cast<uint8_t>(1));
+  if (requested == 0 || !Wire.available()) return;
+  const uint8_t key = static_cast<uint8_t>(Wire.read());
+  if (key == 0) return;
+
+  // Keep the serial event valid JSON for printable ASCII keys. Non-ASCII
+  // special-key codes are reported numerically and interpreted by the Pi.
+  if (key >= 32 && key <= 126) {
+    Serial.printf("{\"type\":\"key\",\"code\":%u,\"character\":\"", key);
+    if (key == '"' || key == '\\') Serial.write('\\');
+    Serial.write(key);
+    Serial.println("\"}");
+  } else {
+    Serial.printf("{\"type\":\"key\",\"code\":%u}\n", key);
+  }
+}
+
 void pollIrReceiver() {
   if (!IrReceiver.decode()) return;
   Serial.printf("{\"type\":\"ir_rx\",\"protocol\":%u,\"address\":%u,\"command\":%u}\n",
@@ -133,9 +158,9 @@ void pollIrReceiver() {
 }
 
 void reportStatus() {
-  Serial.printf("{\"type\":\"status\",\"radio1\":%s,\"radio2\":%s,\"encoder\":%s}\n",
+  Serial.printf("{\"type\":\"status\",\"radio1\":%s,\"radio2\":%s,\"encoder\":%s,\"keyboard\":%s}\n",
                 radio1Ready ? "true" : "false", radio2Ready ? "true" : "false",
-                encoderReady ? "true" : "false");
+                encoderReady ? "true" : "false", cardKbReady ? "true" : "false");
 }
 
 void handleCommand(const char *command) {
@@ -188,6 +213,10 @@ void setup() {
   pinMode(ENCODER_B, INPUT_PULLUP);
   pinMode(ENCODER_BUTTON, INPUT_PULLUP);
   for (auto &button : buttons) pinMode(button.pin, INPUT_PULLUP);
+  Wire.begin(CARDKB_SDA, CARDKB_SCL, 100000);
+  Wire.beginTransmission(CARDKB_I2C_ADDRESS);
+  cardKbReady = Wire.endTransmission() == 0;
+  event(cardKbReady ? "keyboard_ready" : "keyboard_missing", "cardkb_0x5f_gpio1_gpio41");
   encoderAB = (digitalRead(ENCODER_A) << 1) | digitalRead(ENCODER_B);
   SPI.begin(RADIO_SCK, RADIO_MISO, RADIO_MOSI, RADIO1_CSN);
   radio1Ready = configureRadio(radio1, RADIO1_ADDRESS, "radio1");
@@ -206,6 +235,7 @@ void loop() {
   pollUsbSerial();
   pollEncoder();
   pollNavigationButtons();
+  pollCardKb();
   pollIrReceiver();
   pollRadio(radio1, radio1Ready, "radio1");
   pollRadio(radio2, radio2Ready, "radio2");

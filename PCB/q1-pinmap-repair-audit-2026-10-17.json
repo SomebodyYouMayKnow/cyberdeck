@@ -1,0 +1,22 @@
+{
+  "input": "PCB/PCB_cyberdeck-completed-repaired-2026-10-17.json",
+  "output": "PCB/PCB_cyberdeck-completed-q1-pinmap-review-2026-10-17.json",
+  "q1PadNets": {
+    "1": "GND (emitter)",
+    "2": "IR_BASE (base)",
+    "3": "IR_LED_K (collector)"
+  },
+  "rationale": "The selected Diotec 2N2222A data sheet maps E=1, B=2, C=3. Existing PCB nets were B,C,E respectively, so Q1 pins were inconsistent with that manufacturer mapping.",
+  "reroutes": [
+    "IR_BASE moved from Q1 pad 1 to pad 2",
+    "IR_LED_K moved from Q1 pad 2 to pad 3 using a bottom-layer escape/via",
+    "GND moved from Q1 pad 3 to pad 1"
+  ],
+  "via": {
+    "x": 4261.6051,
+    "y": 3204.6119,
+    "outerMm": 0.6,
+    "drillMm": 0.15
+  },
+  "screenObjectsChanged": false
+}

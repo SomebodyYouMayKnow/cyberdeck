@@ -5,6 +5,9 @@
 namespace CyberdeckPins {
 // CardKB uses GPIO1/GPIO41 for shifted I2C. Keep the quadrature encoder off
 // those bus pins: its A/B phases use GPIO2/GPIO3.
+constexpr int CARDKB_SDA = 1;
+constexpr int CARDKB_SCL = 41;
+constexpr uint8_t CARDKB_I2C_ADDRESS = 0x5F;
 constexpr int ENCODER_A = 2;
 constexpr int ENCODER_B = 3;
 constexpr int ENCODER_BUTTON = 42;

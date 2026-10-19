@@ -1,0 +1,100 @@
+{
+  "status": "PRELIMINARY_OFFLINE_EXPORT_ONLY",
+  "source": "PCB\\PCB_cyberdeck-completed-after-JP5-2026-10-16.json",
+  "output": "PCB\\PCB_cyberdeck-completed-two-layer-case-mounts-2026-10-17.json",
+  "sourceRevisionDate": "2026-10-16",
+  "note": "This uses the newest saved cyberdeck-completed PCB source in the workspace. It is not an export from the live EasyEDA document; re-export/sync live PCB before fabrication.",
+  "boardOutlineMm": {
+    "width": 210,
+    "height": 110
+  },
+  "copperLayers": [
+    "TopLayer",
+    "BottomLayer"
+  ],
+  "sourceShapeCount": 206,
+  "outputShapeCount": 218,
+  "componentFootprintsPreserved": true,
+  "existingHolesPreserved": 11,
+  "addedCaseHoles": [
+    {
+      "ref": "CASE1",
+      "x": 51.4,
+      "y": 5,
+      "holeDiameterMm": 2.7,
+      "edgeInsetMm": 5,
+      "nearestCopperClearanceMm": 20.05,
+      "nearestPadClearanceMm": 26.86,
+      "nearestExistingHoleEdgeMm": 44.25,
+      "nearestNewHoleEdgeMm": null,
+      "passesGeometryScreen": true
+    },
+    {
+      "ref": "CASE2",
+      "x": 153,
+      "y": 5,
+      "holeDiameterMm": 2.7,
+      "edgeInsetMm": 5,
+      "nearestCopperClearanceMm": 19.7,
+      "nearestPadClearanceMm": 21.3,
+      "nearestExistingHoleEdgeMm": 47.42,
+      "nearestNewHoleEdgeMm": 98.9,
+      "passesGeometryScreen": true
+    },
+    {
+      "ref": "CASE3",
+      "x": 35,
+      "y": 105,
+      "holeDiameterMm": 2.7,
+      "edgeInsetMm": 5,
+      "nearestCopperClearanceMm": 27.6,
+      "nearestPadClearanceMm": 31.28,
+      "nearestExistingHoleEdgeMm": 17.55,
+      "nearestNewHoleEdgeMm": 98.64,
+      "passesGeometryScreen": true
+    },
+    {
+      "ref": "CASE4",
+      "x": 115,
+      "y": 105,
+      "holeDiameterMm": 2.7,
+      "edgeInsetMm": 5,
+      "nearestCopperClearanceMm": 17.06,
+      "nearestPadClearanceMm": 3.85,
+      "nearestExistingHoleEdgeMm": 13.85,
+      "nearestNewHoleEdgeMm": 77.3,
+      "passesGeometryScreen": true
+    },
+    {
+      "ref": "CASE5",
+      "x": 205,
+      "y": 85,
+      "holeDiameterMm": 2.7,
+      "edgeInsetMm": 5,
+      "nearestCopperClearanceMm": 6.14,
+      "nearestPadClearanceMm": 5.36,
+      "nearestExistingHoleEdgeMm": 55.76,
+      "nearestNewHoleEdgeMm": 89.5,
+      "passesGeometryScreen": true
+    },
+    {
+      "ref": "CASE6",
+      "x": 205,
+      "y": 105,
+      "holeDiameterMm": 2.7,
+      "edgeInsetMm": 5,
+      "nearestCopperClearanceMm": 20.97,
+      "nearestPadClearanceMm": 20.2,
+      "nearestExistingHoleEdgeMm": 75.76,
+      "nearestNewHoleEdgeMm": 17.3,
+      "passesGeometryScreen": true
+    }
+  ],
+  "checksPassed": true,
+  "requiredFinalChecks": [
+    "Import the export into the active EasyEDA cyberdeck-completed PCB and compare against its current canvas.",
+    "Run EasyEDA DRC after import; inspect hole-to-copper and hole-to-component clearances.",
+    "Check case screw/standoff diameter and actual enclosure attachment points.",
+    "Generate and visually inspect Gerber and drill files; perform physical fit and combined-load tests before powering the assembly."
+  ]
+}

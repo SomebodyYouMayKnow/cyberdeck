@@ -1,0 +1,302 @@
+{
+  "status": "PASS_STATIC_LABEL_AND_PAD_CHECK",
+  "input": "PCB\\PCB_cyberdeck-completed-two-layer-case-mounts-2026-10-17.json",
+  "output": "PCB\\PCB_cyberdeck-completed-labeled-2026-10-17.json",
+  "text_labels": [
+    {
+      "text": "BACK",
+      "id": "silk_BACK",
+      "bbox_mm_from_outline": [
+        141.12,
+        72.94,
+        144.88,
+        73.94
+      ]
+    },
+    {
+      "text": "UP",
+      "id": "silk_UP",
+      "bbox_mm_from_outline": [
+        154.17,
+        72.94,
+        155.82,
+        73.94
+      ]
+    },
+    {
+      "text": "MENU",
+      "id": "silk_MENU",
+      "bbox_mm_from_outline": [
+        141.17,
+        82.84,
+        144.83,
+        83.84
+      ]
+    },
+    {
+      "text": "SELECT",
+      "id": "silk_SELECT",
+      "bbox_mm_from_outline": [
+        152.28,
+        94.53,
+        157.72,
+        95.53
+      ]
+    },
+    {
+      "text": "DOWN",
+      "id": "silk_DOWN",
+      "bbox_mm_from_outline": [
+        166.0,
+        78.02,
+        170.0,
+        79.02
+      ]
+    },
+    {
+      "text": "ENTER",
+      "id": "silk_ENTER",
+      "bbox_mm_from_outline": [
+        155.75,
+        67.86,
+        160.25,
+        68.86
+      ]
+    },
+    {
+      "text": "1K",
+      "id": "silk_R5_1K",
+      "bbox_mm_from_outline": [
+        60.33,
+        42.46,
+        61.56,
+        43.46
+      ]
+    },
+    {
+      "text": "100R",
+      "id": "silk_R6_100R",
+      "bbox_mm_from_outline": [
+        48.05,
+        36.11,
+        51.23,
+        37.11
+      ]
+    },
+    {
+      "text": "2N2222",
+      "id": "silk_Q1_2N2222",
+      "bbox_mm_from_outline": [
+        58.16,
+        31.79,
+        63.73,
+        32.79
+      ]
+    },
+    {
+      "text": "IR LED",
+      "id": "silk_D1_IR_LED",
+      "bbox_mm_from_outline": [
+        2.17,
+        85.38,
+        6.69,
+        86.38
+      ]
+    },
+    {
+      "text": "100NF X4",
+      "id": "silk_ceramic_100NF_x4",
+      "bbox_mm_from_outline": [
+        115.17,
+        34.58,
+        122.03,
+        35.58
+      ]
+    },
+    {
+      "text": "100NF",
+      "id": "silk_C9_100NF",
+      "bbox_mm_from_outline": [
+        47.66,
+        37.88,
+        51.37,
+        38.78
+      ]
+    },
+    {
+      "text": "10K",
+      "id": "silk_R7_10K",
+      "bbox_mm_from_outline": [
+        92.19,
+        28.0,
+        93.96,
+        28.8
+      ]
+    },
+    {
+      "text": "10K",
+      "id": "silk_R8_10K",
+      "bbox_mm_from_outline": [
+        92.19,
+        32.0,
+        93.96,
+        32.8
+      ]
+    },
+    {
+      "text": "10K",
+      "id": "silk_R10_10K",
+      "bbox_mm_from_outline": [
+        92.19,
+        36.0,
+        93.96,
+        36.8
+      ]
+    },
+    {
+      "text": "10K",
+      "id": "silk_R9_10K",
+      "bbox_mm_from_outline": [
+        92.19,
+        40.0,
+        93.96,
+        40.8
+      ]
+    },
+    {
+      "text": "10UF",
+      "id": "silk_C12_10UF",
+      "bbox_mm_from_outline": [
+        16.13,
+        34.33,
+        18.64,
+        35.13
+      ]
+    },
+    {
+      "text": "10UF",
+      "id": "silk_C13_10UF",
+      "bbox_mm_from_outline": [
+        23.75,
+        34.33,
+        26.26,
+        35.13
+      ]
+    },
+    {
+      "text": "10UF",
+      "id": "silk_C15_10UF",
+      "bbox_mm_from_outline": [
+        31.37,
+        34.33,
+        33.88,
+        35.13
+      ]
+    },
+    {
+      "text": "10UF",
+      "id": "silk_C17_10UF",
+      "bbox_mm_from_outline": [
+        38.99,
+        34.33,
+        41.5,
+        35.13
+      ]
+    }
+  ],
+  "polarity_marks": [
+    {
+      "symbol": "+",
+      "id": "silk_C12_plus",
+      "center_mm_from_outline": [
+        16.38,
+        39.15
+      ],
+      "size_mm": 0.75
+    },
+    {
+      "symbol": "-",
+      "id": "silk_C12_minus",
+      "center_mm_from_outline": [
+        18.38,
+        39.15
+      ],
+      "size_mm": 0.75
+    },
+    {
+      "symbol": "+",
+      "id": "silk_C13_plus",
+      "center_mm_from_outline": [
+        24.0,
+        39.15
+      ],
+      "size_mm": 0.75
+    },
+    {
+      "symbol": "-",
+      "id": "silk_C13_minus",
+      "center_mm_from_outline": [
+        26.0,
+        39.15
+      ],
+      "size_mm": 0.75
+    },
+    {
+      "symbol": "+",
+      "id": "silk_C15_plus",
+      "center_mm_from_outline": [
+        31.62,
+        39.15
+      ],
+      "size_mm": 0.75
+    },
+    {
+      "symbol": "-",
+      "id": "silk_C15_minus",
+      "center_mm_from_outline": [
+        33.62,
+        39.15
+      ],
+      "size_mm": 0.75
+    },
+    {
+      "symbol": "+",
+      "id": "silk_C17_plus",
+      "center_mm_from_outline": [
+        39.24,
+        39.15
+      ],
+      "size_mm": 0.75
+    },
+    {
+      "symbol": "-",
+      "id": "silk_C17_minus",
+      "center_mm_from_outline": [
+        41.24,
+        39.15
+      ],
+      "size_mm": 0.75
+    },
+    {
+      "symbol": "+",
+      "id": "silk_D1_plus",
+      "center_mm_from_outline": [
+        3.16,
+        90.72
+      ],
+      "size_mm": 0.75
+    },
+    {
+      "symbol": "-",
+      "id": "silk_D1_minus",
+      "center_mm_from_outline": [
+        5.7,
+        90.72
+      ],
+      "size_mm": 0.75
+    }
+  ],
+  "pad_overlaps": [],
+  "components_positions_tracks_nets_and_holes_unchanged": true,
+  "note": "Labels and signs are top-silkscreen geometry on a candidate export. Confirm readability and silk-to-mask clearances in EasyEDA DRC/preview before manufacturing."
+}

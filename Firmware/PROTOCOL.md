@@ -16,7 +16,7 @@ The ESP32 and Pi communicate through an intact USB data cable. Serial speed is 1
 
 Each event is a JSON object on one line. Types currently include `boot`, `status`, `key`, `encoder_delta`, `encoder_button`, `button`, `radio_rx`, `ir_rx`, `radio_sent`, `radio_failed`, and `command_error`.
 
-CardKB events contain an ASCII key code. The Pi bridge prints them; assigning those events to Linux input devices must wait until the actual keyboard behavior is chosen and the hardware is tested.
+CardKB emits `{"type":"key","code":113,"character":"q"}` for printable ASCII and `{"type":"key","code":128}` for special/control codes. The Pi bridge prints the event; mapping keys into Linux input devices still requires choosing and testing that behavior.
 # Navigation-button event
 
 The firmware reports each debounced press as a JSON line on the ESP32 USB serial connection:

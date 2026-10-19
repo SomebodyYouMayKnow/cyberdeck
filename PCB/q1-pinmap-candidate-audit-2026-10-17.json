@@ -1,0 +1,17 @@
+{
+  "input": "PCB/PCB_cyberdeck-completed-repaired-2026-10-17.json",
+  "output": "PCB/PCB_cyberdeck-completed-q1-pinmap-candidate-2026-10-17.json",
+  "q1Pads": {
+    "1": "GND emitter",
+    "2": "IR_BASE base",
+    "3": "IR_LED_K collector"
+  },
+  "tracks": [
+    "gge30005909",
+    "gge30005918",
+    "gge30005954",
+    "gge30006065"
+  ],
+  "screenObjectsChanged": false,
+  "layerRouting": "existing top layer only"
+}
