@@ -22,7 +22,7 @@ M2.5 nylon standoff and screw kit,1 kit,Required purchase,9.99,https://www.amazo
 M3 standoff and screw kit,1 kit,Required purchase,9.99,https://www.amazon.com/dp/B0FBMFBQHQ,Carrier/case mounting hardware; use insulating washers where needed
 USB-A to micro-USB data cable,1,Required purchase,2.95,https://www.adafruit.com/product/898,Connect Pi USB host to Waveshare hub upstream port; confirm data wiring and orientation
 USB-C data cable,1,Required purchase,4.95,https://www.adafruit.com/product/4474,Programming the LILYGO board; use a data-capable cable
-Custom carrier PCB,1,Quote after fit and DRC,TBD,https://jlcpcb.com/,Current restored board; obtain quote only after physical fit and fabrication review
+Custom carrier PCB - 2-layer - 226 x 126 mm envelope (210 x 110 mm inner area),1,Quote refresh required,TBD,https://jlcpcb.com/,Current committed PCB/Gerber is 2-layer with 226 x 126 mm overall envelope (210 x 110 mm inner area) including eight case ears; refresh fabrication quote from exact Gerber before purchase
 3D-printed enclosure and retainers,1 set,Quote after CAD fit,TBD,https://jlc3dp.com/,Custom printed enclosure/retainers; upload finalized CAD/STL after fit checks for a quote
 Waveshare 3.5-inch HDMI LCD SKU12824,1,Required purchase,31.99,https://www.waveshare.com/3.5inch-HDMI-LCD.htm,"480x320 IPS display for Raspberry Pi; 5 V input, about 0.5 A. Resistive touch uses separate SPI GPIO, not HDMI; verify display fit and touch wiring."
 Mini HDMI to HDMI cable (Adafruit 2775),1,Required purchase,5.95,https://www.adafruit.com/product/2775,"Connect Pi Zero 2 W Mini-HDMI output to standard HDMI display input; 1.5 m cable, route through hinge."
