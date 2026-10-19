@@ -10,20 +10,22 @@
     <circle cx="21" cy="21" r="1.6"/><circle cx="218.56" cy="22.4" r="1.6"/><circle cx="21" cy="121" r="1.6"/><circle cx="218.56" cy="121" r="1.6"/>
     <circle cx="68.5" cy="12" r="1.6"/><circle cx="173.5" cy="12" r="1.6"/><circle cx="230" cy="43.5" r="1.6"/><circle cx="230" cy="98.5" r="1.6"/>
     <circle cx="173.5" cy="130" r="1.6"/><circle cx="68.5" cy="130" r="1.6"/><circle cx="12" cy="98.5" r="1.6"/><circle cx="12" cy="43.5" r="1.6"/>
+    <circle cx="21.5" cy="56.5" r="1.3755"/><circle cx="114.5" cy="56.5" r="1.3755"/><circle cx="21.5" cy="115.5" r="1.3755"/><circle cx="114.5" cy="115.5" r="1.3755"/>
+    <circle cx="158" cy="22" r="1.3755"/><circle cx="210" cy="22" r="1.3755"/><circle cx="158" cy="42" r="1.3755"/><circle cx="210" cy="42" r="1.3755"/>
   </g>
   <rect class="reserve" x="24" y="59" width="88" height="54" rx="1.5"/>
   <text x="53" y="85" class="bold">CardKB</text><text x="47" y="89" class="small">88 × 54 reserve</text>
   <g class="support">
     <circle cx="21.5" cy="56.5" r="1.4"/><circle cx="114.5" cy="56.5" r="1.4"/><circle cx="21.5" cy="115.5" r="1.4"/><circle cx="114.5" cy="115.5" r="1.4"/>
   </g>
-  <text x="20" y="123" class="note">red holes = printed CardKB frame only; not PCB holes</text>
+  <text x="20" y="123" class="note">CardKB frame fasteners now pass through matching 2.751 mm PCB NPTHs</text>
   <rect class="cham" x="154" y="18" width="60" height="30" rx="1.5"/>
   <rect x="164" y="21" width="40" height="24" rx="2" fill="#b27024" stroke="#ffe0a2" stroke-width=".4"/>
   <text x="164" y="34" class="bold">Chameleon SE3</text><text x="161" y="52" class="small">60 × 30 PCB reserve</text>
   <g class="support">
-    <circle cx="158" cy="22" r="1.4"/><circle cx="210" cy="22" r="1.4"/><circle cx="158" cy="44" r="1.4"/><circle cx="210" cy="44" r="1.4"/>
+    <circle cx="158" cy="22" r="1.4"/><circle cx="210" cy="22" r="1.4"/><circle cx="158" cy="42" r="1.4"/><circle cx="210" cy="42" r="1.4"/>
   </g>
-  <text x="154" y="56" class="note">red holes = printed retainer only; case-boss fit pending</text>
+  <text x="154" y="56" class="note">Retainer screws pass through matching PCB NPTHs; case-boss fit pending</text>
   <rect class="hint" x="148" y="70" width="65" height="35" rx="2" stroke-dasharray="2 1"/>
   <text x="158" y="85" class="bold">ALFA cradle</text><text x="151" y="90" class="small">separate, unplaced 55 × 25 mm estimate</text>
   <text x="148" y="110" class="note">Do not use as a confirmed PCB location.</text>

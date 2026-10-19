@@ -1,0 +1,169 @@
+{
+  "status": "LIVE_EASYEDA_DRC_PASS_0_ERRORS_NATIVE_GERBER_EXPORTED",
+  "sourcePcb": "PCB\\PCB_cyberdeck-completed-case-ears-2026-10-19.json",
+  "candidatePcb": "PCB\\PCB_cyberdeck-completed-component-mounts-2026-10-19.json",
+  "sourceGerber": "outputs\\NEONRED_case_ears_2026-10-19.zip",
+  "candidateGerber": "outputs\\NEONRED_live_component_mounts_2026-10-19.zip",
+  "existingExplicitHoleRecords": 12,
+  "existingNpthDrillCount": 16,
+  "newTotalNpthDrillCount": 24,
+  "addedHoles": [
+    {
+      "id": "KB_TL",
+      "component": "CardKB printed frame",
+      "boardLocalMm": [
+        13.5,
+        48.5
+      ],
+      "holeDiameterMm": 2.751,
+      "edgeInsetMm": 13.5,
+      "nearestTrackEdgeClearanceMm": 3.467,
+      "nearestTrackId": "gge30008798",
+      "nearestPadEdgeClearanceMm": 3.043,
+      "nearestPadId": "gge30001148",
+      "nearestPadNet": "KB_SCL",
+      "nearestExistingHoleEdgeClearanceMm": 13.126,
+      "screeningPass": true
+    },
+    {
+      "id": "KB_TR",
+      "component": "CardKB printed frame",
+      "boardLocalMm": [
+        106.5,
+        48.5
+      ],
+      "holeDiameterMm": 2.751,
+      "edgeInsetMm": 48.5,
+      "nearestTrackEdgeClearanceMm": 6.186,
+      "nearestTrackId": "gge30008813",
+      "nearestPadEdgeClearanceMm": 7.472,
+      "nearestPadId": "gge20264424",
+      "nearestPadNet": "",
+      "nearestExistingHoleEdgeClearanceMm": 61.026,
+      "screeningPass": true
+    },
+    {
+      "id": "KB_BL",
+      "component": "CardKB printed frame",
+      "boardLocalMm": [
+        13.5,
+        107.5
+      ],
+      "holeDiameterMm": 2.751,
+      "edgeInsetMm": 13.5,
+      "nearestTrackEdgeClearanceMm": 8.731,
+      "nearestTrackId": "gge30008696",
+      "nearestPadEdgeClearanceMm": 8.201,
+      "nearestPadId": "gge20263134",
+      "nearestPadNet": "IR_LED_K",
+      "nearestExistingHoleEdgeClearanceMm": 2.547,
+      "screeningPass": true
+    },
+    {
+      "id": "KB_BR",
+      "component": "CardKB printed frame",
+      "boardLocalMm": [
+        106.5,
+        107.5
+      ],
+      "holeDiameterMm": 2.751,
+      "edgeInsetMm": 18.5,
+      "nearestTrackEdgeClearanceMm": 17.162,
+      "nearestTrackId": "gge30008822",
+      "nearestPadEdgeClearanceMm": 7.174,
+      "nearestPadId": "gge20264454",
+      "nearestPadNet": "",
+      "nearestExistingHoleEdgeClearanceMm": 45.256,
+      "screeningPass": true
+    },
+    {
+      "id": "CHAM_TL",
+      "component": "Chameleon retainer",
+      "boardLocalMm": [
+        150,
+        14
+      ],
+      "holeDiameterMm": 2.751,
+      "edgeInsetMm": 14,
+      "nearestTrackEdgeClearanceMm": 1.425,
+      "nearestTrackId": "gge30008462",
+      "nearestPadEdgeClearanceMm": 24.236,
+      "nearestPadId": "gge20263440",
+      "nearestPadNet": "",
+      "nearestExistingHoleEdgeClearanceMm": 15.47,
+      "screeningPass": true
+    },
+    {
+      "id": "CHAM_TR",
+      "component": "Chameleon retainer",
+      "boardLocalMm": [
+        202,
+        14
+      ],
+      "holeDiameterMm": 2.751,
+      "edgeInsetMm": 14,
+      "nearestTrackEdgeClearanceMm": 22.31,
+      "nearestTrackId": "gge30008492",
+      "nearestPadEdgeClearanceMm": 37.511,
+      "nearestPadId": "gge20262234",
+      "nearestPadNet": "",
+      "nearestExistingHoleEdgeClearanceMm": 5.583,
+      "screeningPass": true
+    },
+    {
+      "id": "CHAM_BL",
+      "component": "Chameleon retainer",
+      "boardLocalMm": [
+        150,
+        34
+      ],
+      "holeDiameterMm": 2.751,
+      "edgeInsetMm": 34,
+      "nearestTrackEdgeClearanceMm": 1.415,
+      "nearestTrackId": "gge30008672",
+      "nearestPadEdgeClearanceMm": 13.013,
+      "nearestPadId": "gge20263440",
+      "nearestPadNet": "",
+      "nearestExistingHoleEdgeClearanceMm": 30.792,
+      "screeningPass": true
+    },
+    {
+      "id": "CHAM_BR",
+      "component": "Chameleon retainer",
+      "boardLocalMm": [
+        202,
+        34
+      ],
+      "holeDiameterMm": 2.751,
+      "edgeInsetMm": 24,
+      "nearestTrackEdgeClearanceMm": 21.125,
+      "nearestTrackId": "gge30008495",
+      "nearestPadEdgeClearanceMm": 18.471,
+      "nearestPadId": "gge20262234",
+      "nearestPadNet": "",
+      "nearestExistingHoleEdgeClearanceMm": 17.08,
+      "screeningPass": true
+    }
+  ],
+  "unchangedElectricalShapes": true,
+  "previousDrillPatchedArchiveSuperseded": true,
+  "liveEasyEDA": {
+    "project": "cyberdeck-completed",
+    "pcb": "PCB_cyberdeck-completed",
+    "components": 36,
+    "netsConnected": "29/29",
+    "drcErrors": 0,
+    "layers": 2,
+    "dimensionsMm": [226, 126],
+    "nativeGerberGenerated": true,
+    "nativeGerberZipEntries": 12,
+    "nativeGerberNpthHits": 24,
+    "gerberGeneratedAt": "2026-10-19 11:02:25"
+  },
+  "validation": [
+    "All 8 holes passed an offline clearance screen and the imported live PCB passed EasyEDA native DRC with 0 errors.",
+    "NPTH file uses existing 2.751 mm EasyEDA drill tool and existing coordinate origin mapping.",
+    "The current live Gerber archive was generated by EasyEDA after native DRC; it supersedes the earlier drill-only patched candidate archive.",
+    "ALFA AWUS036ACS remains unplaced and has no board screw holes; do not drill/print its cradle until a location and real-part measurements are chosen."
+  ]
+}

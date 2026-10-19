@@ -38,6 +38,12 @@ pcb_mounts = [
 pi_mounts = [[113.6983,35.5788],[136.6982,35.5788],[113.6983,93.5789],[136.6982,93.5789]];
 hat_mounts = [[23.5,66],[81.5,66],[23.5,89],[81.5,89]];
 hat_slot = [26.6,85,51.8,8];
+// New 2.751 mm NPTH support holes in the 2026-10-19 PCB candidate.
+// Coordinates are relative to the 210 x 110 mm inner-board datum.
+component_mounts = [
+  [5.5,40.5],[98.5,40.5],[5.5,99.5],[98.5,99.5], // CardKB printed frame
+  [142,6],[194,6],[142,24],[194,24]              // Chameleon retainer
+];
 
 // Confirmed planning envelopes.  Change only from a physical measurement.
 keyboard_xy = [8,43];
@@ -139,6 +145,8 @@ module service_tray() {
     tray_xy([hat_slot[0],hat_slot[1]]) translate([0,0,-0.1]) rr_box([hat_slot[2],hat_slot[3]],1,floor_t+0.2);
     // Twelve clearances correspond to the live PCB's four corner holes and eight ears.
     for (p=pcb_mounts) outer_tray_xy(p) translate([0,0,-0.1]) m25_hole(floor_t+0.2);
+    // Eight board through-holes align with the CardKB frame and Chameleon retainer.
+    for (p=component_mounts) tray_xy(p) translate([0,0,-0.1]) m25_hole(floor_t+0.2);
   }
   // PCB support posts align to the saved NPTHs. Use insulating M2.5 hardware/washers.
   for (p=pcb_mounts) outer_tray_xy(p) translate([0,0,floor_t]) standoff(pcb_standoff_h);
@@ -146,6 +154,8 @@ module service_tray() {
   for (p=pi_mounts) tray_xy(p) translate([0,0,floor_t+pcb_standoff_h+pcb[2]]) standoff(6,5.6,2.6);
   // HAT support posts stop at the carrier; nylon spacers sit between the carrier and HAT.
   for (p=hat_mounts) tray_xy(p) translate([0,0,floor_t+pcb_standoff_h+pcb[2]]) standoff(hat_separator_h,5.6,2.6);
+  // Bosses support the printed CardKB frame and Chameleon retainer through matching NPTHs.
+  for (p=component_mounts) tray_xy(p) translate([0,0,floor_t+pcb_standoff_h+pcb[2]]) standoff(5,6.2,2.8);
   cable_channels();
 }
 
@@ -201,7 +211,7 @@ module chameleon_retainer() {
     rr_box(s,2,3);
     translate([(s[0]-chameleon_size[0])/2,(s[1]-chameleon_size[1])/2,1])
       rr_box([chameleon_size[0]+0.5,chameleon_size[1]+0.5],1.5,2.2);
-    for (p=[[4,4],[s[0]-4,4],[4,s[1]-4],[s[0]-4,s[1]-4]])
+    for (p=[[4,4],[s[0]-4,4],[4,s[1]-6],[s[0]-4,s[1]-6]])
       translate([p[0],p[1],-0.1]) m25_hole(3.2);
   }
   // Raised side rails retain the module without covering its face.
