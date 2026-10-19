@@ -32,4 +32,4 @@ The restored PCB has not been certified for fabrication or power-on. Run a fresh
 
 ## Historical material
 
-Older dated BOM and audit files are historical records. They do not describe the current NEONRED build. Use [the scope reset note](NEONRED_SCOPE_RESET_2026-10-16.md) and [current BOM](../BOM_NEONRED_current_2026-10-17.csv) for current scope.
+Older dated BOM and audit files are historical records. They do not describe the current NEONRED build. Use [the scope reset note](NEONRED_SCOPE_RESET_2026-10-16.md) and [current BOM](../BOM.csv) for current scope.

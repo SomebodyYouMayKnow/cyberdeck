@@ -9,15 +9,13 @@
 
 The live board outline and Gerber export are ready for a **bare-board prototype quote/order** based on EasyEDA's DRC and preview. This does not verify electrical operation, power budget, assembly, or mechanical fit. The ALFA adapter remains unplaced and has no mounting holes. The earlier `NEONRED_component_mounts_2026-10-19.zip` is a superseded offline drill-patched archive; use the live archive above.
 
-The next section is historical: these were the files exported from the live PCB on 2026-10-18 before case lips and support holes were added:
+The next section is historical: the 2026-10-18 files were exported before case lips and support holes were added. Their Gerber ZIPs have been removed; use the current live Gerber package linked above.
 
 - [PCB_cyberdeck-completed-order-candidate-2026-10-18.json](PCB_cyberdeck-completed-order-candidate-2026-10-18.json) — native EasyEDA JSON source export.
-- [NEONRED_Gerber_bare-board-order_2026-10-18.zip](NEONRED_Gerber_bare-board-order_2026-10-18.zip) — cleaned fabrication archive for upload; it omits EasyEDA's non-fabrication DocumentLayer from the original generated archive.
-- [NEONRED_Gerber_order-candidate_2026-10-18.zip](NEONRED_Gerber_order-candidate_2026-10-18.zip) — unmodified EasyEDA-generated archive, retained for traceability.
 - [NEONRED_READINESS_CHECK_2026-10-18.md](../docs/NEONRED_READINESS_CHECK_2026-10-18.md) — audit, power boundary, and remaining prototype tests.
 - [BOM.csv](../BOM.csv) — project purchase list and board quote.
 
-The live EasyEDA Design Manager showed **29/29 nets** and **DRC Errors (0)** immediately before Gerber generation. The Gerber generator reported **2 copper layers**, **210 × 110 mm**, and a JLCPCB preview of **$14.88 for five green boards**, excluding shipping and tax. The cleaned upload archive contains top/bottom copper, top/bottom solder mask, top silkscreen, top paste, the board outline, plated/non-plated/via drills, and the order note. The manufacturing outline is `Gerber_BoardOutlineLayer.GKO`.
+The historical live EasyEDA Design Manager showed **29/29 nets** and **DRC Errors (0)** immediately before Gerber generation. Its old quote and Gerber details are retained in the dated readiness report; use only the current 2026-10-19 Gerber package for fabrication.
 
 This clears the exported geometry for a **bare-board prototype order**. It does not clear electrical operation or assembly. No PCB assembly option is included; modules and through-hole parts must be sourced and fitted separately. Mechanical fit remains unverified and was outside this pass.
 

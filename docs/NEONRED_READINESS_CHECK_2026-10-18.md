@@ -9,7 +9,7 @@
 - [x] EasyEDA Design Manager shows **29/29 nets**.
 - [x] EasyEDA DRC shows **0 errors**. The Gerber generation dialog offered to run DRC; the check completed and proceeded to fabrication export.
 - [x] Exported a fresh EasyEDA PCB JSON: [PCB_cyberdeck-completed-order-candidate-2026-10-18.json](../PCB/PCB_cyberdeck-completed-order-candidate-2026-10-18.json).
-- [x] Generated [NEONRED_Gerber_order-candidate_2026-10-18.zip](../PCB/NEONRED_Gerber_order-candidate_2026-10-18.zip) from the live board after DRC, then created [NEONRED_Gerber_bare-board-order_2026-10-18.zip](../PCB/NEONRED_Gerber_bare-board-order_2026-10-18.zip) with only fabrication layers and the order note.
+- [x] Generated the 2026-10-18 Gerber package from the live board after DRC. Those historical ZIPs were later removed after the board was revised; use the current package documented in [the PCB README](../PCB/README.md).
 - [x] Gerber setup reports **2 copper layers** and **210 × 110 mm** board dimensions. It showed a JLCPCB preview of **$14.88 for five green boards** (shipping/tax excluded).
 - [x] Verified that the upload archive opens and contains top/bottom copper, top/bottom solder mask, top silkscreen, top paste, outline, plated/non-plated/via drill files, and the fabrication order note. The descriptive DocumentLayer was omitted from the upload copy. `Gerber_BoardOutlineLayer.GKO` carries the board outline.
 - [x] Updated [the purchase BOM](../BOM.csv) with the prototype-board quote and distinct Pi and auxiliary power-source roles.

@@ -19,7 +19,7 @@ Keep the battery external and feed each main device from a normal USB output. Do
 
 ## Purchase list
 
-`BOM_NEONRED_purchase-list_2026-10-06.csv` contains unowned required purchase items, current known costs, links, and TBD prices where the exact selection is unresolved. The conditional Anker replacement is excluded from the required subtotal. The owned Pi, LILYGO board, Waveshare hub, and Miady banks are intentionally absent from the purchase rows. The old BOM remains as historical project data.
+The removed `BOM_NEONRED_purchase-list_2026-10-06.csv` listed unowned required purchase items, known costs, links, and TBD prices where the exact selection was unresolved. It was superseded by the current project BOM; this dated note is retained for history.
 
 Known-priced required items subtotal: **$181.52**. This excludes TBD passives/IR parts, the custom PCB quote, shipping/tax, and the conditional Anker power bank.
 
