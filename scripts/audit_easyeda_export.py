@@ -45,12 +45,11 @@ def main(path: Path) -> None:
     print("+3V3 pads", len(net_pads["+3V3"]))
     print("selected components:")
     for ref, package, value, x, y, pads in components:
-        if not ref.startswith("PROX") or ref in {"PROXSV1", "PROXSV2"}:
-            print(" ", ref, package, value, x, y, "GND", [(n, x, y) for net, n, x, y in pads if net == "GND"][:12])
+        print(" ", ref, package, value, x, y, "GND", [(n, x, y) for net, n, x, y in pads if net == "GND"][:12])
     print("GND pads by ref:", dict(collections.Counter(ref for ref, *_ in net_pads["GND"])))
     print("interface pad nets:")
     for ref, package, value, x, y, pads in components:
-        if ref in {"A1", "IC1", "IC2", "U3", "PI1", "PROXSV1", "SW1"}:
+        if ref in {"A1", "IC1", "IC2", "U3", "PI1", "SW1"}:
             print(" ", ref, [(number, net) for net, number, _, _ in pads])
     print("GND tracks near A1:")
     for s in shapes:

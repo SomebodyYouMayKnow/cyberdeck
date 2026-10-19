@@ -12,7 +12,7 @@ The current saved EasyEDA working design is `cyberdeck-completed`; its live two-
 - CardKB, rotary encoder, navigation buttons, IR receiver/transmitter, and two nRF24L01+ modules.
 - Waveshare four-port USB Hub HAT mounted separately beside the Pi.
 - Chameleon Ultra SE3 as a removable external RFID/NFC device.
-- No integrated Proxmark3 or RTL-SDR/radar detector in the current version. The listed INIU bank is assigned to the Pi/HAT branch only; the auxiliary board rail uses a separate owned bank and external regulator, subject to checking labels and measuring loads.
+- No RTL-SDR/radar detector in the current version. The listed INIU bank is assigned to the Pi/HAT branch only; the auxiliary board rail uses a separate owned bank and external regulator, subject to checking labels and measuring loads.
 
 ## Project files
 
@@ -27,4 +27,4 @@ The current saved EasyEDA working design is `cyberdeck-completed`; its live two-
 - [CAD](cad/)
 - [Historical project notes](docs/PROJECT_SUMMARY.md)
 
-Older dated audit/BOM documents remain as historical records. They may describe Proxmark3 and SDR experiments that are outside the current scope.
+Older dated audit/BOM documents are historical records; use the current scope and BOM links above for build decisions.
