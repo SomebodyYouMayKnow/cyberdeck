@@ -40,8 +40,9 @@ Prices are estimates copied from the project BOM; recheck links before ordering.
 | ATNSINC nRF24L01+ PA/LNA module kit | 1 kit | Buy | $9.99 | [Product](https://www.amazon.com/dp/B08R9F11D1) |
 | ALFA AWUS036ACS dual-band Wi-Fi adapter | 1 | Buy | $26.97 | [Product](https://store.rokland.com/products/alfa-awus036acs-802-11ac-ac600-dual-band-wifi-usb-adapter-rp-sma) |
 | RTL-SDR Blog V4L (Lite) SDR dongle | 1 | Buy | $37.95 | [Product](https://www.rtl-sdr.com/product/rtl-sdr-blog-v4l-lite-r828s-rtl2832u-1ppm-tcxo-sma-software-defined-radio-dongle-only/) |
-| RTL-SDR Blog Multipurpose Dipole Antenna Kit | 1 | Buy | $17.95 | [Product](https://www.rtl-sdr.com/product/rtl-sdr-blog-multipurpose-dipole-antenna-kit/) |
-| Adafruit 2.4 GHz Mini Flexible WiFi Antenna, u.FL, 100 mm (ESP32) | 1 | Buy; verify LILYGO connector and RF selection | $2.50 | [Product](https://www.adafruit.com/product/2308) |
+| Bingfu 6-section telescopic SMA-male antenna for RTL-SDR | 1 | Buy | $9.99 | [Product](https://bingfushop.com/products/bingfu-6-section-sma-male-telescopic-antenna-compatible-with-rtl-sdr-blog-v3-dongles-hackrf-one-sdr-nooelec-rtl-sdr-v5-radio-communication-antenna-replacement) |
+| Inventek W24-ASMA-M 2.4 GHz tilting SMA-male whip antenna (ESP32 Wi-Fi/Bluetooth) | 1 | Buy; verify LILYGO external RF connector/selector | $2.99 | [Product](https://www.digikey.com/en/products/detail/inventek-systems/W24-ASMA-M/4959494) |
+| GCT CABLE 348 RF-150-A-1 U.FL/I-PEX-to-SMA-female bulkhead pigtail, 150 mm | 1 | Buy only if LILYGO connector is confirmed | $2.93 | [Product](https://www.digikey.com/en/products/detail/gct/CABLE-348-RF-150-A-1/12822383) |
 | LILYGO T-Display-S3 AMOLED | 1 | Owned | — | [Product](https://github.com/Xinyuan-LILYGO/T-Display-S3-AMOLED) |
 | Raspberry Pi Zero 2 W | 1 | Owned | — | [Product](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/) |
 | Waveshare USB HUB HAT SKU12694 | 1 | Owned | — | [Product](https://www.waveshare.com/usb-hub-hat.htm) |
@@ -66,7 +67,7 @@ Prices are estimates copied from the project BOM; recheck links before ordering.
 | USB-C data cable | 1 | Buy | $4.95 | [Product](https://www.adafruit.com/product/4474) |
 | Custom carrier PCB, 2-layer, 226 × 126 mm envelope (210 × 110 mm inner area) | 1 order (5 boards) | Quote needed | TBD | [Product](https://jlcpcb.com/) |
 
-**Estimated known-purchase subtotal: $228.12 before shipping and tax.** This includes the V4L dongle and both antenna items; verify live prices before ordering.
+**Estimated known-purchase subtotal: $223.58 before shipping and tax.** This includes the V4L dongle and the compact SDR antenna plus ESP32 antenna and pigtail; it counts the five-piece MOQ for the NPN transistor. Verify live prices before ordering. The external ESP32 antenna requires a matching LILYGO RF connector and selecting the external RF path. The cheaper telescopic SDR whip is less versatile than the removed dipole kit and will perform differently across bands.
 
 See [`BOM.csv`](BOM.csv) for more details.
 
