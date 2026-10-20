@@ -39,6 +39,9 @@ Prices are estimates copied from the project BOM; recheck links before ordering.
 | Chameleon Ultra SE3 | 1 | Buy | $39.99 | [Product](https://shop.mtoolstec.com/product/chameleon-ultra-se3) |
 | ATNSINC nRF24L01+ PA/LNA module kit | 1 kit | Buy | $9.99 | [Product](https://www.amazon.com/dp/B08R9F11D1) |
 | ALFA AWUS036ACS dual-band Wi-Fi adapter | 1 | Buy | $26.97 | [Product](https://store.rokland.com/products/alfa-awus036acs-802-11ac-ac600-dual-band-wifi-usb-adapter-rp-sma) |
+| RTL-SDR Blog V4L (Lite) SDR dongle | 1 | Buy | $37.95 | [Product](https://www.rtl-sdr.com/product/rtl-sdr-blog-v4l-lite-r828s-rtl2832u-1ppm-tcxo-sma-software-defined-radio-dongle-only/) |
+| RTL-SDR Blog Multipurpose Dipole Antenna Kit | 1 | Buy | $17.95 | [Product](https://www.rtl-sdr.com/product/rtl-sdr-blog-multipurpose-dipole-antenna-kit/) |
+| Adafruit 2.4 GHz Mini Flexible WiFi Antenna, u.FL, 100 mm (ESP32) | 1 | Buy; verify LILYGO connector and RF selection | $2.50 | [Product](https://www.adafruit.com/product/2308) |
 | LILYGO T-Display-S3 AMOLED | 1 | Owned | — | [Product](https://github.com/Xinyuan-LILYGO/T-Display-S3-AMOLED) |
 | Raspberry Pi Zero 2 W | 1 | Owned | — | [Product](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/) |
 | Waveshare USB HUB HAT SKU12694 | 1 | Owned | — | [Product](https://www.waveshare.com/usb-hub-hat.htm) |
@@ -63,7 +66,7 @@ Prices are estimates copied from the project BOM; recheck links before ordering.
 | USB-C data cable | 1 | Buy | $4.95 | [Product](https://www.adafruit.com/product/4474) |
 | Custom carrier PCB, 2-layer, 226 × 126 mm envelope (210 × 110 mm inner area) | 1 order (5 boards) | Quote needed | TBD | [Product](https://jlcpcb.com/) |
 
-**Estimated known-purchase subtotal: $169.72 before shipping and tax.** 
+**Estimated known-purchase subtotal: $228.12 before shipping and tax.** This includes the V4L dongle and both antenna items; verify live prices before ordering.
 
 See [`BOM.csv`](BOM.csv) for more details.
 
