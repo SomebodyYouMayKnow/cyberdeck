@@ -8,6 +8,21 @@ __pycache__/
 *.stl
 *.step
 *.f3d
-outputs/
 work/
-STARDANCE_SUBMISSION_CHECKLIST.md
+
+# Local scratch scripts and design notes stay out of the public repository.
+/scripts/
+/docs/
+/outputs/
+
+# Publish only PCB screenshots, prior Gerber packages, and the current Gerber.
+/PCB/*
+!/PCB/screenshots/
+!/PCB/past gerbers/
+!/PCB/NEONRED_Gerbers_current_2026-10-19.zip
+/PCB/screenshots/*
+!/PCB/screenshots/*.png
+!/PCB/screenshots/*.jpg
+!/PCB/screenshots/*.jpeg
+/PCB/past gerbers/*
+!/PCB/past gerbers/*.zip

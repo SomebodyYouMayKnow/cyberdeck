@@ -65,5 +65,14 @@ Prices are estimates copied from the project BOM; recheck links before ordering.
 
 **Estimated known-purchase subtotal: $169.72 before shipping and tax.** 
 
-See [`BOM.csv`](../BOM.csv). for more details.
+See [`BOM.csv`](BOM.csv) for more details.
+
+## Project files
+
+- Latest fabrication package: [`PCB/NEONRED_Gerbers_current_2026-10-19.zip`](PCB/NEONRED_Gerbers_current_2026-10-19.zip)
+- Earlier Gerber packages: [`PCB/past gerbers/`](PCB/past%20gerbers/)
+- Current EasyEDA source exports and audit: [`EasyEDA/`](EasyEDA/)
+- Board screenshots: [`PCB/screenshots/`](PCB/screenshots/)
+- Firmware: [`Firmware/`](Firmware/)
+- CAD: [`cad/`](cad/)
 

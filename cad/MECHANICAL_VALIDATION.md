@@ -6,7 +6,7 @@ This is an editable enclosure and printed-retainer concept for the current NEONR
 
 | Feature | Current model | Source/status |
 | --- | --- | --- |
-| PCB outside envelope | 226 × 126 × 1.6 mm, including eight mounting lips | Live EasyEDA Gerber preview from `PCB/PCB_cyberdeck-completed-case-ears-2026-10-19.json`; digital envelope only |
+| PCB outside envelope | 226 × 126 × 1.6 mm, including eight mounting lips | Current EasyEDA source export in `EasyEDA/NEONRED_PCB_2026-10-19.json`; digital envelope only |
 | Main PCB area | 210 × 110 mm, offset 8 mm from the envelope origin | Reconstructed from the saved board outline |
 | Board through-holes | 24 total in current live Gerber: 12 case mounts (four field + eight lips), 4 Pi mounting holes, 8 CardKB/Chameleon support holes | The eight support holes were imported into the live EasyEDA board; native EasyEDA DRC reported 0 errors |
 | Enclosure outside | 242 × 142 mm | CAD allowance of 8 mm nominal around the PCB; hinge and port clearances remain provisional |

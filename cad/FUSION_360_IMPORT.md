@@ -21,5 +21,5 @@ PrusaSlicer works with mesh files, but it does not export STEP. In Fusion's Desi
 6. Create native Fusion components for the enclosure and supports, then save an editable `.f3d`.
 7. Export the complete electronics-inclusive assembly as `.step` for Stardance.
 
-The DXF and SCAD are placement references, not fit-verified enclosure drawings. The eight support holes were imported into the live EasyEDA PCB; DRC reported zero errors, and the fresh native EasyEDA Gerber is saved at `outputs/NEONRED_live_component_mounts_2026-10-19.zip`. The STEP file is the carrier board only, not a verified full enclosure. The ALFA cradle is separate and unplaced because the current PCB has no ALFA reserve. Complete physical checks in `MECHANICAL_VALIDATION.md` before printing.
+The DXF and SCAD are placement references, not fit-verified enclosure drawings. The eight support holes were imported into the live EasyEDA PCB; the saved audit reported zero DRC errors, and the latest native EasyEDA Gerber is [`PCB/NEONRED_Gerbers_current_2026-10-19.zip`](../PCB/NEONRED_Gerbers_current_2026-10-19.zip). The STEP file is the carrier board only, not a verified full enclosure. The ALFA cradle is separate and unplaced because the current PCB has no ALFA reserve. Complete physical checks in `MECHANICAL_VALIDATION.md` before printing.
 
