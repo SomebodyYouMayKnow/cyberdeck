@@ -13,8 +13,8 @@ I am building a portable foldable-style cyberdeck. A raspberry pi 0 2 is the lin
 This project will be used for a wide range of uses including wifi analysis, radio wave analysis, IR use cases, and bluetooth.
 I was inspired for this project by my teacher, Mr. Lindemmann in AP Cybesecurity.
 
-# How the design changed.
-I originally started with a project of this look, and after realizing I had just connected a few parts, I decided to redesign it to be simpler, but with more parts integrated into the PCB. After trying this, I added an open source project called Proxmark 3 into the PCB, but I had many errors and it was above my level, so I decided to revert back to the original version, but integrate some parts in the PCB, which I did with the battery power supply, the IR board, rotary encoder, capacitors, and much more. Which brought me to where I am.
+# How the design changed and feedback.
+I originally started with a project of this look, and after realizing I had just connected a few parts, I decided to redesign it to be simpler, but with more parts integrated into the PCB. After trying this, I added an open source project called Proxmark 3 into the PCB, but I had many errors and it was above my level. And after getting some feedback from my friend, I decided to revert back to the original version, but integrate some parts in the PCB, which I did with the battery power supply, the IR board, rotary encoder, capacitors, and much more. Which brought me to where I am.
  # Earlier design images:
 **Earlier 2026-10-09 PCB view:**
 
