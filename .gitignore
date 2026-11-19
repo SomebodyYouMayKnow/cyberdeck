@@ -19,7 +19,7 @@ work/
 /PCB/*
 !/PCB/screenshots/
 !/PCB/past gerbers/
-!/PCB/NEONRED_Gerbers_current_2026-10-19.zip
+!/PCB/NEONRED_Gerbers_current_2026-11-18.zip
 /PCB/screenshots/*
 !/PCB/screenshots/*.png
 !/PCB/screenshots/*.jpg
