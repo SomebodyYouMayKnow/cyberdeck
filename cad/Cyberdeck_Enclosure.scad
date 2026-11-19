@@ -9,7 +9,7 @@
   editable parameters at the top of the file.
 */
 
-part = "assembly"; // [assembly,base_shell,service_tray,lid,keyboard_frame,esp32_cradle,chameleon_retainer,alfa_cradle,antenna_pivot,battery_hook]
+part = "assembly"; // [assembly,base_shell,service_tray,lid,lcd_retainer,keyboard_frame,esp32_cradle,chameleon_retainer,alfa_cradle,antenna_pivot,battery_hook]
 $fn = 48;
 
 // ---- Manufacturing and case geometry ----
@@ -56,9 +56,11 @@ hat_size = [65,30];
 lily_xy = [153,32];
 lily_size = [25.5,60];
 lily_window = [23,47];
-lcd_board = [85.01,56.41];
-lcd_view = [74,50];       // conservative aperture; verify against the panel
-lcd_xy = [16,34];
+lcd_board = [85,56.5];    // 3.5-inch HDMI module envelope from the older layout/source drawing
+lcd_view = [76.6,51.8];   // centered opening, slightly larger than the 75.96 x 51.24 mm lens VA
+lcd_xy = [16,34];         // legacy layout datum on the lid
+lcd_thickness = 8.3;      // drawing envelope; confirm exact screen revision and connectors
+lcd_mounts = [[13,31],[104,31],[13,93.5],[104,93.5]]; // lid bosses outside module outline
 chameleon_size = [40,24,8]; // adjustable SE3 envelope, not a manufacturer drawing
 chameleon_xy = [138,2];     // 60 x 30 mm PCB reserve, relative to inner-board datum
 battery_size = [96,64,26];  // Miady AS-TPB21 manual dimensions; verify the owned bank
@@ -244,13 +246,30 @@ module lid() {
     // HDMI panel viewing aperture and closed-lid ESP32 status window
     translate([lcd_xy[0]+(lcd_board[0]-lcd_view[0])/2,lcd_xy[1]+(lcd_board[1]-lcd_view[1])/2,lid_h-2.3]) rr_box(lcd_view,2,2.5);
     translate([164,38,lid_h-2.3]) rr_box(lily_window,2,2.5);
+    // Through-holes for screws that secure the removable LCD corner retainer.
+    for (p=lcd_mounts) translate([p[0],p[1],lid_h-2.3]) cylinder(d=2.6,h=2.6);
     // matching hinge ears
     for (x=[18,95,172]) translate([x,-2,-0.1]) rotate([90,0,0]) cylinder(d=2.8,h=6.2);
   }
-  // board-edge display retainers: no guessed LCD screw-hole locations.
-  for (p=[[lcd_xy[0]-1,lcd_xy[1]+4],[lcd_xy[0]+lcd_board[0]-1,lcd_xy[1]+4],
-          [lcd_xy[0]-1,lcd_xy[1]+lcd_board[1]-8],[lcd_xy[0]+lcd_board[0]-1,lcd_xy[1]+lcd_board[1]-8]])
-    translate([p[0],p[1],2.2]) cube([3,4,4]);
+  // Hollow screw towers support the module retainer; screw axes are outside its PCB.
+  for (p=lcd_mounts) translate([p[0],p[1],lid_h-lcd_thickness]) difference() {
+    cylinder(d=7,h=lcd_thickness-2.2);
+    translate([0,0,-0.1]) cylinder(d=2,h=lcd_thickness-2.0);
+  }
+}
+
+// Four removable printed corner clips hold the screen by its board edges. They do
+// not assume holes in the display PCB. Orient the display connector toward the case
+// hinge and check its cable bend before printing the final version.
+module lcd_retainer() {
+  z0 = lid_h-lcd_thickness-1.6;
+  for (i=[0:3]) translate([0,0,z0]) linear_extrude(height=1.6) difference() {
+    if (i==0) polygon([[10,28],[28,28],[28,37],[19,37],[19,46],[10,46]]);
+    if (i==1) polygon([[92,28],[110,28],[110,46],[101,46],[101,37],[92,37]]);
+    if (i==2) polygon([[10,78.5],[19,78.5],[19,87.5],[28,87.5],[28,105.5],[10,105.5]]);
+    if (i==3) polygon([[92,87.5],[101,87.5],[101,78.5],[110,78.5],[110,105.5],[92,105.5]]);
+    translate([lcd_mounts[i][0],lcd_mounts[i][1]]) circle(d=2.6);
+  }
 }
 
 module antenna_pivot() {
@@ -301,6 +320,7 @@ module assembly() {
 if (part == "base_shell") base_shell();
 else if (part == "service_tray") service_tray();
 else if (part == "lid") lid();
+else if (part == "lcd_retainer") lcd_retainer();
 else if (part == "keyboard_frame") keyboard_frame();
 else if (part == "esp32_cradle") esp32_cradle();
 else if (part == "chameleon_retainer") chameleon_retainer();

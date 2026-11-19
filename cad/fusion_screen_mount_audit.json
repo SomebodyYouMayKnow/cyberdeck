@@ -1,0 +1,43 @@
+{
+  "units": "mm",
+  "displayAssumption": "Waveshare 3.5-inch HDMI LCD 480x320",
+  "displayPcbMm": [
+    85.0,
+    56.5
+  ],
+  "displayMaxThicknessMm": 8.3,
+  "displayOriginMm": [
+    16.0,
+    34.0
+  ],
+  "viewWindowMm": [
+    76.6,
+    51.8
+  ],
+  "viewWindowCenterMm": [
+    58.5,
+    62.25
+  ],
+  "screenMountScrewCentersMm": [
+    [
+      13.0,
+      31.0
+    ],
+    [
+      104.0,
+      31.0
+    ],
+    [
+      13.0,
+      93.5
+    ],
+    [
+      104.0,
+      93.5
+    ]
+  ],
+  "screenMountHoleDiameterMm": 2.6,
+  "clipCount": 4,
+  "caseLidTopZmm": 56.0,
+  "caveat": "Mount uses four printed corner clips, not the LCD PCB screw holes. Confirm connector side, cable bend, actual display revision, and fit with the physical module before final printing."
+}
