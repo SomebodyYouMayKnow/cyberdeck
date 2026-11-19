@@ -1,0 +1,11 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "script",
+  "id": "AuditCurrentCase",
+  "author": "NEONRED project",
+  "description": "Read-only audit of current case body and sketches in millimeters.",
+  "version": "1.0.0",
+  "runOnStartup": false,
+  "supportedOS": "windows",
+  "editEnabled": true
+}

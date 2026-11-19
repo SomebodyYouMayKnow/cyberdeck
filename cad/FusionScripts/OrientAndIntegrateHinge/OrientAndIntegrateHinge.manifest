@@ -1,0 +1,9 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "script",
+  "author": "NEONRED",
+  "description": "Correct the Fusion YZ-plane hinge orientation and integrate barrels into the case and lid.",
+  "version": "1.0.0",
+  "runOnStartup": false,
+  "supportedOS": "windows|mac"
+}

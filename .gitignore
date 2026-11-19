@@ -8,6 +8,7 @@ __pycache__/
 *.stl
 *.step
 *.f3d
+!cad/*.step
 work/
 
 # Local scratch scripts and design notes stay out of the public repository.

@@ -1,0 +1,94 @@
+{
+  "units": "mm",
+  "pcbEnvelopeMm": [
+    226,
+    126
+  ],
+  "caseOuterXYMm": [
+    232,
+    132
+  ],
+  "lidOuterXYMm": [
+    238.6,
+    138.6
+  ],
+  "pcbPlacementMm": {
+    "x": 4,
+    "y": 4
+  },
+  "pcbEdgeClearancesMm": {
+    "left": 4,
+    "right": 2,
+    "front": 4,
+    "rear": 2
+  },
+  "caseHoleDiameterMm": 3.2,
+  "hinge": {
+    "worldAxis": "X",
+    "axisCenterMm": [
+      null,
+      139.3,
+      50.0
+    ],
+    "barrelODmm": 8.0,
+    "boreMm": 3.5,
+    "pinMm": 3.0,
+    "segmentsXmm": [
+      [
+        70.0,
+        99.4
+      ],
+      [
+        100.0,
+        130.0
+      ],
+      [
+        130.6,
+        160.0
+      ]
+    ],
+    "integratedIntoCaseAndLid": true,
+    "pinBounds": {
+      "name": "Hinge pin 3 mm x 91 mm - correct world axis",
+      "minMm": [
+        69.5,
+        137.8,
+        48.5
+      ],
+      "maxMm": [
+        160.5,
+        140.8,
+        51.5
+      ]
+    }
+  },
+  "resultBodies": [
+    {
+      "name": "Body1",
+      "minMm": [
+        0.0,
+        0.0,
+        -4.0
+      ],
+      "maxMm": [
+        232.0,
+        143.3,
+        54.0
+      ]
+    },
+    {
+      "name": "Lid shell 238.6 x 138.6 x 10.4 mm",
+      "minMm": [
+        -3.3,
+        -3.3,
+        42.0
+      ],
+      "maxMm": [
+        235.3,
+        143.3,
+        56.0
+      ]
+    }
+  ],
+  "caveat": "Nominal PCB outline and mounting-hole centers align to the Fusion tray. Electronics height, screen window position, cable routing, lid swing, and physical FDM tolerance need a fit prototype."
+}
