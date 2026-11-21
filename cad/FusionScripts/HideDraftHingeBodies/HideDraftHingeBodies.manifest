@@ -1,9 +1,0 @@
-{
-  "autodeskProduct": "Fusion",
-  "type": "script",
-  "author": "NEONRED",
-  "description": "Hide misoriented hinge draft bodies while preserving recoverability.",
-  "version": "1.0.0",
-  "runOnStartup": false,
-  "supportedOS": "windows|mac"
-}

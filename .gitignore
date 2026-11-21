@@ -16,6 +16,11 @@ work/
 /docs/
 /outputs/
 
+# Fusion automation and generated audits are local development artifacts.
+/cad/FusionScripts/
+/cad/Export_Neonred_PCB_STEP.py
+/cad/*audit*.json
+
 # Publish only PCB screenshots, prior Gerber packages, and the current Gerber.
 /PCB/*
 !/PCB/screenshots/

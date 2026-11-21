@@ -1,9 +1,0 @@
-{
-  "autodeskProduct": "Fusion",
-  "type": "script",
-  "author": "NEONRED",
-  "description": "Integrate hinge barrels with the existing case and lid bodies.",
-  "version": "1.0.0",
-  "runOnStartup": false,
-  "supportedOS": "windows|mac"
-}

@@ -1,8 +1,0 @@
-{
-  "autodeskProduct": "Fusion360",
-  "type": "script",
-  "author": "OpenAI",
-  "description": "Add reference circles for the four internal PCB case hold-down holes from the EasyEDA export.",
-  "version": "1.0.0",
-  "runOnStartup": false
-}

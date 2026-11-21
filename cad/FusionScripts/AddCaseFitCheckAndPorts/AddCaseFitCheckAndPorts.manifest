@@ -1,9 +1,0 @@
-{
-  "autodeskProduct": "Fusion360",
-  "type": "script",
-  "id": "AddCaseFitCheckAndPorts",
-  "author": "OpenAI",
-  "description": "Adds a PCB and power-bank fit check, 1 mm case clearance, antenna/IR/USB-C openings, and PCB risers to the current NEONRED case.",
-  "version": "1.0.0",
-  "runOnStartup": false
-}

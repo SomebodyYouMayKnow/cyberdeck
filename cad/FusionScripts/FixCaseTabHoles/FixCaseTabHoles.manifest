@@ -1,8 +1,0 @@
-{
-  "autodeskProduct": "Fusion360",
-  "type": "script",
-  "author": "OpenAI",
-  "description": "Read Sketch1 geometry to audit case lip mounting holes.",
-  "version": "1.0.0",
-  "runOnStartup": false
-}
