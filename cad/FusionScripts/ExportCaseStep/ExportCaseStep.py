@@ -47,4 +47,3 @@ def run(context):
 
 def stop(context):
     pass
-

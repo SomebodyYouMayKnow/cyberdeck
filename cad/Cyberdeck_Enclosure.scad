@@ -56,11 +56,15 @@ hat_size = [65,30];
 lily_xy = [153,32];
 lily_size = [25.5,60];
 lily_window = [23,47];
-lcd_board = [85,56.5];    // 3.5-inch HDMI module envelope from the older layout/source drawing
-lcd_view = [76.6,51.8];   // centered opening, slightly larger than the 75.96 x 51.24 mm lens VA
-lcd_xy = [16,34];         // legacy layout datum on the lid
-lcd_thickness = 8.3;      // drawing envelope; confirm exact screen revision and connectors
-lcd_mounts = [[13,31],[104,31],[13,93.5],[104,93.5]]; // lid bosses outside module outline
+// Lid-space opening centered over the ESP32 AMOLED, using the case-coordinate
+// offset of the carrier PCB. The opening is a through-slot in the closed lid.
+lily_window_xy = [pcb_origin[0]+pcb_inner_offset[0]+lily_xy[0]+(lily_size[0]-lily_window[0])/2,
+                  pcb_origin[1]+pcb_inner_offset[1]+lily_xy[1]+(lily_size[1]-lily_window[1])/2];
+lcd_board = [164.9,106.96]; // Waveshare 7inch HDMI LCD (C), SKU 11199 nominal envelope
+lcd_view = [154.21,85.92];  // manufacturer active display area
+lcd_xy = [0.5,14.52];      // left side of lid; leaves the right-side LILYGO window clear
+lcd_thickness = 8.0;       // manufacturer nominal module thickness
+lcd_mounts = [[13.3,11.5],[158.3,11.5],[13.3,129.5],[158.3,129.5]]; // case-side frame screws outside the panel
 chameleon_size = [40,24,8]; // adjustable SE3 envelope, not a manufacturer drawing
 chameleon_xy = [138,2];     // 60 x 30 mm PCB reserve, relative to inner-board datum
 battery_size = [96,64,26];  // Miady AS-TPB21 manual dimensions; verify the owned bank
@@ -243,10 +247,12 @@ module lid() {
     rr_box(outer,corner_r,lid_h);
     // inner display cavity leaves a 2.2 mm outside skin
     translate([wall,wall,-0.1]) rr_box([outer[0]-2*wall,outer[1]-2*wall],corner_r-wall,lid_h-2.2);
-    // HDMI panel viewing aperture and closed-lid ESP32 status window
+    // Waveshare 7-inch HDMI panel aperture and separate closed-lid ESP32 status window
     translate([lcd_xy[0]+(lcd_board[0]-lcd_view[0])/2,lcd_xy[1]+(lcd_board[1]-lcd_view[1])/2,lid_h-2.3]) rr_box(lcd_view,2,2.5);
-    translate([164,38,lid_h-2.3]) rr_box(lily_window,2,2.5);
-    // Through-holes for screws that secure the removable LCD corner retainer.
+    // Center the slot over the LILYGO display board in case coordinates.
+    translate([lily_window_xy[0],lily_window_xy[1],lid_h-2.3]) rr_box(lily_window,2,2.5);
+    // Through-holes for the removable 7-inch LCD retaining frame. These are in
+    // the lid margins, not guessed holes in the display PCB.
     for (p=lcd_mounts) translate([p[0],p[1],lid_h-2.3]) cylinder(d=2.6,h=2.6);
     // matching hinge ears
     for (x=[18,95,172]) translate([x,-2,-0.1]) rotate([90,0,0]) cylinder(d=2.8,h=6.2);
@@ -258,17 +264,14 @@ module lid() {
   }
 }
 
-// Four removable printed corner clips hold the screen by its board edges. They do
-// not assume holes in the display PCB. Orient the display connector toward the case
-// hinge and check its cable bend before printing the final version.
+// Removable printed retaining frame for the 7-inch LCD. It supports the display
+// around its edges and uses four case-side screws, not assumed LCD PCB holes.
 module lcd_retainer() {
   z0 = lid_h-lcd_thickness-1.6;
-  for (i=[0:3]) translate([0,0,z0]) linear_extrude(height=1.6) difference() {
-    if (i==0) polygon([[10,28],[28,28],[28,37],[19,37],[19,46],[10,46]]);
-    if (i==1) polygon([[92,28],[110,28],[110,46],[101,46],[101,37],[92,37]]);
-    if (i==2) polygon([[10,78.5],[19,78.5],[19,87.5],[28,87.5],[28,105.5],[10,105.5]]);
-    if (i==3) polygon([[92,87.5],[101,87.5],[101,78.5],[110,78.5],[110,105.5],[92,105.5]]);
-    translate([lcd_mounts[i][0],lcd_mounts[i][1]]) circle(d=2.6);
+  translate([0,0,z0]) linear_extrude(height=1.6) difference() {
+    translate([0.3,8]) square([167.7,120]);
+    translate([0.8,14.2]) square([164.9,107.6]);
+    for (p=lcd_mounts) translate([p[0],p[1]]) circle(d=2.6);
   }
 }
 

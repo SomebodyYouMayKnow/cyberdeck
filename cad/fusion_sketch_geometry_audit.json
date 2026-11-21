@@ -1,0 +1,596 @@
+{
+  "fusionDocument": "cad case cyberdeck",
+  "sketch": "Sketch1",
+  "units": "mm",
+  "sketchDimensions": {
+    "lines": 47,
+    "circles": 8,
+    "arcs": 0
+  },
+  "circles": [
+    {
+      "centerMm": [
+        63.35,
+        125.245
+      ],
+      "diameterMm": 3.2,
+      "construction": false
+    },
+    {
+      "centerMm": [
+        168.38,
+        125.245
+      ],
+      "diameterMm": 3.2,
+      "construction": false
+    },
+    {
+      "centerMm": [
+        63.45,
+        6.955
+      ],
+      "diameterMm": 3.2,
+      "construction": false
+    },
+    {
+      "centerMm": [
+        224.875,
+        93.415
+      ],
+      "diameterMm": 3.2,
+      "construction": false
+    },
+    {
+      "centerMm": [
+        224.875,
+        38.405
+      ],
+      "diameterMm": 3.2,
+      "construction": false
+    },
+    {
+      "centerMm": [
+        7.125,
+        93.415
+      ],
+      "diameterMm": 3.2,
+      "construction": false
+    },
+    {
+      "centerMm": [
+        7.125,
+        38.4
+      ],
+      "diameterMm": 3.2,
+      "construction": false
+    },
+    {
+      "centerMm": [
+        168.5,
+        6.955
+      ],
+      "diameterMm": 3.2,
+      "construction": false
+    }
+  ],
+  "lines": [
+    {
+      "startMm": [
+        0.0,
+        0.0
+      ],
+      "endMm": [
+        232.0,
+        -0.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        232.0,
+        -0.0
+      ],
+      "endMm": [
+        232.0,
+        132.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        232.0,
+        132.0
+      ],
+      "endMm": [
+        0.0,
+        132.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        -0.0,
+        132.0
+      ],
+      "endMm": [
+        0.0,
+        0.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        11.0,
+        11.0
+      ],
+      "endMm": [
+        221.0,
+        11.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        221.0,
+        11.0
+      ],
+      "endMm": [
+        221.0,
+        121.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        221.0,
+        121.0
+      ],
+      "endMm": [
+        11.0,
+        121.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        11.0,
+        121.0
+      ],
+      "endMm": [
+        11.0,
+        11.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        58.3521,
+        121.0
+      ],
+      "endMm": [
+        58.3521,
+        129.4938
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        58.3521,
+        129.4938
+      ],
+      "endMm": [
+        68.3543,
+        129.4938
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        68.3543,
+        129.4938
+      ],
+      "endMm": [
+        68.3543,
+        121.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        163.3753,
+        121.0
+      ],
+      "endMm": [
+        163.3753,
+        129.4938
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        163.3753,
+        129.4938
+      ],
+      "endMm": [
+        173.3775,
+        129.4938
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        173.3775,
+        129.4938
+      ],
+      "endMm": [
+        173.3775,
+        121.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        163.3753,
+        11.0
+      ],
+      "endMm": [
+        173.3775,
+        11.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        221.0,
+        98.4155
+      ],
+      "endMm": [
+        228.7469,
+        98.4155
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        228.7469,
+        98.4155
+      ],
+      "endMm": [
+        228.7469,
+        88.4133
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        228.7469,
+        88.4133
+      ],
+      "endMm": [
+        221.0,
+        88.4133
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        221.0,
+        43.4034
+      ],
+      "endMm": [
+        228.7469,
+        43.4034
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        228.7469,
+        43.4034
+      ],
+      "endMm": [
+        228.7469,
+        33.4012
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        228.7469,
+        33.4012
+      ],
+      "endMm": [
+        221.0,
+        33.4012
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        58.3521,
+        11.0
+      ],
+      "endMm": [
+        68.5499,
+        11.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        68.5499,
+        11.0
+      ],
+      "endMm": [
+        68.5499,
+        2.9099
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        68.5499,
+        2.9099
+      ],
+      "endMm": [
+        58.3521,
+        2.9099
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        58.3521,
+        2.9099
+      ],
+      "endMm": [
+        58.3521,
+        11.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        11.0,
+        98.42
+      ],
+      "endMm": [
+        3.25,
+        98.42
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        3.25,
+        98.42
+      ],
+      "endMm": [
+        3.25,
+        88.41
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        3.25,
+        88.41
+      ],
+      "endMm": [
+        11.0,
+        88.41
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        11.0,
+        43.4
+      ],
+      "endMm": [
+        3.25,
+        43.4
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        3.25,
+        43.4
+      ],
+      "endMm": [
+        3.25,
+        33.4
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        3.25,
+        33.4
+      ],
+      "endMm": [
+        11.0,
+        33.4
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        5.0495,
+        98.42
+      ],
+      "endMm": [
+        5.0495,
+        127.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        5.0,
+        5.0
+      ],
+      "endMm": [
+        5.0,
+        33.4
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        5.0,
+        43.4
+      ],
+      "endMm": [
+        5.0,
+        88.41
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        58.3521,
+        5.0
+      ],
+      "endMm": [
+        5.0,
+        5.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        227.0,
+        33.4012
+      ],
+      "endMm": [
+        227.0,
+        5.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        227.0,
+        127.0
+      ],
+      "endMm": [
+        227.0,
+        98.4155
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        227.0,
+        88.4133
+      ],
+      "endMm": [
+        227.0,
+        43.4034
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        173.3775,
+        127.0
+      ],
+      "endMm": [
+        227.0,
+        127.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        5.0495,
+        127.0
+      ],
+      "endMm": [
+        58.3521,
+        127.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        68.3543,
+        127.0
+      ],
+      "endMm": [
+        163.3753,
+        127.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        163.3262,
+        11.0
+      ],
+      "endMm": [
+        173.6702,
+        11.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        173.6702,
+        11.0
+      ],
+      "endMm": [
+        173.6702,
+        2.9099
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        173.6702,
+        2.9099
+      ],
+      "endMm": [
+        163.3262,
+        2.9099
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        163.3262,
+        2.9099
+      ],
+      "endMm": [
+        163.3262,
+        11.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        227.0,
+        5.0
+      ],
+      "endMm": [
+        173.6702,
+        5.0
+      ],
+      "construction": false
+    },
+    {
+      "startMm": [
+        163.3262,
+        5.0
+      ],
+      "endMm": [
+        68.5499,
+        5.0
+      ],
+      "construction": false
+    }
+  ],
+  "arcs": []
+}

@@ -1,0 +1,9 @@
+{
+  "autodeskProduct": "Fusion360",
+  "type": "script",
+  "id": "UpdateCyberdeckFitCheck",
+  "author": "NEONRED project",
+  "description": "Adds scale device and Pi/HAT underside envelopes, relocates the battery clear of the stack, and improves PCB support fit-checks.",
+  "version": "1.0.0",
+  "runOnStartup": false
+}

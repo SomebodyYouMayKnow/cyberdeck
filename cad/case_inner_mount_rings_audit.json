@@ -1,0 +1,51 @@
+{
+  "fusionDocument": "cad case cyberdeck v9",
+  "sketch": "PCB Case HoldDown References",
+  "source": "Live EasyEDA PCB_cyberdeck-completed, Hole Properties verified: CASE_TL inner hole 3.200 mm and case-ear TOP_L hole 3.200 mm.",
+  "purpose": "Concentric annular support profiles around the four inner case mounting holes; inner opening matches the PCB hole and ring profile is ready for extrusion. Perimeter lips remain unchanged.",
+  "pcbOpeningDiameterMm": 3.2,
+  "supportRingOuterDiameterMm": 6.5,
+  "radialRingWidthMm": 1.65,
+  "holes": [
+    {
+      "hole": "CASE_TL",
+      "centerSketchXYMm": [
+        16.0,
+        16.0
+      ],
+      "pcbOpeningDiameterMm": 3.2,
+      "supportRingOuterDiameterMm": 6.5,
+      "radialRingWidthMm": 1.65
+    },
+    {
+      "hole": "CASE_TR",
+      "centerSketchXYMm": [
+        213.55,
+        17.39
+      ],
+      "pcbOpeningDiameterMm": 3.2,
+      "supportRingOuterDiameterMm": 6.5,
+      "radialRingWidthMm": 1.65
+    },
+    {
+      "hole": "CASE_BL",
+      "centerSketchXYMm": [
+        16.0,
+        116.0
+      ],
+      "pcbOpeningDiameterMm": 3.2,
+      "supportRingOuterDiameterMm": 6.5,
+      "radialRingWidthMm": 1.65
+    },
+    {
+      "hole": "CASE_BR",
+      "centerSketchXYMm": [
+        213.55,
+        116.0
+      ],
+      "pcbOpeningDiameterMm": 3.2,
+      "supportRingOuterDiameterMm": 6.5,
+      "radialRingWidthMm": 1.65
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "fusionDocument": "cad case cyberdeck v6",
+  "referenceSketch": "PCB Case HoldDown References",
+  "pcbSource": "EasyEDA/NEONRED_PCB_2026-10-19.json",
+  "holeType": "Existing PCB NPTH CASE mounting holes, represented as reference circles for case support placement",
+  "pcbHoleDiameterMm": 6.2992,
+  "pcbMainBodySizeMm": [
+    210,
+    110
+  ],
+  "fusionBaseRectangleSizeMm": [
+    210,
+    110
+  ],
+  "mapping": "PCB main-body origin at board-local (8, 8) mm maps to Fusion inner-rectangle origin (11, 11) mm.",
+  "holes": [
+    {
+      "hole": "CASE_TL",
+      "diameterMm": 6.2992,
+      "caseSketchXYMm": [
+        16.0,
+        16.0
+      ],
+      "fromPcbBaseBottomLeftMm": [
+        5.0,
+        5.0
+      ]
+    },
+    {
+      "hole": "CASE_TR",
+      "diameterMm": 6.2992,
+      "caseSketchXYMm": [
+        213.55,
+        17.39
+      ],
+      "fromPcbBaseBottomLeftMm": [
+        202.55,
+        6.39
+      ]
+    },
+    {
+      "hole": "CASE_BL",
+      "diameterMm": 6.2992,
+      "caseSketchXYMm": [
+        16.0,
+        116.0
+      ],
+      "fromPcbBaseBottomLeftMm": [
+        5.0,
+        105.0
+      ]
+    },
+    {
+      "hole": "CASE_BR",
+      "diameterMm": 6.2992,
+      "caseSketchXYMm": [
+        213.55,
+        116.0
+      ],
+      "fromPcbBaseBottomLeftMm": [
+        202.55,
+        105.0
+      ]
+    }
+  ]
+}

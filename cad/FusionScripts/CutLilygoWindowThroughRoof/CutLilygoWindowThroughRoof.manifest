@@ -1,0 +1,1 @@
+{"autodeskProduct":"Fusion360","type":"script","description":{"author":"Codex","name":"Cut LILYGO screen window through roof","description":"Remove the blind roof floor at the ESP32 screen window and export a corrected lid mesh.","version":"1.0.0"}}

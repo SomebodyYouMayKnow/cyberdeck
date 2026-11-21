@@ -1,0 +1,11 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "script",
+  "id": "AddInnerPCBMountRings",
+  "author": "OpenAI",
+  "description": "Adds concentric 9 mm support-ring outlines around the four internal PCB case hold-down references.",
+  "version": "1.0.0",
+  "runOnStartup": false,
+  "supportedOS": "windows",
+  "editEnabled": true
+}

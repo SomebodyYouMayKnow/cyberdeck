@@ -1,0 +1,76 @@
+{
+  "fusionDocument": "cad case cyberdeck",
+  "sketch": "PCB Case HoldDown References",
+  "units": "mm",
+  "geometryCounts": {
+    "circles": 8,
+    "lines": 0
+  },
+  "circles": [
+    {
+      "centerMm": [
+        16.0,
+        16.0
+      ],
+      "diameterMm": 3.2,
+      "construction": false
+    },
+    {
+      "centerMm": [
+        16.0,
+        16.0
+      ],
+      "diameterMm": 6.5,
+      "construction": false
+    },
+    {
+      "centerMm": [
+        16.0,
+        116.0
+      ],
+      "diameterMm": 3.2,
+      "construction": false
+    },
+    {
+      "centerMm": [
+        16.0,
+        116.0
+      ],
+      "diameterMm": 6.5,
+      "construction": false
+    },
+    {
+      "centerMm": [
+        213.55,
+        16.0
+      ],
+      "diameterMm": 3.2,
+      "construction": false
+    },
+    {
+      "centerMm": [
+        213.55,
+        16.0
+      ],
+      "diameterMm": 6.5,
+      "construction": false
+    },
+    {
+      "centerMm": [
+        213.55,
+        114.61
+      ],
+      "diameterMm": 3.2,
+      "construction": false
+    },
+    {
+      "centerMm": [
+        213.55,
+        114.61
+      ],
+      "diameterMm": 6.5,
+      "construction": false
+    }
+  ],
+  "lines": []
+}

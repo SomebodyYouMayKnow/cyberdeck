@@ -1,0 +1,11 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "script",
+  "id": "CorrectInnerPCBMountRings",
+  "author": "OpenAI",
+  "description": "Matches inner PCB mount openings to the verified 3.2 mm EasyEDA holes and updates their surrounding support-ring profiles.",
+  "version": "1.0.0",
+  "runOnStartup": false,
+  "supportedOS": "windows",
+  "editEnabled": true
+}

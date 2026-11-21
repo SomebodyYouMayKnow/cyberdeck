@@ -3,7 +3,7 @@
 I am building a portable foldable-style cyberdeck. A raspberry pi 0 2 is the linux host, and I have a LILYGO T-Display-S3 AMOLED as a microcontroller. The pi will be connected to multiple parts through a USB hat including the following:
  - An ALFA dual band wifi adapter
  - A chameleon SE3 ultra
- - A 3.5" LCD HDMI screen
+ - A Waveshare 7-inch HDMI touchscreen (C, 1024 × 600)
  - A battery
  - The esp32 which is then connected to multiple other parts including 
  - - A kardKB keyboard from M5 stack
@@ -11,7 +11,7 @@ I am building a portable foldable-style cyberdeck. A raspberry pi 0 2 is the lin
  - - Some buttons and a rotary encoder
  - - A ir emitter and receiver
 This project will be used for a wide range of uses including wifi analysis, radio wave analysis, IR use cases, and bluetooth.
-I was inspired for this project by my teacher, Mr. Lindemmann in AP Cybesecurity.
+I was inspired for this project by my class, Mr. Lindemmann in AP Cybesecurity.
 
 # How the design changed and feedback.
 I originally started with a project of this look, and after realizing I had just connected a few parts, I decided to redesign it to be simpler, but with more parts integrated into the PCB. After trying this, I added an open source project called Proxmark 3 into the PCB, but I had many errors and it was above my level. And after getting some feedback from my friend, I decided to revert back to the original version, but integrate some parts in the PCB, which I did with the battery power supply, the IR board, rotary encoder, capacitors, and much more. Which brought me to where I am.
@@ -29,6 +29,8 @@ I originally started with a project of this look, and after realizing I had just
 
 ![NEONRED carrier PCB in EasyEDA 3D view; this is the bare carrier board, not the assembled cyberdeck](./PCB/screenshots/easyeda-current-3d-view.png)
 
+### Current cad view
+![Cyberdeck enclosure with the lid open in Fusion 360](PCB/screenshots/fusion-cyberdeck-open-lid-2026-11-21.png)
 # BOM
 ## Bill of materials
 
@@ -44,6 +46,8 @@ Prices are estimates copied from the project BOM; recheck links before ordering.
 | Inventek W24-ASMA-M 2.4 GHz tilting SMA-male whip antenna (ESP32 Wi-Fi/Bluetooth) | 1 | Buy; verify LILYGO external RF connector/selector | $2.99 | [Product](https://www.digikey.com/en/products/detail/inventek-systems/W24-ASMA-M/4959494) |
 | GCT CABLE 348 RF-150-A-1 U.FL/I-PEX-to-SMA-female bulkhead pigtail, 150 mm | 1 | Buy only if LILYGO connector is confirmed | $2.93 | [Product](https://www.digikey.com/en/products/detail/gct/CABLE-348-RF-150-A-1/12822383) |
 | LILYGO T-Display-S3 AMOLED | 1 | Owned | — | [Product](https://github.com/Xinyuan-LILYGO/T-Display-S3-AMOLED) |
+| Waveshare 7inch HDMI LCD (C), 1024×600, SKU 11199 | 1 | Buy | $43.99 | [Product](https://www.waveshare.com/7inch-hdmi-lcd-c.htm) |
+| Mini-HDMI (Type C) male to HDMI (Type A) male cable | 1 | Buy | $6.00 | [Product](https://www.bipom.com/products/us/4380338.html) |
 | Raspberry Pi Zero 2 W | 1 | Owned | — | [Product](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/) |
 | Waveshare USB HUB HAT SKU12694 | 1 | Owned | — | [Product](https://www.waveshare.com/usb-hub-hat.htm) |
 | M5Stack CardKB v1.1 | 1 | Buy | $7.95 | [Product](https://shop.m5stack.com/products/cardkb-mini-keyboard-programmable-unit-v1-1-mega8a) |
@@ -67,7 +71,7 @@ Prices are estimates copied from the project BOM; recheck links before ordering.
 | USB-C data cable | 1 | Buy | $4.95 | [Product](https://www.adafruit.com/product/4474) |
 | Custom carrier PCB, 2-layer, 226 × 126 mm envelope (210 × 110 mm inner area) | 1 order (5 boards) | Quote needed | TBD | [Product](https://jlcpcb.com/) |
 
-**Estimated known-purchase subtotal: $223.58 before shipping and tax.** This includes the V4L dongle and the compact SDR antenna plus ESP32 antenna and pigtail; it counts the five-piece MOQ for the NPN transistor. Verify live prices before ordering. The external ESP32 antenna requires a matching LILYGO RF connector and selecting the external RF path. The cheaper telescopic SDR whip is less versatile than the removed dipole kit and will perform differently across bands.
+**Estimated known-purchase subtotal: $273.57 before shipping and tax.** This includes the Waveshare 7-inch HDMI touchscreen, the Mini-HDMI cable required by the Pi Zero 2 W, V4L dongle and compact SDR antenna, ESP32 antenna and pigtail, and the five-piece MOQ for the NPN transistor. The display kit includes a standard HDMI cable, a Micro-HDMI adapter, USB touch/power cable, and Pi screw pack; the Micro-HDMI adapter does not fit the Pi Zero's Mini-HDMI port. Verify live prices before ordering. The external ESP32 antenna requires a matching LILYGO RF connector and selecting the external RF path. The cheaper telescopic SDR whip is less versatile than the removed dipole kit and will perform differently across bands.
 
 See [`BOM.csv`](BOM.csv) for more details.
 

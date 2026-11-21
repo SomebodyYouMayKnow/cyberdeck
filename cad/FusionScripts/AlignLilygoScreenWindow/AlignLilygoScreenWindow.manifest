@@ -1,0 +1,8 @@
+{
+  "autodeskProduct": "Fusion360",
+  "type": "script",
+  "author": "OpenAI",
+  "description": "Centers the lid through-slot over the planned LILYGO ESP32 display.",
+  "supportedApplications": ["Autodesk Fusion 360"],
+  "editEnabled": true
+}

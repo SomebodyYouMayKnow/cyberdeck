@@ -1,0 +1,8 @@
+{
+  "autodeskProduct": "Fusion360",
+  "type": "script",
+  "author": "OpenAI",
+  "description": "Align bottom-right case lip and right-side inner support rings to the latest PCB hole locations.",
+  "version": "1.0.0",
+  "runOnStartup": false
+}

@@ -1,0 +1,11 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "script",
+  "id": "AdjustInnerPCBMountRings",
+  "author": "OpenAI",
+  "description": "Widens the four internal PCB hold-down support-ring outlines while preserving the PCB hole diameters and case lips.",
+  "version": "1.0.0",
+  "runOnStartup": false,
+  "supportedOS": "windows",
+  "editEnabled": true
+}

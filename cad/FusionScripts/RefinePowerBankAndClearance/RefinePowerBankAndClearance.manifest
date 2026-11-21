@@ -1,0 +1,9 @@
+{
+  "autodeskProduct": "Fusion360",
+  "type": "script",
+  "id": "RefinePowerBankAndClearance",
+  "author": "OpenAI",
+  "description": "Cuts a full-through power-bank USB-C access opening and adds retention rails while preserving PCB hole centers.",
+  "version": "1.0.0",
+  "runOnStartup": false
+}

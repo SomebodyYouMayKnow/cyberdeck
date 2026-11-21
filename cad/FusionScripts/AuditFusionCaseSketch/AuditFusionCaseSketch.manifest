@@ -1,0 +1,11 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "script",
+  "id": "AuditFusionCaseSketch",
+  "author": "OpenAI",
+  "description": "Read-only audit of Fusion Sketch1 geometry in millimeters.",
+  "version": "1.0.0",
+  "runOnStartup": false,
+  "supportedOS": "windows",
+  "editEnabled": true
+}

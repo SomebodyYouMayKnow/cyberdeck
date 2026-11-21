@@ -1,0 +1,11 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "script",
+  "id": "AuditFusionMountSketch",
+  "author": "OpenAI",
+  "description": "Read-only audit of PCB mount-hole reference circles in Fusion.",
+  "version": "1.0.0",
+  "runOnStartup": false,
+  "supportedOS": "windows",
+  "editEnabled": true
+}
