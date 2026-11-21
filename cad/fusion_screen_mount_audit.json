@@ -1,43 +1,104 @@
 {
+  "document": "cad case cyberdeck",
   "units": "mm",
-  "displayAssumption": "Waveshare 3.5-inch HDMI LCD 480x320",
-  "displayPcbMm": [
-    85.0,
-    56.5
+  "display": "Waveshare 7inch HDMI LCD (C), SKU 11199 / Rev 4.1 reference",
+  "source": "https://www.waveshare.com/7inch-hdmi-lcd-c.htm",
+  "nominalDisplayBoardMm": [
+    164.9,
+    106.96,
+    8.0
   ],
-  "displayMaxThicknessMm": 8.3,
-  "displayOriginMm": [
-    16.0,
-    34.0
+  "boardEnvelopeBoundsMm": [
+    -2.8,
+    14.52,
+    162.1,
+    121.47999999999999
   ],
-  "viewWindowMm": [
-    76.6,
-    51.8
+  "activeAreaMm": [
+    154.21,
+    85.92
   ],
-  "viewWindowCenterMm": [
-    58.5,
-    62.25
+  "activeAreaBoundsMm": [
+    2.5450000000000017,
+    25.04,
+    156.755,
+    110.96000000000001
   ],
-  "screenMountScrewCentersMm": [
-    [
-      13.0,
-      31.0
+  "activeWindowToLILYGOWindowGapMm": null,
+  "lilygoAmoledWindowMm": [
+    23.0,
+    47.0
+  ],
+  "lilygoAmoledWindowBoundsMm": [
+    170.25,
+    54.5,
+    193.25,
+    101.5
+  ],
+  "liveLidRoofMm": {
+    "outerFaceZ": 52.4,
+    "innerFaceZ": 50.0,
+    "thickness": 2.4
+  },
+  "retainer": {
+    "outerBoundsMm": [
+      -3.3,
+      8.0,
+      162.8,
+      128.0
     ],
-    [
-      104.0,
-      31.0
+    "clearanceBoundsMm": [
+      -2.5,
+      14.2,
+      162.3,
+      121.8
     ],
-    [
-      13.0,
-      93.5
-    ],
-    [
-      104.0,
-      93.5
+    "fastener": "4 x M2 screws, 2.2 mm clearance, through top/bottom rails",
+    "centresMm": [
+      [
+        10.0,
+        10.0
+      ],
+      [
+        155.0,
+        10.0
+      ],
+      [
+        10.0,
+        126.0
+      ],
+      [
+        155.0,
+        126.0
+      ]
     ]
+  },
+  "obsolete3p5inMountHoles": "Two right-side holes plugged under panel envelope; left pair is inside enlarged display opening.",
+  "caveat": "The envelope dimensions are manufacturer nominal, but exact mount-hole pattern, connector position, and cable bend clearance are not provided by this CAD fit check. Verify actual screen revision before printing/order.",
+  "lilygoBoardEnvelopeCaseMm": [
+    189.547,
+    27.267,
+    215.047,
+    81.083
   ],
-  "screenMountHoleDiameterMm": 2.6,
-  "clipCount": 4,
-  "caseLidTopZmm": 56.0,
-  "caveat": "Mount uses four printed corner clips, not the LCD PCB screw holes. Confirm connector side, cable bend, actual display revision, and fit with the physical module before final printing."
+  "lilygoWindow": "Existing 23 x 47 mm roof cut remains at the recorded legacy coordinates and is misaligned with the corrected A2 portrait board envelope. Do not print the lid until the cut is repositioned in the closed-lid coordinate system.",
+  "lilygoWindowPlacementBasis": "Corrected board envelope derived from live EasyEDA A2 footprint outline and the Fusion board-to-case datum (+4 mm X, +52 mm Y). The existing lid cut is not derived from this envelope.",
+  "lilygoWindowFitCaveat": "Existing cut X=170.25..193.25, Y=54.5..101.5 mm does not align with the corrected board envelope X=189.547..215.047, Y=27.267..81.083 mm. Reposition only after checking the closed-lid transform and exact active-area offset for the owned board.",
+  "lcdMountedInsideLid": true,
+  "lcdActiveAreaThroughCutBoundsMm": [
+    2.545,
+    25.04,
+    156.755,
+    110.96
+  ],
+  "screenMounting": "Waveshare fit envelope is inside the lid cavity; active panel reference is flush with the outer roof face; retainer is below the board.",
+  "verifiedLidTopPlanarAreaMm2": 18580.237,
+  "expectedLidTopPlanarAreaMm2": 18580.237,
+  "lilygoCurrentBoardEnvelopeCaseMm": [
+    189.547,
+    27.267,
+    215.047,
+    81.083
+  ],
+  "lilygoAmoledWindowAlignmentStatus": "MISALIGNED after the LILYGO footprint was corrected to portrait. Existing window is still the old 23 x 47 mm cut at X=170.25..193.25, Y=54.5..101.5 mm. Current board fit envelope is X=189.547..215.047, Y=27.267..81.083 mm. Window repositioning is required; exact closed-lid transform and active-area center need confirmation."
 }

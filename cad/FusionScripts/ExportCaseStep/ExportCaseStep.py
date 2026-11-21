@@ -6,7 +6,7 @@ import os
 import traceback
 
 
-OUTPUT = r"C:\Users\matth\Documents\Codex\2026-09-29\cyberdeck-electrical-engineering\cad\NEONRED_Case_Lid_Hinge.step"
+OUTPUT = r"C:\Users\matth\Documents\Codex\2026-09-29\cyberdeck-electrical-engineering\cad\NEONRED_Cyberdeck_Case_FitCheck_2026-11-20.step"
 
 
 def run(context):
